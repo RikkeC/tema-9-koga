@@ -5,16 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div id="logo"></div>
-        <nav id="menu">
-            <a href="om.html">Om</a>
-            <a href="cykler.html">Kogas cykler</a>
-            <a href="kontakt.html">Kontakt</a>
+    <header id="side_menu">
+        <div id="logo">
+            <img src="logo_sketch.svg" alt="logo">
+        </div>
+        <nav id="menu_container">
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <a href="om.html">Om</a>
+                <a href="cykler.html">Kogas cykler</a>
+                <a href="kontakt.html">Kontakt</a>
+            </ul>
         </nav>
     </header>
 
@@ -160,7 +165,5 @@
     </section>
     <footer></footer>
 
-    <script src=""></script>
-</body>
-
-</html>
+    <script src="script.js"></script>
+</body></html>
