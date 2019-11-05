@@ -1,5 +1,14 @@
 body {
     margin: 0;
+    padding: 0;
+}
+
+a,
+p,
+h1,
+h2,
+h3 {
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*burger menu og desktop menu*/
@@ -13,7 +22,6 @@ body {
     width: 100%;
     z-index: 2;
     justify-content: space-around;
-    margin-bottom: 3vw;
 }
 
 .hidden {
@@ -85,3 +93,118 @@ body {
 }
 
 /*menu færdig*/
+
+
+
+/*kontakt start*/
+
+#kontakt_splash {
+    background-image: url(header-comfort-AOC.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 80vh;
+}
+
+#kontakt_splash a span {
+    position: absolute;
+    bottom: 2vw;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: -12px;
+    border-left: 2.5px solid #fff;
+    border-bottom: 2.5px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: pil 2s infinite;
+    animation: pil 2s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes pil {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes pil {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+#info h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#info h2 {
+    font-size: 20px;
+}
+
+#info p {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+#info {
+    margin: 3rem;
+}
+
+#info #section_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section_wrapper1 {
+    display: flex;
+}
+
+#info iframe {
+    height: 400px;
+    width: 600px;
+}
+
+#info .map {
+    flex-grow: 1;
+    flex-basis: 420px;
+}
+
+#info .text_kontakt {
+    flex-grow: 1;
+    flex-basis: 300px;
+    background-color: #f3f4f4;
+}
+
+.text_kontakt img {
+    height: 260px;
+    width: 200px;
+    margin: 10px;
+}
+
+
+.text_kontakt p,
+.text_kontakt h2 {
+    margin: 7px;
+}
+
+/*kontakt slut*/
