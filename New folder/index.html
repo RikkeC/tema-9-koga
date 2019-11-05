@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <main>
+        <section class="indhold">
+            <h1 class="overskrift"></h1>
+            <article class="side"></article>
+        </section>
+    </main>
+
+
+    <script>
+        const url = "https://kvikea.dk/babushkaWP/wordpress/wp-json/wp/v2/pages";
+        let side;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+
+        }
+        async function hentJson() {
+            const response = fetch(url);
+            console.log(response);
+            side = await response.json();
+            console.log(side);
+            vis();
+        }
+
+        function vis() {
+            document.querySelector(".overskrift").textContent = side.title.rendered;
+            document.querySelector(".side").innerHTML = side.content.rendered;
+        }
+    </script>
+</body></html>
