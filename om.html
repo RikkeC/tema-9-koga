@@ -7,11 +7,43 @@
     <title>Kogacenter - om</title>
     <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+
     <meta name="om koga" content="information om koga og kogacenters historie og filosofi">
 
     <style>
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #337CBE;
+            font-weight: bold;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
         .side {
             margin: 0 5vw;
+            padding: 5vw 0;
+            display: grid;
+            grid-gap: 0.5rem;
+            grid-template-areas:
+                "kogacenter_overskrift"
+                "kogacenter_img"
+                "kogacenter_txt"
+                "historie_overskrift"
+                "historie_img"
+                "historie_txt"
+                "historie_txt_2"
+                "filosofi_overskrift"
+                "filosofi_txt"
+                "filosofi_img"
+                "filosofi_txt_2";
         }
 
         .overskrift {
@@ -24,67 +56,85 @@
         }
 
         .side img {
-            max-width: 350px;
+            max-width: 80vw;
             margin: 0;
         }
 
+        .side .historie_overskrift {
+            grid-area: historie_overskrift;
+        }
 
-        @media screen and (min-width: 800px) {
-            .side {
-                margin: 0 15vw;
-            }
+        .side .historie_img {
+            grid-area: historie_img;
+        }
+
+        .side .historie_txt {
+            grid-area: historie_txt;
+        }
+
+        .side .historie_txt_2 {
+            grid-area: historie_txt_2;
+            margin: 0 0 5vw 0;
+        }
+
+        .side .filosofi_overskrift {
+            grid-area: filosofi_overskrift;
+        }
+
+        .side .filosofi_txt {
+            grid-area: filosofi_txt;
+        }
+
+        .side .filosofi_txt_2 {
+            grid-area: filosofi_txt_2;
+        }
+
+        .side .filosofi_img {
+            grid-area: filosofi_img;
+        }
+
+        .side .kogacenter_overskrift {
+            grid-area: kogacenter_overskrift;
+            margin: 0 0 1vw 0;
+        }
+
+        .side .kogacenter_txt {
+            grid-area: kogacenter_txt;
+            margin: 0 0 5vw 0;
+        }
+
+        .side .kogacenter_img {
+            grid-area: kogacenter_img;
+        }
+
+
+        @media screen and (min-width: 1000px) {
 
             .overskrift {
                 margin: 2vw 15vw;
             }
 
             .side img {
-                max-width: 400px;
-            }
-
-            .historie_overskrift {
-                color: red;
-                grid-area: historie_overskrift;
-            }
-
-            .historie_img {
-                grid-area: historie_img;
-            }
-
-            .historie_txt {
-                grid-area: historie_txt;
-            }
-
-            .filosofi_overskrift {
-                grid-area: filosofi_overskrift;
-            }
-
-            .filosofi_txt {
-                grid-area: filosofi_txt;
-            }
-
-            .filosofi_img {
-                grid-area: filosofi_img;
-            }
-
-            .kogacenter_overskrift {
-                grid-area: kogacenter_overskrift;
-            }
-
-            .kogacenter_txt {
-                grid-area: kogacenter_txt;
+                max-width: 35vw;
             }
 
             .side {
-                display: grid;
-                grid-gap: 2rem;
+                width: 75vw;
+                margin: 0 auto;
+                grid-area: 2rem;
                 grid-template-areas:
-                    "historie_overskrift ."
+                    "kogacenter_overskrift kogacenter_overskrift"
+                    "kogacenter_img kogacenter_txt"
+                    "historie_overskrift historie_overskrift"
                     "historie_txt historie_img"
-                    "filosofi_overskrift ."
-                    "filosofi_img filosofi_txt"
-                    "kogacenter_overskrift ."
-                    "kogacenter_txt .";
+                    "historie_txt_2 historie_txt_2"
+                    "filosofi_overskrift filosofi_overskrift"
+                    "filosofi_txt filosofi_img"
+                    "filosofi_txt_2 filosofi_txt_2";
+            }
+
+            .kogacenter_overskrift {
+                text-align: center;
             }
         }
 
@@ -138,7 +188,6 @@
 
     <main>
         <section class="indhold">
-            <h1 class="overskrift"></h1>
             <article class="side"></article>
         </section>
 
@@ -184,7 +233,6 @@
         }
 
         function visData() {
-            document.querySelector(".overskrift").textContent = side.title.rendered;
             document.querySelector(".side").innerHTML = side.content.rendered;
         }
 
