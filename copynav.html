@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+
+        .myDropdown,
+        .myDropdown2,
+        .myDropdown3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: antiquewhite;
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            padding: 16px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .dropdown {}
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropbtn2,
+        .dropbtn3 {
+            background-color: transparent;
+            border: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdowncontent a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        a,
+        .dropbtn2,
+        .dropbtn3 {
+            font: 16px Times New Roman;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .show {
+            display: inline-block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /*subnav*/
+        .subanv {
+            overflow: hidden;
+
+        }
+
+        .subnav .subnavbtn {
+            border: none;
+            outline: none;
+            margin: 0;
+        }
+
+
+        .subnavcontent {
+            display: none;
+            position: absolute;
+            widows: 100%;
+            z-index: 1;
+        }
+
+        .subnavcontent a {
+            float: left;
+            text-decoration: none;
+        }
+
+        /* animated burger icon */
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #0101e2;
+            margin: 6px 0;
+            transition: 0.5s ease;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        /*header background image*/
+        .header_background {
+            display: flex;
+            background-image: url("images/opacity_background.jpg");
+            margin: 0 auto;
+            height: 5rem;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            max-height: 50px;
+            padding-top: 15px;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        /*Splash section  */
+        /*to make the image responsive*/
+        .splash_image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_background">
+            <div class="logo"><img src="logo_sketch.svg" alt=""></div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                    <div class="myDropdown hidden">
+                        <a href="#">Om</a>
+                        <button class="dropbtn2">Koga cykler</button>
+                        <div class="myDropdown2 hidden">
+                            <button class="dropbtn3">Cykler</button>
+                            <div class="myDropdown3 hidden">
+                                <a href="#">City cykler</a>
+                                <a href="#">Racer cykler</a>
+                                <a href="#">Trekking cykler</a>
+                                <a href="#">El-cykler</a>
+                                <a href="#">Signature cykler</a>
+                            </div>
+                            <a href="#">Tilbehør</a>
+                            <a href="#">Vedligholdelser</a>
+                        </div>
+                        <a href="#">Kontakt</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="splash">
+        <img class="splash_image" src="images/Edinburgh-Mark_beaumont.jpg" alt=""> </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("helo");
+            document.querySelector(".dropbtn").addEventListener("click", () => {
+                showList();
+                animationBurger();
+            });
+        }
+
+        function animationBurger() {
+            document.querySelector(".dropbtn").classList.toggle("change");
+        }
+
+        function showList() {
+            console.log("hello");
+            document.querySelector(".myDropdown").classList.toggle("hidden");
+        }
+
+
+        document.querySelector(".dropbtn2").addEventListener("click", showList2);
+
+        function showList2() {
+            console.log("submenu");
+            document.querySelector(".myDropdown2").classList.toggle("hidden");
+
+        }
+
+        document.querySelector(".dropbtn3").addEventListener("click", showList3);
+
+        function showList3() {
+            console.log("dropbtn3");
+            document.querySelector(".myDropdown3").classList.toggle("hidden");
+        }
+    </script>
+</body></html>

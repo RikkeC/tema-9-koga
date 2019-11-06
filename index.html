@@ -14,7 +14,7 @@
             <a href="index.html"><img src="logo_sketch.svg" alt="logo"></a>
         </div>
         <nav id="menu_container">
-            <div id="menuknap">☰</div>
+            <button id="menuknap">☰</button>
             <ul id="menu" class="hidden">
                 <a href="om.html">Om</a>
                 <div class="dropdown">
@@ -31,7 +31,7 @@
         </nav>
     </header>
 
-    <section id="slideshow">
+    <!--  <section id="slideshow">
         <h1>Velkommen til Koga Center</h1>
         <div> <img src="" alt=""></div>
         <div> <img src="" alt=""></div>
@@ -41,12 +41,38 @@
         <h2>Title</h2>
         <div><img src="" alt=""></div>
 
-    </section>
+    </section>-->
+    <main class="liste">
+        <h2></h2>
+    </main>
 
-    <footer>
+    <template>
+        <h2 class="title"></h2>
+    </template>
 
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <script>
+        let content;
+        let url = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/pages";
+        document.addEventListener("DOMContentLoaded", start);
 
-</html>
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            content = await response.json();
+            vis();
+        }
+
+        function vis() {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".liste");
+            content.forEach(item => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector(".title").textContent = item.content.rendered;
+                liste.appendChild(klon);
+            });
+        }
+    </script>
+</body></html>
