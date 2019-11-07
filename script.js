@@ -1,29 +1,31 @@
-window.addEventListener("load", sidenVises);
+window.addEventListener("DOMContentLoaded", sidenVises);
 
 
 function sidenVises() {
     console.log("sidenVises");
+    hentHeader();
 
-    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
 
-
-function toggleMenu() {
-    console.log("toggleMenu");
-    document.querySelector("#menu").classList.toggle("hidden");
-
-    let erSkjult =
-        document.querySelector("#menu").classList.contains("hidden");
-
-    if (erSkjult == true) {
-        document.querySelector("#menuknap").textContent = "☰";
-    } else {
-        document.querySelector("#menuknap").textContent = "X";
-    }
+async function hentHeader() {
+    const headerMenu = await fetch("inc/header.html");
+    const including = await headerMenu.text();
+    document.querySelector("header").innerHTML = including;
+    console.log(headerMenu);
+    document.querySelector(".dropbtn").addEventListener("click", () => {
+        showList();
+        animationBurger();
+    });
 }
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function animationBurger() {
+    document.querySelector(".dropbtn").classList.toggle("change");
+}
+
+function showList() {
+    console.log("hello");
+    document.querySelector(".menu").classList.toggle("hidden");
+    document.querySelector("header").classList.toggle("header_stor");
 }
 
 
