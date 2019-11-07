@@ -667,13 +667,15 @@ footer img {
     margin: 10px;
 }
 
-.main_text {
+.main_text,
+.tilbage {
     border: #4b8ce5 3px solid;
     background-color: transparent;
     margin-top: 30px;
     padding: 15px;
 }
 
+.tilbage,
 .main_text:hover {
     background-color: #4b8ce5;
     color: white;
