@@ -63,6 +63,7 @@
         function start() {
             hentJson();
             hentHeader();
+            hentFooter();
             document.querySelector(".prev").addEventListener("click", clickPrev);
             document.querySelector(".next").addEventListener("click", clickNext);
 
@@ -96,6 +97,12 @@
                 animationBurger();
             });
 
+        }
+        async function hentFooter() {
+            const footer = await fetch("inc/footer.html");
+            const including = await footer.text();
+            document.querySelector("footer").innerHTML = including;
+            console.log(footer);
         }
 
         function visEnCykel() {
