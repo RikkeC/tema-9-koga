@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -11,187 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
 
     <meta name="om koga" content="information om koga og kogacenters historie og filosofi">
-
-    <style>
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #337CBE;
-            font-weight: bold;
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        .side {
-            margin: 0 5vw;
-            padding: 5vw 0;
-            display: grid;
-            grid-gap: 0.5rem;
-            grid-template-areas:
-                "kogacenter_overskrift"
-                "kogacenter_img"
-                "kogacenter_txt"
-                "historie_overskrift"
-                "historie_img"
-                "historie_txt"
-                "historie_txt_2"
-                "filosofi_overskrift"
-                "filosofi_txt"
-                "filosofi_img"
-                "filosofi_txt_2";
-        }
-
-        .overskrift {
-            margin: 2vw 5vw;
-        }
-
-        .side figure {
-            margin: 0;
-            padding: 0;
-        }
-
-        .side img {
-            max-width: 80vw;
-            margin: 0;
-        }
-
-        .side .historie_overskrift {
-            grid-area: historie_overskrift;
-        }
-
-        .side .historie_img {
-            grid-area: historie_img;
-            margin: 0 0 0 2vw;
-        }
-
-        .side .historie_txt {
-            grid-area: historie_txt;
-        }
-
-        .side .historie_txt_2 {
-            grid-area: historie_txt_2;
-            margin: 0 0 5vw 0;
-        }
-
-        .side .filosofi_overskrift {
-            grid-area: filosofi_overskrift;
-        }
-
-        .side .filosofi_txt {
-            grid-area: filosofi_txt;
-        }
-
-        .side .filosofi_txt_2 {
-            grid-area: filosofi_txt_2;
-        }
-
-        .side .filosofi_img {
-            grid-area: filosofi_img;
-        }
-
-        .side .kogacenter_overskrift {
-            grid-area: kogacenter_overskrift;
-            margin: 0 0 1vw 0;
-        }
-
-        .side .kogacenter_txt {
-            grid-area: kogacenter_txt;
-            margin: 0 0 5vw 0;
-        }
-
-        .side .kogacenter_img {
-            grid-area: kogacenter_img;
-        }
-
-
-        @media screen and (min-width: 1000px) {
-
-            .overskrift {
-                margin: 2vw 15vw;
-            }
-
-            .side img {
-                max-width: 35vw;
-            }
-
-            .side {
-                width: 75vw;
-                margin: 0 auto;
-                grid-gap: 1rem;
-                grid-template-areas:
-                    ". kogacenter_overskrift"
-                    "kogacenter_img kogacenter_txt"
-                    "historie_overskrift historie_overskrift"
-                    "historie_txt historie_img"
-                    "historie_txt_2 historie_txt_2"
-                    "filosofi_overskrift filosofi_overskrift"
-                    "filosofi_txt filosofi_img"
-                    "filosofi_txt_2 filosofi_txt_2";
-            }
-
-            .side .kogacenter_overskrift {
-
-                margin: 0;
-            }
-
-            .side .historie_img,
-            .side .filosofi_img {
-                margin: 0 0 0 2vw;
-            }
-
-        }
-    </style>
 </head>
 
 <body>
-    <!--<header id="side_menu">
-        <div id="logo">
-            <a href="index.html"><img src="logo_sketch.svg" alt="logo"></a>
-        </div>
-        <nav id="menu_container">
-            <div id="menuknap">☰</div>
-            <ul id="menu" class="hidden">
-                <a href="om.html">Om</a>
-                <a href="cykler.html">Koga cykler</a>
-                <a href="kontakt.html">Kontakt</a>
-            </ul>
-        </nav>
-    </header>
-    <h1>Om Koga København </h1>
-    <section>
-        <div>
-            <div class="title">
-                <h2>Title</h2>
-                <div> lorem ipsum </div>
-            </div>
-            <div class="billede"><img src="" alt=""></div>
-        </div>
-    </section>
-    <section>
-        <div>
-            <div class="title">
-                <h2>Title</h2>
-                <div> lorem ipsum </div>
-            </div>
-            <div class="billede"><img src="" alt=""></div>
-        </div>
-    </section>
-    <section>
-        <div>
-            <div class="title">
-                <h2>Title</h2>
-                <div> lorem ipsum </div>
-            </div>
-            <div class="billede"><img src="" alt=""></div>
-        </div>
-    </section>-->
-
-    <nav></nav>
+    <header></header>
 
     <main>
         <section class="indhold">
@@ -200,26 +23,7 @@
 
     </main>
 
-    <!--<template>
-        <article class="omkoga">
-            <h2 class="kogacenter"></h2>
-            <p class="kogacenter_txt"></p>
-            <img class="kogacenter_img">
-
-            <h2 class="historie"></h2>
-            <p class="historie_txt"></p>
-            <img class="historie_img">
-
-            <h2 class="filosofi"></h2>
-            <p class="filosofi_txt"></p>
-            <img class="filosofi_img">
-        </article>
-    </template>-->
-
-
     <footer></footer>
-
-
 
     <script>
         const url = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/pages/60";
@@ -229,6 +33,7 @@
 
         function start() {
             hentJson();
+            hentHeader();
         }
 
         async function hentJson() {
@@ -239,8 +44,29 @@
             visData();
         }
 
+        async function hentHeader() {
+            const headerMenu = await fetch("inc/header.html");
+            const including = await headerMenu.text();
+            document.querySelector("header").innerHTML = including;
+            console.log(headerMenu);
+            document.querySelector(".dropbtn").addEventListener("click", () => {
+                showList();
+                animationBurger();
+            });
+        }
+
         function visData() {
             document.querySelector(".side").innerHTML = side.content.rendered;
+        }
+
+        function animationBurger() {
+            document.querySelector(".dropbtn").classList.toggle("change");
+        }
+
+        function showList() {
+            console.log("hello");
+            document.querySelector(".menu").classList.toggle("hidden");
+            document.querySelector("header").classList.toggle("header_stor");
         }
     </script>
 </body>

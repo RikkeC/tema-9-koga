@@ -1,3 +1,5 @@
+/*generelle*/
+
 body {
     margin: 0;
     padding: 0;
@@ -11,87 +13,197 @@ h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
-/*burger menu og desktop menu*/
+/*header*/
 
-#side_menu {
-    color: #f1f1f1;
+header {
     display: flex;
-    flex-wrap: wrap;
-    background-color: #282828;
+    background-image: url("header_img/baggrund_mereopacity.png");
+    margin: 0 auto;
+    height: 4rem;
     width: 100%;
-    z-index: 2;
-    justify-content: space-around;
+    position: fixed;
+}
+
+.header_stor {
+    height: 15rem;
+}
+
+.logo {
+    background-image: url(header_img/logo_koga.png);
+    height: 27px;
+    width: 200px;
+    background-size: 100%;
+    margin: 4vw;
+}
+
+.logo_link {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2vw 5vw;
+    position: absolute;
+    right: 0;
+    top: 4rem;
+}
+
+.dropbtn {
+    background-color: transparent;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+header a {
+    font-family: 'Montserrat', sans-serif;
+    color: #337cbe;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: right;
+    padding: 2vw;
+}
+
+.show {
+    display: inline-block;
 }
 
 .hidden {
-    transform: translateX(-100%);
+    padding: 0;
+    display: none;
+}
+
+/* animated burger icon i header */
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #337cbe;
+    margin: 6px 0;
+    transition: 0.5s ease;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
     opacity: 0;
 }
 
-#menuknap {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    align-content: flex-end;
-    color: white;
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
-#menu {
-    list-style-type: none;
-    transition: transform .3s;
-    transform-origin: top left;
+/*Om*/
+
+.side h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #337CBE;
+    font-weight: bold;
+    margin: 0;
+    font-size: 2rem;
 }
 
-/* visited link */
-#side_menu header nav a:visited {
-    color: #ffffff;
+.side p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    margin: 0;
 }
 
-/* mouse over link */
-#side_menu header nav a:hover {
-    color: #070505;
+.side {
+    margin: 0 5vw;
+    padding: 5rem 0;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "kogacenter_overskrift"
+        "kogacenter_img"
+        "kogacenter_txt"
+        "historie_overskrift"
+        "historie_img"
+        "historie_txt"
+        "historie_txt_2"
+        "filosofi_overskrift"
+        "filosofi_txt"
+        "filosofi_img"
+        "filosofi_txt_2";
 }
 
-/* selected link */
-#side_menu header nav a:active {
-    color: #000000;
+.overskrift {
+    margin: 2vw 5vw;
 }
 
-#side_menu header nav {
-    display: flex;
-    margin: 1rem 1.5rem;
-    justify-content: center;
+.side figure {
+    margin: 0;
+    padding: 0;
 }
 
-#side_menu header nav a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin: 0 0.2rem;
-    padding: 0 1rem 0 0;
-    /*border-right: 1px solid black;*/
+.side img {
+    max-width: 80vw;
+    margin: 0;
 }
 
-#side_menu #menuknap {
-    position: absolute;
-    left: 85vw;
+.side .historie_overskrift {
+    grid-area: historie_overskrift;
 }
 
-@media only screen and (min-width: 1000px) {
-    #menuknap {
-        display: none;
-    }
-
-    #menu.hidden {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    #menu li {
-        display: inline-block;
-    }
+.side .historie_img {
+    grid-area: historie_img;
+    margin: 0 0 0 2vw;
 }
 
-/*menu færdig*/
+.side .historie_txt {
+    grid-area: historie_txt;
+}
+
+.side .historie_txt_2 {
+    grid-area: historie_txt_2;
+    margin: 0 0 5vw 0;
+}
+
+.side .filosofi_overskrift {
+    grid-area: filosofi_overskrift;
+}
+
+.side .filosofi_txt {
+    grid-area: filosofi_txt;
+}
+
+.side .filosofi_txt_2 {
+    grid-area: filosofi_txt_2;
+}
+
+.side .filosofi_img {
+    grid-area: filosofi_img;
+}
+
+.side .kogacenter_overskrift {
+    grid-area: kogacenter_overskrift;
+    margin: 0 0 1vw 0;
+}
+
+.side .kogacenter_txt {
+    grid-area: kogacenter_txt;
+    margin: 0 0 5vw 0;
+}
+
+.side .kogacenter_img {
+    grid-area: kogacenter_img;
+}
 
 
 
@@ -231,7 +343,50 @@ h3 {
     height: 100%;
 }
 
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-image: url(header_img/baggrund.jpg);
+    background-size: 100%;
+    padding: 2vw;
+}
+
+/*header_footer.html */
+
+.footer_image {
+    width: 40px;
+}
+
+/*media queries*/
+
+@media screen and (min-width: 800px) {
+
+    /*header*/
+    .logo {
+        margin: 1.5vw;
+    }
+
+    .dropbtn {
+        visibility: hidden;
+    }
+
+    .menu {
+        display: block;
+        height: auto;
+        width: auto;
+        position: absolute;
+        top: 0;
+        padding: 2vw;
+        background: none;
+    }
+}
+
 @media only screen and (max-width: 820px) {
+
+    /*kontaktsiden*/
     #info {
         margin: 0;
         padding: 0;
@@ -255,11 +410,41 @@ h3 {
 
 }
 
-#footer {
-    background-color: mediumpurple;
-    bottom: 0;
-    display: flex;
-    width: 100%;
-}
+@media screen and (min-width: 1000px) {
 
-/*kontakt slut*/
+    /*om*/
+
+    .overskrift {
+        margin: 2vw 15vw;
+    }
+
+    .side img {
+        max-width: 35vw;
+    }
+
+    .side {
+        width: 75vw;
+        margin: 0 auto;
+        grid-gap: 1rem;
+        grid-template-areas:
+            ". kogacenter_overskrift"
+            "kogacenter_img kogacenter_txt"
+            "historie_overskrift historie_overskrift"
+            "historie_txt historie_img"
+            "historie_txt_2 historie_txt_2"
+            "filosofi_overskrift filosofi_overskrift"
+            "filosofi_txt filosofi_img"
+            "filosofi_txt_2 filosofi_txt_2";
+    }
+
+    .side .kogacenter_overskrift {
+
+        margin: 0;
+    }
+
+    .side .historie_img,
+    .side .filosofi_img {
+        margin: 0 0 0 2vw;
+    }
+
+}
