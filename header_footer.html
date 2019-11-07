@@ -68,6 +68,7 @@
         }
 
         .hidden {
+            padding: 0;
             display: none;
         }
 
@@ -139,26 +140,14 @@
             display: flex;
         }
 
-        /*Splash section  */
-        /*to make the image responsive*/
-        .splash_image {
-            width: 100%;
-            height: auto;
+        /*footer*/
+        footer {
+            display: flex;
+            justify-content: space-around
         }
 
         .footer_image {
-            width: 50px;
-            height: auto;
-        }
-
-        footer {
-            display: flex;
-            justify-content: space-around;
-            margin: 0 auto;
-        }
-
-        .myDropdown {
-            50vw;
+            width: 40px;
         }
     </style>
 </head>
@@ -196,9 +185,7 @@
         </div>
     </header>
 
-    <section class="splash">
-        <img class="splash_image" src="images/Edinburgh-Mark_beaumont.jpg" alt="">
-    </section>
+
     <footer>
         <div>Vores adresse:
             <br> Peter Bangsvej 18
@@ -227,13 +214,11 @@
             document.querySelector(".myDropdown").classList.toggle("hidden");
         }
 
-
         document.querySelector(".dropbtn2").addEventListener("click", showList2);
 
         function showList2() {
             console.log("submenu");
             document.querySelector(".myDropdown2").classList.toggle("hidden");
-
         }
 
         document.querySelector(".dropbtn3").addEventListener("click", showList3);
