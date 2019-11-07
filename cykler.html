@@ -5,7 +5,187 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <!--    <link rel="stylesheet" href="style.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h3,
+        h4 {
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        img {
+            max-width: 200px;
+        }
+
+        /*cykler.html----TOP----*/
+        header {
+            background-image: url(assets/bg_header_opacity.jpg);
+            background-size: 100%;
+            height: 60px;
+            width: 100%;
+            text-align: right;
+            top: 0;
+            position: fixed;
+        }
+
+        nav a {
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+            padding: 2em 2em 0 2em;
+            color: blue;
+        }
+
+        .logo {
+            background-image: url(assets/koga_owler_20160228_050919_original.svg);
+            background-size: 100%;
+            height: 27px;
+            width: 200px;
+        }
+
+        /*cykler.html----BODY----*/
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            margin: 2em 0 3em 0;
+        }
+
+        main {
+            margin: 6em 0 1em 1em;
+        }
+
+        article {
+            padding-right: 1rem;
+        }
+
+        .overskrift {
+            text-align: center;
+        }
+
+        .encykel {
+            margin: 0.8em 1em;
+        }
+
+        .navn,
+        .pris {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .label {
+            cursor: pointer;
+            background-color: #337CBE;
+            padding: 0.5em;
+            max-height: 10vh;
+        }
+
+        .vandret {
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+        }
+
+        /*cykler.html----BOTTOM----*/
+        footer {
+            background-image: url(assets/asphalt-background-1.jpg);
+            background-size: 100%;
+            width: 100%;
+        }
+
+        #footerinfo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            padding: 0.5em;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+
+        }
+
+        .facebook {
+            cursor: pointer;
+            background-image: url(assets/facebook-circular-logo.svg);
+            background-size: 100%;
+        }
+
+        .twitter {
+            cursor: pointer;
+            background-image: url(assets/twitter-black-shape.svg);
+            background-size: 100%;
+        }
+
+        .some {
+            grid-column: 2;
+            grid-row: 1;
+            /*grid i grid*/
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1.5em;
+            padding: 0.5em 0 0;
+        }
+
+        .adresse {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .aabningstider {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .kontaktinfo {
+            grid-row: 2;
+            grid-column: 3;
+        }
+
+        @media (max-width: 350px) {
+            .overskrift {
+                font-size: 2rem;
+            }
+
+            a,
+            p,
+            h4 {
+                font-size: 1rem;
+            }
+
+            .kontaktinfo {
+                word-break: break-all;
+            }
+
+            .facebook,
+            .twitter {
+                height: 30px;
+                width: 30px;
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
@@ -24,58 +204,206 @@
     </header>
     <h1>Vores cykler</h1>
 
-    <!--  skal vi have multiple templates for hver kategori? -->
+    <header></header>
+
+    <!--vis alle en LISTE af kategorier  -->
+    <main>
+        <h1 class="overskrift"></h1>
+        <section class="citycykler">
+            <h2>By Cykler</h2>
+            <article class="cityside vandret">
+            </article>
+        </section>
+        <section class="racercykler">
+            <h2>Racer Cykler</h2>
+            <article class="racerside vandret">
+            </article>
+        </section>
+        <section class="trekcykler">
+            <h2>Trekking Cykler</h2>
+            <article class="trekside vandret">
+            </article>
+        </section>
+        <section class="elcykler">
+            <h2>El-cykler</h2>
+            <article class="elside vandret">
+            </article>
+        </section>
+    </main>
+
+    <!--  hvordan en cykel ser ud i listen -->
     <template>
-        <div class="kategori">
-            <img src="" alt="">
-            <p class="titel"></p>
-            <p class="pris"></p>
-            <p class="oprindelse"></p>
-        </div>
+        <article class="encykel">
+            <img class="thumbnail" src="" alt="">
+            <div class="label">
+                <h3 class="navn"></h3>
+                <p class="pris"></p>
+            </div>
+        </article>
     </template>
-    <!--
-    <section>
-        <div>
-            <div>
-                <h2>Kategori</h2>
+
+    <footer>
+        <div id="footerinfo">
+            <div class="some">
+                <div class="facebook"><a href="https://www.facebook.com/kogacenter"></a></div>
+                <div class="twitter"><a href="https://twitter.com/Kogacenter"></a></div>
             </div>
-            <div>
-                <div><img src="" alt=""></div>
-                <div>
-                    <p>titel</p>
-                </div>
-                <div>
-                    <p>pris</p>
-                </div>
+
+            <div class="adresse">
+                <h4>Adresse</h4>
+                <p>Peter Bangsvej 18 <br> 2000 Fredeiksberg</p>
             </div>
-            <div>
-                <div><img src="" alt=""></div>
-                <div>
-                    <p>titel</p>
-                </div>
-                <div>
-                    <p>pris</p>
-                </div>
+            <div class="aabningstider">
+                <h4>Åbningstider</h4>
+                <p>Man - Fre: 11.00 - 18.00<br> Lør: 9.00 - 14.00</p>
             </div>
-            <div>
-                <div><img src="" alt=""></div>
-                <div>
-                    <p>titel</p>
-                </div>
-                <div>
-                    <p>pris</p>
-                </div>
+            <div class="kontaktinfo">
+                <h4>Kontakt os</h4>
+                <p>Tlf.: +45 38 86 43 25<br>Email: info@kogacenter.dk</p>
             </div>
         </div>
-    </section>
--->
 
+    </footer>
 
+    <script>
+        const stiltilHeaderHtml = "inc/header.html";
+        const urlOverskrift = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/pages/74";
+        const urlCityCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=3";
+        const urlElCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=2";
+        const urlRacerCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=4";
+        const urlTrekCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=5";
 
+        let loadIterator = 0;
+        let filtre;
 
-    <footer></footer>
+        const loadArray = [{
+            theUrl: stiltilHeaderHtml,
+            theFunction: visMenu,
+            contentType: "text"
+        }, {
+            theUrl: urlOverskrift,
+            theFunction: visOverskrift,
+            contentType: "json"
+        }, {
+            theUrl: urlCityCykler,
+            theFunction: visCityCykler,
+            contentType: "json"
+        }, {
+            theUrl: urlElCykler,
+            theFunction: visElCykler,
+            contentType: "json"
+        }, {
+            theUrl: urlRacerCykler,
+            theFunction: visRacerCykler,
+            contentType: "json"
+        }, {
+            theUrl: urlTrekCykler,
+            theFunction: visTrekCykler,
+            contentType: "json"
+        }];
 
-    <script src="script.js"></script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            loadTheContentArray(loadArray[loadIterator]);
+        }
+
+        async function loadTheContentArray(contentToLoad) {
+            let jsonData = await fetch(contentToLoad.theUrl);
+            let indhold;
+            if (contentToLoad.contentType == "json") {
+                indhold = await jsonData.json();
+            } else {
+                indhold = await jsonData.text();
+            }
+            contentToLoad.theFunction(indhold);
+            loadIterator++;
+            if (loadIterator < loadArray.length) {
+                loadTheContentArray(loadArray[loadIterator]);
+            }
+        }
+
+        function visMenu(indhold) {
+            document.querySelector("header").innerHTML = indhold;
+        }
+
+        function visOverskrift(indhold) {
+            document.querySelector(".overskrift").textContent = indhold.title.rendered;
+        }
+
+        function visCityCykler(indhold) {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".cityside");
+
+            indhold.forEach(cykel => {
+                console.log(cykel);
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+                klon.querySelector(".navn").textContent = cykel.title.rendered;
+                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+
+                liste.appendChild(klon);
+                liste.lastElementChild.addEventListener("click", () => {
+                    location.href = "singleView.html?id=" + cykel.id;
+                });
+            })
+        }
+
+        function visElCykler(indhold) {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".elside");
+
+            indhold.forEach(cykel => {
+                console.log(cykel);
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+                klon.querySelector(".navn").textContent = cykel.title.rendered;
+                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+
+                liste.appendChild(klon);
+                liste.lastElementChild.addEventListener("click", () => {
+                    location.href = "singleView.html?id=" + cykel.id;
+                });
+            })
+        }
+
+        function visRacerCykler(indhold) {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".racerside");
+
+            indhold.forEach(cykel => {
+                console.log(cykel);
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+                klon.querySelector(".navn").textContent = cykel.title.rendered;
+                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+
+                liste.appendChild(klon);
+                liste.lastElementChild.addEventListener("click", () => {
+                    location.href = "singleView.html?id=" + cykel.id;
+                });
+            })
+        }
+
+        function visTrekCykler(indhold) {
+            const skabelon = document.querySelector("template");
+            const liste = document.querySelector(".trekside");
+
+            indhold.forEach(cykel => {
+                console.log(cykel);
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+                klon.querySelector(".navn").textContent = cykel.title.rendered;
+                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+
+                liste.appendChild(klon);
+                liste.lastElementChild.addEventListener("click", () => {
+                    location.href = "singleView.html?id=" + cykel.id;
+                });
+            })
+        }
+
+    </script>
 </body>
 
 </html>
