@@ -144,7 +144,12 @@ article {
     margin: 0.8em 1em;
 }
 
-.navn,
+.navn {
+    color: black;
+    font-size: 2rem;
+}
+
+.encykel .navn,
 .pris {
     color: white;
     font-size: 1rem;
@@ -276,6 +281,7 @@ article {
 
 .tilbage {
     position: fixed;
+    top: 7vh;
     left: 0;
     font-size: 1rem;
     z-index: 5;
