@@ -66,6 +66,7 @@
 
         .side .historie_img {
             grid-area: historie_img;
+            margin: 0 0 0 2vw;
         }
 
         .side .historie_txt {
@@ -121,9 +122,9 @@
             .side {
                 width: 75vw;
                 margin: 0 auto;
-                grid-area: 2rem;
+                grid-gap: 1rem;
                 grid-template-areas:
-                    "kogacenter_overskrift kogacenter_overskrift"
+                    ". kogacenter_overskrift"
                     "kogacenter_img kogacenter_txt"
                     "historie_overskrift historie_overskrift"
                     "historie_txt historie_img"
@@ -133,11 +134,17 @@
                     "filosofi_txt_2 filosofi_txt_2";
             }
 
-            .kogacenter_overskrift {
-                text-align: center;
-            }
-        }
+            .side .kogacenter_overskrift {
 
+                margin: 0;
+            }
+
+            .side .historie_img,
+            .side .filosofi_img {
+                margin: 0 0 0 2vw;
+            }
+
+        }
     </style>
 </head>
 
@@ -235,7 +242,6 @@
         function visData() {
             document.querySelector(".side").innerHTML = side.content.rendered;
         }
-
     </script>
 </body>
 
