@@ -7,122 +7,6 @@
     <title></title>
 
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        * {
-            margin: 0 auto;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            overflow-x: hidden;
-        }
-
-        p,
-        pre {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        h3,
-        h4 {
-            font-weight: 700;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        h1,
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        /*cykler.html----TOP----*/
-        #encykel {
-            /*
-            width: 70vw;
-            min-height: 50vh;
-*/
-            margin: 4em 1em;
-            padding: 1em;
-        }
-
-        .teknist_tekst {
-            word-break: break-all;
-        }
-
-        .tilbage {
-            position: fixed;
-            left: 0;
-            font-size: 1rem;
-        }
-
-        .galleri_container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-
-        /*
-        .slide {
-        display: none;
-        }
-*/
-
-        .slide img {
-            width: 100%;
-        }
-
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: black;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        /* Position the "next button" to the right */
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .active {
-            background-color: #717171;
-        }
-
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
@@ -182,9 +66,8 @@
             document.querySelector(".prev").addEventListener("click", clickPrev);
             document.querySelector(".next").addEventListener("click", clickNext);
 
+        };
 
-
-        }
 
         //        function visGalleri(n) {
         // console.log(visGalleri);
@@ -204,10 +87,14 @@
             visEnCykel();
         }
         async function hentHeader() {
-            const response = await fetch("inc/header.html");
-            const inclusion = await response.text();
-            document.querySelector("header").innerHTML = inclusion;
-            console.log(inclusion);
+            const headerMenu = await fetch("inc/header.html");
+            const including = await headerMenu.text();
+            document.querySelector("header").innerHTML = including;
+            console.log(headerMenu);
+            document.querySelector(".dropbtn").addEventListener("click", () => {
+                showList();
+                animationBurger();
+            });
 
         }
 
@@ -253,7 +140,14 @@
 
         }
 
-    </script>
-</body>
+        function animationBurger() {
+            document.querySelector(".dropbtn").classList.toggle("change");
+        }
 
-</html>
+        function showList() {
+            console.log("hello");
+            document.querySelector(".menu").classList.toggle("hidden");
+            document.querySelector("header").classList.toggle("header_stor");
+        }
+    </script>
+</body></html>

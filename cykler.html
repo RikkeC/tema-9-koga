@@ -6,145 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alle Cykler</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Open+Sans:400,700,800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0 auto;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        html {
-            overflow-x: hidden;
-        }
-
-        p {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        h3,
-        h4 {
-            font-weight: 700;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        h1,
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        img {
-            max-width: 200px;
-        }
-
-        /*cykler.html----TOP----*/
-        header {
-            background-image: url(assets/bg_header_opacity.jpg);
-            background-size: 100%;
-            height: 60px;
-            width: 100%;
-            text-align: right;
-            top: 0;
-            position: fixed;
-        }
-
-        nav a {
-            font-family: 'Open Sans', sans-serif;
-            text-decoration: none;
-            padding: 2em 2em 0 2em;
-            color: blue;
-        }
-
-        .logo {
-            background-image: url(assets/koga_owler_20160228_050919_original.svg);
-            background-size: 100%;
-            height: 27px;
-            width: 200px;
-        }
-
-        /*cykler.html----BODY----*/
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        section {
-            margin: 2em 0 3em 0;
-        }
-
-        main {
-            margin: 6em 0 1em 1em;
-        }
-
-        article {
-            padding-right: 1rem;
-        }
-
-        .overskrift {
-            text-align: center;
-        }
-
-        .encykel {
-            margin: 0.8em 1em;
-        }
-
-        .navn,
-        .pris {
-            color: white;
-            font-size: 1rem;
-        }
-
-        .label {
-            cursor: pointer;
-            background-color: #337CBE;
-            padding: 0.5em;
-            max-height: 10vh;
-        }
-
-        .vandret {
-            display: flex;
-            flex-direction: row;
-            overflow-x: scroll;
-        }
-    </style>
 </head>
 
 <body>
     <header></header>
 
     <!--vis alle en LISTE af kategorier  -->
-    <main>
-        <h1 class="overskrift"></h1>
-        <section class="citycykler">
-            <h2>By Cykler</h2>
-            <article class="cityside vandret">
-            </article>
-        </section>
-        <section class="racercykler">
-            <h2>Racer Cykler</h2>
-            <article class="racerside vandret">
-            </article>
-        </section>
-        <section class="trekcykler">
-            <h2>Trekking Cykler</h2>
-            <article class="trekside vandret">
-            </article>
-        </section>
-        <section class="elcykler">
-            <h2>El-cykler</h2>
-            <article class="elside vandret">
-            </article>
-        </section>
-    </main>
+    <section id="cykler">
+        <main>
 
-    <!--  hvordan en cykel ser ud i listen -->
-    <template>
-        <article class="encykel">
-            <img class="thumbnail" src="" alt="">
-            <div class="label">
-                <h3 class="navn"></h3>
-                <p class="pris"></p>
-            </div>
-        </article>
-    </template>
+            <h1 class="overskrift"></h1>
+            <section class="citycykler">
+                <h2>By Cykler</h2>
+                <article class="cityside vandret">
+                </article>
+            </section>
+            <section class="racercykler">
+                <h2>Racer Cykler</h2>
+                <article class="racerside vandret">
+                </article>
+            </section>
+            <section class="trekcykler">
+                <h2>Trekking Cykler</h2>
+                <article class="trekside vandret">
+                </article>
+            </section>
+            <section class="elcykler">
+                <h2>El-cykler</h2>
+                <article class="elside vandret">
+                </article>
+            </section>
+        </main>
+
+        <!--  hvordan en cykel ser ud i listen -->
+        <template>
+            <article class="encykel">
+                <img class="thumbnail" src="" alt="">
+                <div class="label">
+                    <h3 class="navn"></h3>
+                    <p class="pris"></p>
+                </div>
+            </article>
+        </template>
+    </section>
 
     <footer>
     </footer>
@@ -190,7 +96,20 @@
 
         function start() {
             loadTheContentArray(loadArray[loadIterator]);
+            hentHeader();
+
         }
+        async function hentHeader() {
+            const headerMenu = await fetch("inc/header.html");
+            const including = await headerMenu.text();
+            document.querySelector("header").innerHTML = including;
+            console.log(headerMenu);
+            document.querySelector(".dropbtn").addEventListener("click", () => {
+                showList();
+                animationBurger();
+            });
+        }
+
 
         async function loadTheContentArray(contentToLoad) {
             let jsonData = await fetch(contentToLoad.theUrl);
@@ -285,6 +204,16 @@
                     location.href = "singleView.html?id=" + cykel.id;
                 });
             })
+        }
+
+        function animationBurger() {
+            document.querySelector(".dropbtn").classList.toggle("change");
+        }
+
+        function showList() {
+            console.log("hello");
+            document.querySelector(".menu").classList.toggle("hidden");
+            document.querySelector("header").classList.toggle("header_stor");
         }
     </script>
 </body></html>
