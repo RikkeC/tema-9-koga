@@ -595,6 +595,8 @@ footer img {
 
 }
 
+
+
 @media screen and (min-width: 1000px) {
 
     /*om*/
@@ -631,5 +633,59 @@ footer img {
     .side .filosofi_img {
         margin: 0 0 0 2vw;
     }
+
+}
+
+/*Forside*/
+.splash_img,
+.main_image {
+    width: 100%;
+    height: auto;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.main_text {
+    border: #4b8ce5 3px solid;
+    background-color: transparent;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.main_text:hover {
+    background-color: #4b8ce5;
+    color: white;
+
+}
+
+.main_text a:hover {
+    color: white;
+}
+
+.main_text a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #4b8ce5;
+}
+
+.splash_container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.splash_text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    width: 80vw;
+
 
 }
