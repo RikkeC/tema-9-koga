@@ -16,14 +16,16 @@
             display: flex;
             flex-direction: column;
             margin: 0 auto;
-            background-color: antiquewhite;
-            position: relative;
         }
 
         .myDropdown {
-            width: 35vw;
+            width: 50vw;
             height: 50vw;
-            padding: 2vw;
+            padding: 2vw 5vw;
+            position: absolute;
+            right: 0;
+            top: 5rem;
+            background-color: antiquewhite;
         }
 
         .dropbtn {
@@ -32,14 +34,8 @@
             border: none;
             cursor: pointer;
             display: inline-block;
-        }
-
-        .dropbtn2 {
-            text-align: right;
-        }
-
-        .dropdown {
-            width: 2vw;
+            position: absolute;
+            right: 0;
         }
 
         .dropdowncontent {
@@ -56,6 +52,7 @@
             display: inline-block;
             cursor: pointer;
             padding: 0;
+            text-align: right;
         }
 
         .dropdowncontent a {
@@ -68,11 +65,15 @@
         .dropbtn2,
         .dropbtn3 {
             font: 16px Times New Roman;
+            color: #337cbe;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         a {
-            color: black;
             text-decoration: none;
+            text-align: right;
+            padding: 2vw;
         }
 
         .show {
@@ -105,7 +106,7 @@
         }
 
         .subnavcontent a {
-            float: left;
+            float: right;
             text-decoration: none;
         }
 
@@ -116,7 +117,7 @@
         .bar3 {
             width: 35px;
             height: 5px;
-            background-color: #0101e2;
+            background-color: #337cbe;
             margin: 6px 0;
             transition: 0.5s ease;
         }
@@ -136,16 +137,18 @@
         /*header background image*/
         .header_background {
             display: flex;
-            background-image: url("images/opacity_background.jpg");
+            background-image: url("header_img/baggrund_opacity.jpg");
             margin: 0 auto;
             height: 5rem;
             width: 100%;
         }
 
         .logo {
-            display: flex;
-            max-height: 50px;
-            padding-top: 15px;
+            background-image: url(header_img/logo_koga.png);
+            height: 27px;
+            width: 200px;
+            background-size: 100%;
+            margin: 4vw;
         }
 
         nav {
@@ -155,7 +158,7 @@
         /*footer*/
         footer {
             display: flex;
-            justify-content: space-around
+            justify-content: space-around;
         }
 
         /*header_footer.html */
@@ -163,15 +166,35 @@
         .footer_image {
             width: 40px;
         }
+
+        @media screen and (min-width: 800px) {
+            .logo {
+                margin: 2vw;
+            }
+
+            .dropbtn {
+                visibility: hidden;
+            }
+
+            .myDropdown {
+                display: block;
+                height: auto;
+                width: auto;
+                position: absolute;
+                top: 0;
+                padding: 2vw;
+                background: none;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <div class="header_background">
-            <div class="logo"><img src="logo_sketch.svg" alt=""></div>
+            <div class="logo"></div>
             <nav>
-                <div class="dropdown">
+                <div class="dropdown_container">
                     <button class="dropbtn">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
@@ -242,4 +265,6 @@
             document.querySelector(".myDropdown3").classList.toggle("hidden");
         }
     </script>
-</body></html>
+</body>
+
+</html>
