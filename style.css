@@ -278,6 +278,7 @@ article {
     position: fixed;
     left: 0;
     font-size: 1rem;
+    z-index: 5;
 }
 
 .galleri_container {
