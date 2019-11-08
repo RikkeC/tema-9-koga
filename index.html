@@ -16,6 +16,7 @@
     <section class="splash_container">
         <img class="splash_img" src="images/header-comfort.jpg" alt="splash_img">
         <div class="splash_text">Velkommen til Koga Center Copenhagen</div>
+        <a href="#info"><span></span></a>
     </section>
     <div class="main_container">
         <button class="main_text"><a href="cykler.html">SE ALLE CYKLER</a></button>
@@ -25,41 +26,7 @@
 
     <footer>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            hentHeader();
-            hentFooter();
-        }
-        async function hentHeader() {
-            const headerMenu = await fetch("inc/header.html");
-            const including = await headerMenu.text();
-            document.querySelector("header").innerHTML = including;
-            console.log(headerMenu);
-            document.querySelector(".dropbtn").addEventListener("click", () => {
-                showList();
-                animationBurger();
-            });
-        }
-        async function hentFooter() {
-            const footer = await fetch("inc/footer.html");
-            const including = await footer.text();
-            document.querySelector("footer").innerHTML = including;
-            console.log(footer);
-        }
-
-        function animationBurger() {
-            document.querySelector(".dropbtn").classList.toggle("change");
-        }
-
-        function showList() {
-            console.log("hello");
-            document.querySelector(".menu").classList.toggle("hidden");
-            document.querySelector("header").classList.toggle("header_stor");
-        }
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 

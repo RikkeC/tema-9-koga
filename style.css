@@ -117,6 +117,59 @@ header a {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
+/*---------Forside----------*/
+.splash_container {
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 90% 0%;
+}
+
+.splash_container a span {
+    position: absolute;
+    bottom: 2vw;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: -12px;
+    border-left: 2.5px solid #fff;
+    border-bottom: 2.5px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: pil 2s infinite;
+    animation: pil 2s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes pil {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes pil {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    40% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
 
 /*cykler.html----BODY----*/
 
@@ -372,60 +425,6 @@ article {
 
 /*kontakt start*/
 
-#kontakt_splash {
-    background-image: url(header-comfort-AOC.jpg);
-    display: flex;
-    flex-wrap: wrap;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 90vh;
-    background-position: 90% 0%;
-}
-
-#kontakt_splash a span {
-    position: absolute;
-    bottom: 2vw;
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    margin-left: -12px;
-    border-left: 2.5px solid #fff;
-    border-bottom: 2.5px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: pil 2s infinite;
-    animation: pil 2s infinite;
-    box-sizing: border-box;
-}
-
-@-webkit-keyframes pil {
-    0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-    }
-
-    20% {
-        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-    }
-
-    40% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-    }
-}
-
-@keyframes pil {
-    0% {
-        transform: rotate(-45deg) translate(0, 0);
-    }
-
-    20% {
-        transform: rotate(-45deg) translate(-10px, 10px);
-    }
-
-    40% {
-        transform: rotate(-45deg) translate(0, 0);
-    }
-}
 
 #info h1 {
     text-align: center;

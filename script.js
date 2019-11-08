@@ -36,11 +36,11 @@ function showList() {
 }
 
 
-$(function scroll_button() {
+function scroll_button() {
     $('a[href*=#]').on('click', function scroll_button(e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 500, 'linear');
     });
-});
+};
