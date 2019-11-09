@@ -58,12 +58,13 @@
         </template>
     </section>
 
-
     <footer>
     </footer>
 
+    <script src="script.js"></script>
     <script>
         const stiltilHeaderHtml = "inc/header.html";
+        const stiltilFooterHtml = "inc/footer.html";
         const urlOverskrift = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/pages/74";
         const urlCityCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=3";
         const urlElCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=2";
@@ -76,6 +77,10 @@
         const loadArray = [{
             theUrl: stiltilHeaderHtml,
             theFunction: visMenu,
+            contentType: "text"
+        }, {
+            theUrl: stiltilFooterHtml,
+            theFunction: visFooter,
             contentType: "text"
         }, {
             theUrl: urlOverskrift,
@@ -103,19 +108,19 @@
 
         function start() {
             loadTheContentArray(loadArray[loadIterator]);
-            hentHeader();
+            //            hentHeader();
 
         }
-        async function hentHeader() {
-            const headerMenu = await fetch("inc/header.html");
-            const including = await headerMenu.text();
-            document.querySelector("header").innerHTML = including;
-            console.log(headerMenu);
-            document.querySelector(".dropbtn").addEventListener("click", () => {
-                showList();
-                animationBurger();
-            });
-        }
+        //        async function hentHeader() {
+        // const headerMenu = await fetch("inc/header.html");
+        // const including = await headerMenu.text();
+        // document.querySelector("header").innerHTML = including;
+        // console.log(headerMenu);
+        // document.querySelector(".dropbtn").addEventListener("click", () => {
+        // showList();
+        // animationBurger();
+        // });
+        // }
 
 
         async function loadTheContentArray(contentToLoad) {
@@ -135,6 +140,10 @@
 
         function visMenu(indhold) {
             document.querySelector("header").innerHTML = indhold;
+        }
+
+        function visFooter(indhold) {
+            document.querySelector("footer").innerHTML = indhold;
         }
 
         function visOverskrift(indhold) {
@@ -222,8 +231,5 @@
             document.querySelector(".menu").classList.toggle("hidden");
             document.querySelector("header").classList.toggle("header_stor");
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

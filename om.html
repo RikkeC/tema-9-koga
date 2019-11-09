@@ -24,6 +24,8 @@
     </main>
 
     <footer></footer>
+    <!--Hent menuen fra script.js    -->
+    <script src="script.js"></script>
 
     <script>
         const url = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/pages/60";
@@ -33,8 +35,6 @@
 
         function start() {
             hentJson();
-            hentHeader();
-            hentFooter();
         }
 
         async function hentJson() {
@@ -45,36 +45,39 @@
             visData();
         }
 
-        async function hentHeader() {
-            const headerMenu = await fetch("inc/header.html");
-            const including = await headerMenu.text();
-            document.querySelector("header").innerHTML = including;
-            console.log(headerMenu);
-            document.querySelector(".dropbtn").addEventListener("click", () => {
-                showList();
-                animationBurger();
-            });
-        }
-        async function hentFooter() {
-            const footer = await fetch("inc/footer.html");
-            const including = await footer.text();
-            document.querySelector("footer").innerHTML = including;
-            console.log(footer);
-        }
+        //        async function hentHeader() {
+        //            const headerMenu = await fetch("inc/header.html");
+        //            const including = await headerMenu.text();
+        //            document.querySelector("header").innerHTML = including;
+        //            console.log(headerMenu);
+        //            document.querySelector(".dropbtn").addEventListener("click", () => {
+        //                showList();
+        //                animationBurger();
+        //            });
+        //        }
+        //        async function hentFooter() {
+        //            const footer = await fetch("inc/footer.html");
+        //            const including = await footer.text();
+        //            document.querySelector("footer").innerHTML = including;
+        //            console.log(footer);
+        //        }
 
 
         function visData() {
             document.querySelector(".side").innerHTML = side.content.rendered;
         }
 
-        function animationBurger() {
-            document.querySelector(".dropbtn").classList.toggle("change");
-        }
+        //        function animationBurger() {
+        // document.querySelector(".dropbtn").classList.toggle("change");
+        // }
+        //
+        // function showList() {
+        // console.log("hello");
+        // document.querySelector(".menu").classList.toggle("hidden");
+        // document.querySelector("header").classList.toggle("header_stor");
+        // }
 
-        function showList() {
-            console.log("hello");
-            document.querySelector(".menu").classList.toggle("hidden");
-            document.querySelector("header").classList.toggle("header_stor");
-        }
     </script>
-</body></html>
+</body>
+
+</html>
