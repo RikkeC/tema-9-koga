@@ -15,11 +15,15 @@ body {
 }
 
 a,
-p,
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 h1,
 h2,
-h3 {
-    font-family: 'Open Sans', sans-serif;
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*-------------HEADER------------*/
@@ -128,7 +132,7 @@ header a {
 
 .splash_container a span {
     position: absolute;
-    bottom: 2vw;
+    bottom: 3.5vw;
     left: 50%;
     width: 25px;
     height: 25px;
@@ -660,7 +664,7 @@ footer img {
 
 }
 
-/*Forside*/
+/*---------------FORSIDE--------------*/
 .splash_img,
 .main_image {
     width: 100%;
@@ -703,6 +707,10 @@ footer img {
     text-align: center;
     color: white;
     width: 100%;
+}
+
+.splash_text h1 {
+    padding: 0 0 20vw 0;
 }
 
 .splash_text {
