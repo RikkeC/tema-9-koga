@@ -576,8 +576,9 @@ footer {
 #footerinfo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    padding: 0.5em;
+    grid-gap: 4vw;
+    margin: 0 1.5em;
+    padding: 2vw;
 }
 
 footer img {
