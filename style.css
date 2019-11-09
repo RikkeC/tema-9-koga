@@ -37,10 +37,6 @@ h4 {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
-    font-size: 7vw;
-}
-
 /*-------------HEADER------------*/
 
 header {
@@ -259,12 +255,12 @@ header a {
     margin: 2vw 0 3vw 1vw;
 }
 
-.cykler img {
-    max-width: 200px;
-}
-
 #cykellisten .cykler {
     margin: 4.5vw 0 7vw 2vw;
+}
+
+.signcykler {
+    margin: 4.5vw;
 }
 
 main {
@@ -315,7 +311,8 @@ article {
 .box {
     background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
-    margin: 4vw 0 0;
+    box-shadow: 0.8vw 1vw 2vw grey;
+    margin: 4vw;
 }
 
 .textimg {
@@ -327,6 +324,10 @@ article {
 .encykel:hover,
 .box:hover {
     transform: scale(1.1);
+}
+
+.label:hover {
+    background-color: rgb(62, 103, 141);
 }
 
 .stryge_container {
@@ -457,7 +458,7 @@ article {
         "filosofi_txt_2";
 }
 
-.overskrift {
+#omside .overskrift {
     margin: 2vw 5vw;
 }
 
@@ -666,15 +667,21 @@ footer img {
     grid-column: 3;
 }
 
-/*header_footer.html */
-
-.footer_image {
+/*
+header_footer.html .footer_image {
     width: 40px;
 }
+*/
 
-/*media queries*/
+/*--------------MEDIA QUERIES------------*/
 
 @media screen and (min-width: 800px) {
+
+/*
+    cykler.html .thumbnail {
+        max-height: 200px;
+    }
+*/
 
     /*header*/
     .logo {
@@ -700,7 +707,20 @@ footer img {
 
 @media only screen and (max-width: 820px) {
 
-    /*kontaktsiden*/
+    /*cykler.html*/
+    h1 {
+        font-size: 6.5vw;
+    }
+
+    h2 {
+        font-size: 3.5vw;
+    }
+
+    .thumbnail {
+        max-width: 200px;
+    }
+
+    /*kontakt.html*/
     #info {
         margin: 0;
         padding: 0;
@@ -729,10 +749,21 @@ footer img {
 
 
 @media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 3vw;
+    }
 
-    /*om*/
+    h2 {
+        font-size: 2.3vw;
+    }
 
-    .overskrift {
+    .thumbnail {
+        max-width: 1000px;
+    }
+
+    /*om.html*/
+
+    #omside .overskrift {
         margin: 2vw 15vw;
     }
 
