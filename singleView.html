@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title></title>
 
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -110,9 +112,6 @@
             cykler.forEach((cykel) => {
                 if (cykel.id == id) {
                     document.querySelector(".navn").textContent = cykel.navn;
-                    //                    document.querySelector(".billed_1").src = cykel.billed_1.guid;
-                    //                    document.querySelector(".billed_2").src = cykel.billed_2.guid;
-                    //                    document.querySelector(".billed_3").src = cykel.billed_3.guid;
                     document.querySelector(".tekst").textContent = cykel.beskrivelse;
                     document.querySelector(".teknisk_tekst").textContent = cykel.teknisk;
                     //   console.log("Billed array", cykel.billeder);
@@ -156,8 +155,5 @@
             document.querySelector(".menu").classList.toggle("hidden");
             document.querySelector("header").classList.toggle("header_stor");
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

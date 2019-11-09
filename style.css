@@ -1,4 +1,4 @@
-/*generelle*/
+/*-------------generelle------------*/
 * {
     margin: 0 auto;
     padding: 0;
@@ -22,7 +22,7 @@ h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
-/*header*/
+/*-------------HEADER------------*/
 
 header {
     display: flex;
@@ -505,7 +505,7 @@ article {
     height: 100%;
 }
 
-/*footer*/
+/*-----------------FOOTER--------------------*/
 
 footer {
     width: 100%;
@@ -526,13 +526,13 @@ footer img {
 
 .facebook {
     cursor: pointer;
-    background-image: url(assets/facebook-circular-logo.svg);
+    background-image: url(images/facebook-circular-logo.svg);
     background-size: 100%;
 }
 
 .twitter {
     cursor: pointer;
-    background-image: url(assets/twitter-black-shape.svg);
+    background-image: url(images/twitter-black-shape.svg);
     background-size: 100%;
 }
 
