@@ -25,6 +25,11 @@ pre {
     font-family: 'Open Sans', sans-serif;
 }
 
+pre {
+    display: flex;
+    white-space: pre-wrap;
+}
+
 h1,
 h2,
 h3,
@@ -133,6 +138,7 @@ header a {
 .change .bar3 {
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
 
 /*---------------FORSIDE--------------*/
 .splash_img,
@@ -261,10 +267,6 @@ header a {
     margin: 4.5vw 0 7vw 2vw;
 }
 
-.encykel {
-    box-shadow: rgba(0, 0, 0, 1);
-}
-
 main {
     margin: 3em 0 1em 1em;
 }
@@ -363,23 +365,24 @@ article {
     text-align: center;
 }
 
-.teknist_tekst,
+.teknisk_tekst,
 .tekst {
-    word-wrap: break-word;
+    margin: 3.5vw 1vw;
+    padding: 1.5vw;
 }
 
 .tilbage {
     position: fixed;
-    top: 7vh;
+    top: 4.5vh;
     left: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     z-index: 5;
 }
 
 .galleri_container {
     max-width: 1000px;
     position: relative;
-    margin: auto;
+    margin-bottom: 3.5vw;
 }
 
 .slide img {
@@ -418,22 +421,8 @@ article {
     background-color: rgba(136, 136, 136, 0.8);
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
 
-@keyframes fade {
-    from {
-        opacity: .4;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/*-----------------OM---------------------*/
+/*-------------------OM---------------------*/
 
 .side h3 {
     font-family: 'Montserrat', sans-serif;

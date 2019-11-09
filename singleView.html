@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Open+Sans:400,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="myIcons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="myIcons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="myIcons/favicon-16x16.png">
-    <link rel="manifest" href="myIcons/site.webmanifest">
-    <link rel="shortcut icon" href="myIcons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="myIcons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <title>Produkt</title>
+    <title></title>
 
 
 </head>
@@ -29,7 +21,7 @@
                 <h1 class="navn"></h1>
                 <!--slider-->
                 <div class="galleri_container">
-                    <div class="slide fade">
+                    <div class="slide">
                         <img class="billede" src="" alt="">
                     </div>
                     <!--
@@ -45,13 +37,10 @@
                     <a class="prev">&#10094;</a>
                     <a class="next">&#10095;</a>
                 </div>
-
                 <h2 class="beskrivelse">Beskrivelse</h2>
-                <br>
-                <p class="tekst"></p><br>
-                <br>
+                <pre class="tekst"></pre>
                 <h2 class="tekniskinfo">Teknisk Information</h2><br>
-                <p class="teknisk_tekst"></p>
+                <pre class="teknisk_tekst"></pre>
 
             </article>
         </section>
@@ -60,6 +49,7 @@
     <footer>
     </footer>
 
+    <script src="script.js"></script>
     <script>
         const url = new URLSearchParams(window.location.search);
         let id = url.get("id");
@@ -72,10 +62,8 @@
 
         function start() {
             hentJson();
-            hentHeader();
-            hentFooter();
-            document.querySelector(".prev").addEventListener("click", clickPrev);
-            document.querySelector(".next").addEventListener("click", clickNext);
+            document.querySelector(".prev").addEventListener("click", klikPrev);
+            document.querySelector(".next").addEventListener("click", klikNext);
 
         };
 
@@ -97,23 +85,6 @@
             console.log(cykler);
             visEnCykel();
         }
-        async function hentHeader() {
-            const headerMenu = await fetch("inc/header.html");
-            const including = await headerMenu.text();
-            document.querySelector("header").innerHTML = including;
-            console.log(headerMenu);
-            document.querySelector(".dropbtn").addEventListener("click", () => {
-                showList();
-                animationBurger();
-            });
-
-        }
-        async function hentFooter() {
-            const footer = await fetch("inc/footer.html");
-            const including = await footer.text();
-            document.querySelector("footer").innerHTML = including;
-            console.log(footer);
-        }
 
         function visEnCykel() {
 
@@ -124,7 +95,7 @@
                     document.querySelector(".teknisk_tekst").textContent = cykel.teknisk;
                     //   console.log("Billed array", cykel.billeder);
                     billedArray = cykel.billeder;
-                    clickNext();
+                    klikNext();
                 }
             })
             document.querySelector(".tilbage").addEventListener("click", () => {
@@ -133,7 +104,8 @@
 
         }
 
-        function clickNext() {
+        function klikNext() {
+            console.log(klikPrev);
             galleri_taeller++;
             if (galleri_taeller == billedArray.length) {
                 galleri_taeller = 0;
@@ -142,8 +114,8 @@
 
         }
 
-        function clickPrev() {
-            console.log("CLICK PREV");
+        function klikPrev() {
+            console.log(klikPrev);
             galleri_taeller--;
 
             if (galleri_taeller < 0) {
@@ -154,14 +126,7 @@
 
         }
 
-        function animationBurger() {
-            document.querySelector(".dropbtn").classList.toggle("change");
-        }
-
-        function showList() {
-            console.log("hello");
-            document.querySelector(".menu").classList.toggle("hidden");
-            document.querySelector("header").classList.toggle("header_stor");
-        }
     </script>
-</body></html>
+</body>
+
+</html>
