@@ -465,17 +465,17 @@ article {
 
 
 .box {
-    background-image: url(images/76727065_478354176361035_6009280445403889664_n.jpg);
+    background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
-    margin: 2.5em 1em 0 1.8em;
-    height: 160px;
-    width: 230px;
-
+    margin: 3vw 0 0;
+    height: 120px;
+    width: 200px;
+    align-content: center;
 }
 
 .box a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
