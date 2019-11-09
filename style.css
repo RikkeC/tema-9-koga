@@ -53,7 +53,7 @@ header {
 }
 
 .logo {
-    background-image: url(header_img/logo_koga.png);
+    background-image: url(header_img/logo_koga2.png);
     height: 27px;
     width: 200px;
     background-size: 100%;
@@ -677,7 +677,7 @@ header_footer.html .footer_image {
 
 @media screen and (min-width: 800px) {
 
-/*
+    /*
     cykler.html .thumbnail {
         max-height: 200px;
     }
