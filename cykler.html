@@ -14,49 +14,52 @@
     <header></header>
 
     <!--vis alle en LISTE af kategorier  -->
-    <section id="cykler">
-        <main>
-
-            <h1 class="overskrift"></h1>
-            <section class="citycykler">
-                <h2>By Cykler</h2>
-                <article class="cityside vandret">
-                </article>
-            </section>
-            <section class="racercykler">
-                <h2>Racer Cykler</h2>
-                <article class="racerside vandret">
-                </article>
-            </section>
-            <section class="trekcykler">
-                <h2>Trekking Cykler</h2>
-                <article class="trekside vandret">
-                </article>
-            </section>
-            <section class="elcykler">
-                <h2>El-cykler</h2>
-                <article class="elside vandret">
-                </article>
-            </section>
-            <section class="signcykler">
-                <h2>Signature cykler</h2>
-                <button class="box">
-                    <a href="https://www.koga.com/en/koga-signature">Byg din egne cykel</a>
-                </button>
-            </section>
-        </main>
-
-        <!--  hvordan en cykel ser ud i listen -->
-        <template>
-            <article class="encykel">
-                <img class="thumbnail" src="" alt="">
-                <div class="label">
-                    <h3 class="navn"></h3>
-                    <p class="pris"></p>
-                </div>
+    <main id="cykellisten">
+        <h1 class="overskrift"></h1>
+        <section class="citycykler cykler">
+            <h2>By Cykler</h2>
+            <article class="cityside vandret">
             </article>
-        </template>
-    </section>
+        </section>
+        <section class="racercykler cykler">
+            <h2>Racer Cykler</h2>
+            <article class="racerside vandret">
+            </article>
+        </section>
+        <section class="trekcykler cykler">
+            <h2>Trekking Cykler</h2>
+            <article class="trekside vandret">
+            </article>
+        </section>
+        <section class="elcykler cykler">
+            <h2>El-cykler</h2>
+            <article class="elside vandret">
+            </article>
+        </section>
+        <section class="signcykler cykler">
+            <h2>Signature cykler</h2>
+            <div class="box">
+                <div class="textimg">
+                    <div class="signlabel">
+                        <a href="https://www.koga.com/en/koga-signature">
+                            <h3>Byg din egne cykel</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--  hvordan en cykel ser ud i listen -->
+    <template>
+        <article class="encykel">
+            <img class="thumbnail" src="" alt="">
+            <div class="label">
+                <h3 class="navn"></h3>
+                <p class="pris"></p>
+            </div>
+        </article>
+    </template>
 
     <footer>
     </footer>

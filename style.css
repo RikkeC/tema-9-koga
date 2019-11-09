@@ -7,11 +7,16 @@
 
 html {
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 a,
@@ -241,12 +246,16 @@ header a {
 
 /*---------------CYKLER---------------*/
 
-#cykler img {
+#cykellisten {
+    margin: 2vw 0 3vw 1vw;
+}
+
+.cykler img {
     max-width: 200px;
 }
 
-#cykler section {
-    margin: 2em 0 3em 0;
+.cykler {
+    margin: 5vw;
 }
 
 main {
@@ -267,31 +276,55 @@ article {
     margin: 0.8em 1em;
 }
 
-.navn {
-    color: black;
-    font-size: 2rem;
-}
-
 .encykel .navn,
-.pris {
+.pris,
+.signlabel h3 {
     color: white;
     font-size: 1rem;
 }
 
-.label {
+.label,
+.signlabel {
     cursor: pointer;
     background-color: #337CBE;
     padding: 0.5em;
-    max-height: 10vh;
+}
+
+.signlabel {
+    text-align: center;
+    height: 7vw;
 }
 
 .vandret {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    margin: 2vw 0 3vw 0;
+}
+
+.box {
+    background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
+    background-size: 100%;
+    margin: 3vw 0 0;
+}
+
+.textimg {
+    padding: 30vw 0 10vw 0;
+    margin-bottom: 3vw;
+    text-align: center;
+}
+
+.encykel:hover,
+.box:hover {
+    opacity: 50%;
 }
 
 /*---------------SINGLE VIEW---------------*/
+#encykel {
+    padding: 1em;
+    margin: 0.8em 1em;
+}
+
 .enCykelview .navn {
     text-align: center;
 }
@@ -463,24 +496,6 @@ article {
     grid-area: kogacenter_img;
 }
 
-
-.box {
-    background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
-    background-size: 100%;
-    margin: 3vw 0 0;
-    height: 120px;
-    width: 200px;
-    align-content: center;
-}
-
-.box a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
-
-}
 
 
 /*---------------KONTAKT--------------*/
