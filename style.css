@@ -251,16 +251,9 @@ header a {
 
 /*---------------CYKLER---------------*/
 
-#cykellisten {
-    margin: 2vw 0 3vw 1vw;
-}
-
-#cykellisten .cykler {
-    margin: 4.5vw 0 7vw 2vw;
-}
-
+#cykellisten .cykler,
 .signcykler {
-    margin: 4.5vw;
+    margin: 4.5vw 1vw 7vw;
 }
 
 #cykellisten {
@@ -271,12 +264,19 @@ article {
     padding: 2.7vw;
 }
 
-.overskrift {
-    margin: 5vw;
+#cykellisten .overskrift,
+#cykellisten h2 {
+    color: #007CC4;
+    margin: 3vw;
     text-align: center;
 }
 
-#encykel {
+#cykellisten h2 {
+    text-align: left;
+}
+
+#encykel,
+.box {
     padding: 1em;
     margin: 0.8em 1em;
 }
@@ -298,6 +298,7 @@ article {
 .signlabel {
     text-align: center;
     height: 7vw;
+    padding: 2vw;
 }
 
 .vandret {
@@ -312,7 +313,6 @@ article {
     background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
     box-shadow: 0.8vw 1vw 2vw grey;
-    margin: 4vw;
 }
 
 .textimg {
@@ -334,6 +334,7 @@ article {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    opacity: 70%;
 }
 
 .stryge_container p {
@@ -692,6 +693,10 @@ header_footer.html .footer_image {
         max-width: 200px;
     }
 
+    .box {
+        padding: 0;
+    }
+
     /*singleView.html*/
     .tilbage {
         font-size: 2vw;
@@ -777,8 +782,6 @@ header_footer.html .footer_image {
         font-size: 1.8vw;
     }
 
-    main #omside {}
-
     /*cykler.html*/
     .thumbnail {
         width: 500px;
@@ -803,19 +806,14 @@ header_footer.html .footer_image {
         font-size: 2vw;
     }
 
-    .signlabel {
-        height: 4vw;
-        padding: 1em;
-    }
-
     .box {
-        margin-left: 0;
+        margin-left: 2.8vw;
         height: 400px;
         width: 700px;
     }
 
     .textimg {
-        padding: 13vw 0 3vw;
+        padding: 20vw 3vw;
     }
 
     /*singleView.html*/
