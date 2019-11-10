@@ -19,23 +19,58 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
 -->
+
+    <style>
+        .galleri_container {
+            max-width: 1000px;
+            position: relative;
+            margin-bottom: 3.5vw;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <header></header>
 
+    <!--
     <section class="splash_container">
         <img class="splash_img" src="images/header-comfort.jpg" alt="splash_img">
         <div class="splash_text">
             <h1>Velkommen til Koga Center Copenhagen</h1>
         </div>
         <a href="#forside"><span></span></a>
-    </section>
+    </section>-->
 
     <section id="forside">
+        <!--
         <div class="main_container">
             <button class="main_text"><a href="cykler.html">SE ALLE CYKLER</a></button>
             <div class=""><img class="main_image" src="images/KV657001.jpg" alt="bike"></div>
+        </div>
+-->
+
+        <!--slider-->
+        <div class="galleri_container">
+            <div class="slide">
+                <img class="billede" src="" alt="">
+                <h2 class="navnKat"></h2>
+            </div>
+            <!--
+                    <div class="slide fade">
+                        <img class="billed_2" src="" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img class="billed_3" src="" alt="">
+                    </div>
+-->
+
+            <!-- Next and previous buttons -->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
         </div>
     </section>
 
@@ -43,6 +78,59 @@
     </footer>
     <script src="script.js"></script>
 
-</body>
+    <script>
+        const urlKat = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykelkategorier";
+        let kategorier = [];
+        let katArray;
+        let galleri_taeller = -1;
 
-</html>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+            document.querySelector(".prev").addEventListener("click", klikPrev);
+            document.querySelector(".next").addEventListener("click", klikNext);
+        }
+
+        async function hentJson() {
+            const response = await fetch(urlKat);
+            console.log(response);
+            kategorier = await response.json();
+            console.log(kategorier);
+            visKat();
+        }
+
+        function visKat() {
+            kategorier.forEach(kategori => {
+                document.querySelector("img").src = kategori.billeder.guid;
+                document.querySelector(".navnKat").textContent = kategori.navn;
+
+                klikNext();
+
+            })
+        }
+
+        function klikNext() {
+            console.log(klikNext);
+            galleri_taeller++;
+            if (galleri_taeller == kategorier.length) {
+                galleri_taeller = 0;
+            }
+
+            document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
+            document.querySelector("img").src = kategorier[galleri_taeller].billeder.guid;
+        }
+
+        function klikPrev() {
+            console.log(klikPrev);
+            galleri_taeller--;
+            if (galleri_taeller < 0) {
+                galleri_taeller = katArray.length - 1;
+            }
+
+            document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
+            document.querySelector("img").src = kategorier[galleri_taeller].billeder.guid;
+        }
+    </script>
+
+</body></html>
