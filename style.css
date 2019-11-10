@@ -433,6 +433,10 @@ article {
     width: 100%;
 }
 
+.kat_slide img {
+    padding: 3.5vw;
+}
+
 /* Next & previous buttons */
 .prev,
 .next,
