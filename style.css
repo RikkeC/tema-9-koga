@@ -193,7 +193,6 @@ header a {
     font-size: 5vw;
     width: 80vw;
 
-
 }
 
 .splash_container {
@@ -248,6 +247,33 @@ header a {
     }
 }
 
+.kat_container {
+    max-width: 700px;
+    position: relative;
+    margin-bottom: 3.5vw;
+}
+
+.labelKat {
+    margin: 2vw;
+    padding: 2vw;
+    background-color: #337CBE;
+
+}
+
+.navnKat {
+    text-align: center;
+    color: white;
+}
+
+/* Position the "next button" to the right */
+.kathoejre {
+    right: 1vw;
+    border-radius: 3px 0 0 3px;
+}
+
+.katvenstre {
+    left: 1vw;
+}
 
 /*---------------CYKLER---------------*/
 
@@ -390,13 +416,16 @@ article {
     margin-bottom: 3.5vw;
 }
 
-.slide img {
+.slide img,
+.kat_slide img {
     width: 100%;
 }
 
 /* Next & previous buttons */
 .prev,
-.next {
+.next,
+.katvenstre,
+.kathoejre {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -421,7 +450,9 @@ article {
 }
 
 .prev:hover,
-.next:hover {
+.next:hover,
+.katvenstre:hover,
+.kathoejre:hover {
     background-color: rgba(136, 136, 136, 0.8);
 }
 
