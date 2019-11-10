@@ -65,7 +65,6 @@
     <script>
         const urlKat = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykelkategorier";
         let kategorier = [];
-        let katArray;
         let galleri_taeller = -1;
 
         document.addEventListener("DOMContentLoaded", start);
@@ -115,6 +114,9 @@
             document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
             document.querySelector(".katbillede").src = kategorier[galleri_taeller].billeder.guid;
         }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
