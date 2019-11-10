@@ -141,7 +141,7 @@ header a {
 .splash_img,
 .main_image {
     width: 100%;
-    height: auto;
+    height: 90vh;
 }
 
 .main_container {
