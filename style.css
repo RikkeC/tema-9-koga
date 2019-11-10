@@ -263,7 +263,7 @@ header a {
     margin: 4.5vw;
 }
 
-main {
+#cykellisten {
     margin: 3em 0 1em 1em;
 }
 
@@ -431,7 +431,6 @@ article {
 }
 
 .side p {
-    font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
     margin: 0;
 }
@@ -608,15 +607,14 @@ footer {
     background-image: url(header_img/baggrund.jpg);
     background-size: 100%;
     color: white;
-    margin-top: 15vw;
+    margin-top: 1vw;
+    padding: 2vw;
 }
 
 #footerinfo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4vw;
-    margin: 0 1.5em;
-    padding: 2vw;
 }
 
 footer img {
@@ -699,6 +697,10 @@ header_footer.html .footer_image {
         font-size: 4vw;
     }
 
+    pre {
+        line-height: 4.2vw;
+    }
+
     /*kontakt.html*/
     #info {
         margin: 0;
@@ -752,42 +754,15 @@ header_footer.html .footer_image {
     }
 
     header a {
-        font-size: 1.3rem;
+        font-size: 1.5vw;
     }
 
-    /*footer*/
-    footer {
-        margin-top: 3vw;
-        padding: 0 3vw;
+    /*om.html*/
+    .side p {
+        font-size: 1.8vw;
     }
 
-    #footerinfo {
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1.5vw;
-    }
-
-    footer img {
-        display: flex;
-    }
-
-    .facebook,
-    .twitter {
-        height: 2.5vw;
-        width: 2.5vw;
-    }
-
-    .some {
-        grid-column: 4;
-        grid-row: 2;
-    }
-
-    h4 {
-        font-size: 1.2vw;
-    }
-
-    footer p {
-        font-size: 1vw;
-    }
+    main #omside {}
 
     /*cykler.html*/
     .thumbnail {
@@ -848,6 +823,41 @@ header_footer.html .footer_image {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2vw;
     }
+
+    pre {
+        font-size: 1.8vw;
+        line-height: 3vw;
+    }
+
+    /*footer*/
+
+    #footerinfo {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.5vw;
+    }
+
+    footer img {
+        display: flex;
+    }
+
+    .facebook,
+    .twitter {
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .some {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+    h4 {
+        font-size: 1.8vw;
+    }
+
+    footer p {
+        font-size: 1.5vw;
+    }
 }
 
 
@@ -860,7 +870,16 @@ header_footer.html .footer_image {
     }
 
     h2 {
-        font-size: 2.3vw;
+        font-size: 2vw;
+    }
+
+    header a {
+        font-size: 1.2vw;
+    }
+
+    /*om.html*/
+    .side p {
+        font-size: 1.3vw;
     }
 
     /*cykler.html*/
@@ -880,9 +899,9 @@ header_footer.html .footer_image {
         padding: 2vw;
     }
 
-    pre {
+    pre,
+    .tilbage {
         font-size: 1.2vw;
-        line-height: 2vw;
     }
 
     /*om.html*/
@@ -919,5 +938,23 @@ header_footer.html .footer_image {
     .side .filosofi_img {
         margin: 0 0 0 2vw;
     }
+
+    /*footer*/
+
+    .facebook,
+    .twitter {
+        height: 2.5vw;
+        width: 2.5vw;
+        padding-right: 1vw;
+    }
+
+    h4 {
+        font-size: 1.5vw;
+    }
+
+    footer p {
+        font-size: 1vw;
+    }
+
 
 }
