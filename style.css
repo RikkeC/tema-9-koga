@@ -268,7 +268,7 @@ main {
 }
 
 article {
-    padding-right: 2.7vw;
+    padding: 2.7vw;
 }
 
 .overskrift {
@@ -358,8 +358,7 @@ article {
 
 /*---------------SINGLE VIEW---------------*/
 #encykel {
-    padding: 1em;
-    margin: 0.8em 1em;
+    padding: 2.5vw;
 }
 
 .enCykelview .navn {
@@ -376,7 +375,6 @@ article {
     position: fixed;
     top: 4.5vh;
     left: 0;
-    font-size: 0.8rem;
     z-index: 5;
 }
 
@@ -401,7 +399,6 @@ article {
     margin-top: -22px;
     color: black;
     font-weight: bold;
-    font-size: 20px;
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
@@ -409,7 +406,7 @@ article {
 /* Position the "next button" to the right */
 
 .next {
-    right: -5vw;
+    right: 1vw;
     border-radius: 3px 0 0 3px;
 }
 
@@ -675,7 +672,60 @@ header_footer.html .footer_image {
 
 /*--------------MEDIA QUERIES------------*/
 
-/*hvis skærmen er min. 800px og større*/
+/*hvis skærmen er max. 820px og mindre -- MOBILE */
+
+@media only screen and (max-width: 820px) {
+
+    /*cykler.html*/
+    h1 {
+        font-size: 6.5vw;
+    }
+
+    h2 {
+        font-size: 3.5vw;
+    }
+
+    .thumbnail {
+        max-width: 200px;
+    }
+
+    /*singleView.html*/
+    .tilbage {
+        font-size: 2vw;
+    }
+
+    .prev,
+    .next {
+        font-size: 4vw;
+    }
+
+    /*kontakt.html*/
+    #info {
+        margin: 0;
+        padding: 0;
+    }
+
+    #info #section_wrapper {
+        margin-top: 2vw;
+        display: grid;
+        flex-wrap: wrap-reverse;
+    }
+
+    #info .text_kontakt {
+        margin: 25px;
+    }
+
+    #info .map {
+        margin: 0;
+        width: 100%;
+        padding-bottom: 45%;
+        padding-top: 20%;
+
+    }
+
+}
+
+/*hvis skærmen er min. 800px og større --- TABLET og andre*/
 @media screen and (min-width: 800px) {
 
     /*header*/
@@ -708,6 +758,7 @@ header_footer.html .footer_image {
     /*footer*/
     footer {
         margin-top: 3vw;
+        padding: 0 3vw;
     }
 
     #footerinfo {
@@ -731,7 +782,7 @@ header_footer.html .footer_image {
     }
 
     h4 {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
 
     footer p {
@@ -744,7 +795,7 @@ header_footer.html .footer_image {
     }
 
     .stryge_container p {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .pil_venstre,
@@ -755,7 +806,7 @@ header_footer.html .footer_image {
 
     .pris,
     .encykel .navn {
-        font-size: 1.3vw;
+        font-size: 1.8vw;
     }
 
     .signlabel h3 {
@@ -776,50 +827,30 @@ header_footer.html .footer_image {
     .textimg {
         padding: 13vw 0 3vw;
     }
-}
 
-/*hvis skærmen er max. 820px og mindre*/
-
-@media only screen and (max-width: 820px) {
-
-    /*cykler.html*/
-    h1 {
-        font-size: 6.5vw;
+    /*singleView.html*/
+    #encykel {
+        margin: 3vw;
     }
 
-    h2 {
-        font-size: 3.5vw;
+    .tilbage {
+        font-size: 1.5vw;
+        top: 5vw;
     }
 
-    .thumbnail {
-        max-width: 200px;
+    .prev,
+    .next {
+        font-size: 2.5vw;
     }
 
-    /*kontakt.html*/
-    #info {
-        margin: 0;
-        padding: 0;
-    }
-
-    #info #section_wrapper {
-        margin-top: 2vw;
+    .tekstcontainer {
         display: grid;
-        flex-wrap: wrap-reverse;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2vw;
     }
-
-    #info .text_kontakt {
-        margin: 25px;
-    }
-
-    #info .map {
-        margin: 0;
-        width: 100%;
-        padding-bottom: 45%;
-        padding-top: 20%;
-
-    }
-
 }
+
+
 
 /*desktop skærme*/
 
@@ -832,8 +863,26 @@ header_footer.html .footer_image {
         font-size: 2.3vw;
     }
 
+    /*cykler.html*/
     .thumbnail {
         max-width: 1000px;
+    }
+
+    /*singleView.html*/
+
+    .next {
+        right: -1vw;
+    }
+
+    .teksthoejre,
+    .tekstvenstre {
+        margin: 0;
+        padding: 2vw;
+    }
+
+    pre {
+        font-size: 1.2vw;
+        line-height: 2vw;
     }
 
     /*om.html*/
