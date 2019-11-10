@@ -251,8 +251,7 @@ header a {
 
 /*---------------CYKLER---------------*/
 
-#cykellisten .cykler,
-.signcykler {
+#cykellisten .cykler {
     margin: 4.5vw 1vw 7vw;
 }
 
@@ -335,6 +334,7 @@ article {
     flex-flow: row wrap;
     justify-content: center;
     opacity: 70%;
+    padding: 0 3vw 0;
 }
 
 .stryge_container p {
@@ -787,6 +787,11 @@ header_footer.html .footer_image {
         width: 500px;
     }
 
+    #cykellisten .cykler,
+    .signcykler {
+        margin: 2vw;
+    }
+
     .stryge_container p {
         font-size: 1rem;
     }
@@ -813,7 +818,7 @@ header_footer.html .footer_image {
     }
 
     .textimg {
-        padding: 20vw 3vw;
+        padding: 15vw 3vw;
     }
 
     /*singleView.html*/
@@ -915,6 +920,11 @@ header_footer.html .footer_image {
         max-width: 1000px;
     }
 
+    .pris,
+    .encykel .navn {
+        font-size: 1.2vw;
+    }
+
     /*singleView.html*/
 
     .next {
@@ -930,6 +940,10 @@ header_footer.html .footer_image {
     pre,
     .tilbage {
         font-size: 1.2vw;
+    }
+
+    .textimg {
+        padding: 12vw 3vw;
     }
 
     /*om.html*/
