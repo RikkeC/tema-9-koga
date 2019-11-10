@@ -261,6 +261,7 @@ header a {
     position: absolute;
     bottom: 3vw;
     left: 6vw;
+    cursor: pointer;
 }
 
 .navnKat {
@@ -268,6 +269,7 @@ header a {
     padding-top: 6vw;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 /* Position the "next button" to the right */
