@@ -38,16 +38,17 @@
                     <a class="next">&#10095;</a>
                 </div>
                 <div class="tekstcontainer">
+                    <div class="prissingle">
+                        <pre class="nummer"></pre>
+                    </div>
                     <div class="tekstvenstre">
-                        <h2 class="beskrivelse">Beskrivelse</h2>
+                        <h2 class="beskrivelse">Beskrivelse</h2><br>
                         <pre class="tekst"></pre>
                     </div>
                     <div class="teksthoejre">
                         <h2 class="tekniskinfo">Teknisk Information</h2><br>
                         <pre class="teknisk_tekst"></pre>
                     </div>
-
-
                 </div>
             </article>
         </section>
@@ -98,6 +99,7 @@
             cykler.forEach((cykel) => {
                 if (cykel.id == id) {
                     document.querySelector(".navn").textContent = cykel.navn;
+                    document.querySelector(".nummer").textContent = "Pris: " + cykel.pris + ",- kr.";
                     document.querySelector(".tekst").textContent = cykel.beskrivelse;
                     document.querySelector(".teknisk_tekst").textContent = cykel.teknisk;
                     //   console.log("Billed array", cykel.billeder);

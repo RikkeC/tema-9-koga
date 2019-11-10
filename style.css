@@ -365,10 +365,15 @@ article {
     text-align: center;
 }
 
-.teknisk_tekst,
-.tekst {
-    margin: 3.5vw 1vw;
-    padding: 1.5vw;
+.tekstcontainer {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.prissingle pre {
+    color: #337CBE;
+    font-weight: 600;
+    text-align: right;
 }
 
 .tilbage {
@@ -701,6 +706,16 @@ header_footer.html .footer_image {
         line-height: 4.2vw;
     }
 
+    .tekstvenstre,
+    .teksthoejre {
+        margin: 3.5vw 1vw;
+        padding: 1.5vw;
+    }
+
+    .prissingle {
+        margin: 0 0 0 60vw;
+    }
+
     /*kontakt.html*/
     #info {
         margin: 0;
@@ -821,7 +836,22 @@ header_footer.html .footer_image {
     .tekstcontainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 5vw;
         grid-gap: 2vw;
+    }
+
+    .prissingle {
+        grid-column: 2;
+        margin: 0 auto;
+    }
+
+    .prissingle pre {
+        font-size: 2vw;
+        text-align: right;
+    }
+
+    .tekstvenstre {
+        grid-column: 1;
     }
 
     pre {
