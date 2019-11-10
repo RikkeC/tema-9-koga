@@ -34,13 +34,3 @@ function showList() {
     document.querySelector(".menu").classList.toggle("hidden");
     document.querySelector("header").classList.toggle("header_stor");
 }
-
-
-function scroll_button() {
-    $('a[href*=#]').on('click', function scroll_button(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 500, 'linear');
-    });
-};
