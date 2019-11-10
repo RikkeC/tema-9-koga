@@ -138,10 +138,9 @@ header a {
 
 
 /*---------------FORSIDE--------------*/
-.splash_img,
 .main_image {
     width: 100%;
-    height: 90vh;
+    height: auto;
 }
 
 .main_container {
@@ -175,11 +174,15 @@ header a {
     color: #4b8ce5;
 }
 
-.splash_container {
-    position: relative;
-    text-align: center;
-    color: white;
+#splash_container {
+    flex-wrap: wrap;
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 90% 0%;
+    background-image: url(images/Edinburgh-Mark_beaumont.jpg);
     width: 100%;
+    height: 90vh;
 }
 
 .splash_text h1 {
@@ -188,25 +191,19 @@ header a {
 
 .splash_text {
     position: absolute;
-    top: 80%;
+    text-align: center;
+    color: white;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 5vw;
     width: 80vw;
-
 }
 
-.splash_container {
-    display: flex;
-    flex-wrap: wrap;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 90% 0%;
-}
 
-.splash_container a span {
+#splash_container a span {
     position: absolute;
-    bottom: 3.5vw;
+    bottom: 3.8vw;
     left: 50%;
     width: 25px;
     height: 25px;
@@ -573,12 +570,14 @@ article {
     margin: 5vw;
     text-align: center;
     font-size: 30px;
+    color: #007CC4;
 }
 
 
 #info h2 {
     font-size: 20px;
     margin: 5px;
+    color: #007CC4;
 }
 
 #info p {
@@ -607,6 +606,7 @@ article {
     height: 260px;
     width: 400px;
     margin: 15px;
+    box-shadow: 0.5vw 0.5vw 0.5vw grey;
 }
 
 #info .text_kontakt h2,
@@ -628,7 +628,7 @@ article {
     margin: 5px;
     overflow: hidden;
     position: relative;
-    padding-bottom: 45%;
+    padding-bottom: 48.5%;
     padding-top: 25px;
     height: 0;
 }
@@ -983,6 +983,7 @@ header_footer.html .footer_image {
     /*cykler.html*/
     .thumbnail {
         max-width: 1000px;
+        cursor: pointer;
     }
 
     .pris,
