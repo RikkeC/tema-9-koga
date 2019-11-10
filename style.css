@@ -254,25 +254,32 @@ header a {
 }
 
 .labelKat {
-    margin: 2vw;
-    padding: 2vw;
     background-color: #337CBE;
-
+    opacity: 80%;
+    height: 25%;
+    width: 89%;
+    position: absolute;
+    bottom: 3vw;
+    left: 6vw;
 }
 
 .navnKat {
+    font-size: 4vw;
+    padding-top: 6vw;
     text-align: center;
     color: white;
 }
 
 /* Position the "next button" to the right */
 .kathoejre {
-    right: 1vw;
+    font-size: 4vw;
+    right: 0;
     border-radius: 3px 0 0 3px;
 }
 
 .katvenstre {
-    left: 1vw;
+    font-size: 4vw;
+    left: 0;
 }
 
 /*---------------CYKLER---------------*/
@@ -290,7 +297,8 @@ article {
 }
 
 #cykellisten .overskrift,
-#cykellisten h2 {
+#cykellisten h2,
+.kat_container h1 {
     color: #007CC4;
     margin: 3vw;
     text-align: center;
@@ -313,14 +321,15 @@ article {
     font-size: 1rem;
 }
 
-.label,
-.signlabel {
+.label {
     cursor: pointer;
     background-color: #337CBE;
     padding: 0.5em;
 }
 
 .signlabel {
+    cursor: pointer;
+    background-color: #337CBE;
     text-align: center;
     height: 7vw;
     padding: 2vw;
@@ -807,6 +816,12 @@ header_footer.html .footer_image {
         font-size: 1.5vw;
     }
 
+    /*forside.html*/
+    .labelKat {
+        bottom: 3vw;
+        left: 4.5vw;
+    }
+
     /*om.html*/
     .side p {
         font-size: 1.8vw;
@@ -929,7 +944,7 @@ header_footer.html .footer_image {
 
 @media screen and (min-width: 1000px) {
     h1 {
-        font-size: 3vw;
+        font-size: 4.3vw;
     }
 
     h2 {
@@ -938,6 +953,31 @@ header_footer.html .footer_image {
 
     header a {
         font-size: 1.2vw;
+    }
+
+    /*forside.html*/
+    .labelKat {
+        width: 100%;
+        bottom: 1vw;
+        left: 0;
+    }
+
+    .navnKat {
+        font-size: 3vw;
+        padding-top: 2vw;
+    }
+
+    .katvenstre,
+    .kathoejre {
+        font-size: 2vw;
+    }
+
+    .katvenstre {
+        left: -5vw;
+    }
+
+    .kathoejre {
+        right: -5vw;
     }
 
     /*om.html*/
@@ -1021,11 +1061,11 @@ header_footer.html .footer_image {
     }
 
     h4 {
-        font-size: 1.5vw;
+        font-size: 1.7vw;
     }
 
     footer p {
-        font-size: 1vw;
+        font-size: 1.3vw;
     }
 
 
