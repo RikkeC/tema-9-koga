@@ -430,6 +430,10 @@ article {
     width: 100%;
 }
 
+.kat_slide img {
+    padding: 3.5vw;
+}
+
 /* Next & previous buttons */
 .prev,
 .next,
@@ -1057,11 +1061,11 @@ header_footer.html .footer_image {
     }
 
     h4 {
-        font-size: 1.7vw;
+        font-size: 1.5vw;
     }
 
     footer p {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
 
 
