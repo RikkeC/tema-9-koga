@@ -72,6 +72,7 @@
 
         function start() {
             hentJson();
+            document.querySelector(".labelKat").addEventListener("click", klikHverkate);
             document.querySelector(".katvenstre").addEventListener("click", klikPrev);
             document.querySelector(".kathoejre").addEventListener("click", klikNext);
         }
@@ -82,17 +83,20 @@
             kategorier = await response.json();
             console.log(kategorier);
             visKat();
+// klikHverkate();
         }
 
         function visKat() {
             kategorier.forEach(kategori => {
                 document.querySelector(".katbillede").src = kategori.billeder.guid;
                 document.querySelector(".navnKat").textContent = kategori.navn;
-
                 klikNext();
-
             })
         }
+
+//        function klikHverkate() {
+//
+//        }
 
         function klikNext() {
             console.log(klikNext);
@@ -117,6 +121,4 @@
         }
     </script>
 
-</body>
-
-</html>
+</body></html>
