@@ -15,6 +15,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="myIcons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <!--
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
@@ -73,7 +75,11 @@
 
         function start() {
             hentJson();
+<<<<<<< HEAD
 
+=======
+            //            document.querySelector(".labelKat").addEventListener("click", klikHverkate);
+>>>>>>> origin/master
             document.querySelector(".katvenstre").addEventListener("click", klikPrev);
             document.querySelector(".kathoejre").addEventListener("click", klikNext);
         }
@@ -83,11 +89,17 @@
             console.log(response);
             kategorier = await response.json();
             console.log(kategorier);
+<<<<<<< HEAD
             // visKat();
             klikNext();
+=======
+            visKat();
+            // klikHverkate();
+>>>>>>> origin/master
         }
 
 
+<<<<<<< HEAD
         // function visKat() {
         // // kategorierID = this.dataset.id;
         // kategorier.forEach(kategori => {
@@ -101,6 +113,11 @@
         // klikNext();
         // })
         // }
+=======
+        //        function klikHverkate() {
+        //
+        //        }
+>>>>>>> origin/master
 
         function klikNext() {
             console.log(klikNext);
