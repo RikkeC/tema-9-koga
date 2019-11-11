@@ -42,7 +42,7 @@ h4 {
 
 header {
     display: flex;
-    background-image: url("header_img/baggrund_mereopacity.png");
+    background-image: url("images/5%20header_asphalt.jpg");
     margin: 0 auto;
     height: 4rem;
     width: 100%;
@@ -181,7 +181,7 @@ header a {
     background-size: cover;
     background-attachment: fixed;
     background-position: 90% 0%;
-    background-image: url(images/Edinburgh-Mark_beaumont.jpg);
+    background-image: url(header_img/nyt_header.jpg);
     width: 100%;
     height: 90vh;
 }
@@ -358,6 +358,7 @@ article {
 
 .encykel:hover,
 .box:hover {
+    transition: 0.4s ease-in-out;
     transform: scale(1.1);
 }
 
@@ -650,7 +651,7 @@ article {
 
 footer {
     width: 100%;
-    background-image: url("header_img/baggrund.jpg");
+    background-image: url("images/5%20header_asphalt.jpg");
     background-size: 100%;
     color: white;
     padding: 2.5vw;
