@@ -42,7 +42,7 @@ h4 {
 
 header {
     display: flex;
-    background-image: url("images/5%20header_asphalt.jpg");
+    background-image: url("images/asfalt.jpg");
     margin: 0 auto;
     height: 4rem;
     width: 100%;
@@ -651,7 +651,7 @@ article {
 
 footer {
     width: 100%;
-    background-image: url("images/5%20header_asphalt.jpg");
+    background-image: url("images/asfalt.jpg");
     background-size: 100%;
     color: white;
     padding: 2.5vw;
