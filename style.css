@@ -35,7 +35,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*-------------HEADER------------*/
@@ -46,7 +46,7 @@ header {
     margin: 0 auto;
     height: 4rem;
     width: 100%;
-    background-position: cover;
+    background-position: 100%;
 
 }
 
@@ -95,14 +95,19 @@ nav {
 }
 
 header a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 1rem;
     font-weight: bolder;
     text-decoration: none;
+    text-transform: uppercase;
     text-align: right;
     padding: 2vw;
+    margin: 0;
+}
 
+header a:hover {
+    text-decoration: underline;
 }
 
 .show {
@@ -189,6 +194,7 @@ header a {
 
 .splash_text h1 {
     padding: 0 0 20vw 0;
+    text-transform: uppercase;
 }
 
 .splash_text {
@@ -360,7 +366,7 @@ article {
 .encykel:hover,
 .box:hover {
     transition: 0.4s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .label:hover {
