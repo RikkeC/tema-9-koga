@@ -55,11 +55,11 @@ header {
 }
 
 .logo {
-    background-image: url(header_img/logo_koga2.png);
-    height: 27px;
+    background-image: url(header_img/new_logo_white.svg);
+    height: 100px;
     width: 200px;
     background-size: 100%;
-    margin: 4vw;
+    margin: 0;
 }
 
 .logo_link {
