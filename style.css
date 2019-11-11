@@ -55,11 +55,12 @@ header {
 }
 
 .logo {
-    background-image: url(header_img/new_logo_white.svg);
-    height: 100px;
-    width: 200px;
+    background-image: url(header_img/logo_white_new_small.svg);
+    height: 40px;
+    width: 150px;
+    position: relative;
     background-size: 100%;
-    margin: 0;
+    margin: 2vw;
 }
 
 .logo_link {

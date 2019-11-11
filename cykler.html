@@ -94,7 +94,7 @@
 
     <script src="script.js"></script>
     <script>
-        const stiltilHeaderHtml = "inc/header.html";
+        //        const stiltilHeaderHtml = "inc/header.html";
         //        const stiltilFooterHtml = "inc/footer.html";
         const urlOverskrift = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/pages/74";
         const urlCityCykler = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykel?cykelkategorier=3";
@@ -106,10 +106,6 @@
         let filtre;
 
         const loadArray = [{
-            theUrl: stiltilHeaderHtml,
-            theFunction: visMenu,
-            contentType: "text"
-        }, {
             theUrl: urlOverskrift,
             theFunction: visOverskrift,
             contentType: "json"
@@ -165,13 +161,13 @@
             }
         }
 
-        function visMenu(indhold) {
-            document.querySelector("header").innerHTML = indhold;
-        }
-
-        function visFooter(indhold) {
-            document.querySelector("footer").innerHTML = indhold;
-        }
+        //        function visMenu(indhold) {
+        //            document.querySelector("header").innerHTML = indhold;
+        //        }
+        //
+        //        function visFooter(indhold) {
+        //            document.querySelector("footer").innerHTML = indhold;
+        //        }
 
         function visOverskrift(indhold) {
             document.querySelector(".overskrift").textContent = indhold.title.rendered;
