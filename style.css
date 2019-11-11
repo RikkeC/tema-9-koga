@@ -322,7 +322,7 @@ header a:hover {
 
 #cykellisten .cykler {
     margin: 4.5vw 1vw 7vw;
-    display: none;
+    /*    display: none;*/
 }
 
 #cykellisten {
@@ -334,11 +334,8 @@ article {
 }
 
 #cykellisten .overskrift,
-<<<<<<< HEAD
 #forside_slides .overskrift,
 #cykellisten h2,
-=======
->>>>>>> origin/master
 .kat_container h1 {
     color: #007CC4;
     margin: 3vw;
@@ -499,7 +496,7 @@ article {
 /* Position the "next button" to the right */
 
 .next {
-    right: 1vw;
+    right: -5vw;
     border-radius: 3px 0 0 3px;
 }
 
@@ -1043,7 +1040,7 @@ header_footer.html .footer_image {
     /*singleView.html*/
 
     .next {
-        right: -1vw;
+        right: -5vw;
     }
 
     .teksthoejre,

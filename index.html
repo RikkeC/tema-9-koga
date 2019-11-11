@@ -33,12 +33,6 @@
             </div>
             <a href="#forside_slides"><span></span></a>
         </section>
-        <!--
-        <div class="main_container">
-            <button class="main_text"><a href="cykler.html">SE ALLE CYKLER</a></button>
-            <div class=""><img class="main_image" src="images/KV657001.jpg" alt="bike"></div>
-        </div>
--->
 
         <!--slideshow til kategories-->
         <section id="forside_slides">
@@ -75,11 +69,6 @@
 
         function start() {
             hentJson();
-<<<<<<< HEAD
-
-=======
-            //            document.querySelector(".labelKat").addEventListener("click", klikHverkate);
->>>>>>> origin/master
             document.querySelector(".katvenstre").addEventListener("click", klikPrev);
             document.querySelector(".kathoejre").addEventListener("click", klikNext);
         }
@@ -89,35 +78,9 @@
             console.log(response);
             kategorier = await response.json();
             console.log(kategorier);
-<<<<<<< HEAD
-            // visKat();
+
             klikNext();
-=======
-            visKat();
-            // klikHverkate();
->>>>>>> origin/master
         }
-
-
-<<<<<<< HEAD
-        // function visKat() {
-        // // kategorierID = this.dataset.id;
-        // kategorier.forEach(kategori => {
-        // console.log(kategori.id)
-        // document.querySelector(".katbillede").src = kategori.billeder.guid;
-        // document.querySelector(".navnKat").textContent = kategori.navn;
-        //
-        // document.querySelector(".labelKat").lastElementChild.addEventListener("click", () => {
-        // location.href = "cykler.html?cykelkategorier=" + kategori.id;
-        // });
-        // klikNext();
-        // })
-        // }
-=======
-        //        function klikHverkate() {
-        //
-        //        }
->>>>>>> origin/master
 
         function klikNext() {
             console.log(klikNext);
