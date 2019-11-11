@@ -288,6 +288,7 @@ header a {
 
 #cykellisten .cykler {
     margin: 4.5vw 1vw 7vw;
+    display: none;
 }
 
 #cykellisten {

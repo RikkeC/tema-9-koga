@@ -44,9 +44,9 @@
                 <div class="kat_slide">
                     <div class="enkat_wrapper">
                         <div class="labelKat">
-                            <a href="cykler.html">
-                                <h2 class="navnKat"></h2>
-                            </a>
+                            <!--                            <a href="cykler.html">-->
+                            <h2 class="navnKat"></h2>
+                            <!--                            </a>-->
                         </div>
                         <img class="katbillede" src="" alt="">
                     </div>
@@ -66,13 +66,13 @@
     <script>
         const urlKat = "https://jenniferjaque.dk/kea/2-semester/tema9/koga/wordpress/wp-json/wp/v2/cykelkategorier";
         let kategorier = [];
-        let galleri_taeller = -1;
+        let galleri_taeller = 0;
 
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentJson();
-//            document.querySelector(".labelKat").addEventListener("click", klikHverkate);
+
             document.querySelector(".katvenstre").addEventListener("click", klikPrev);
             document.querySelector(".kathoejre").addEventListener("click", klikNext);
         }
@@ -82,31 +82,37 @@
             console.log(response);
             kategorier = await response.json();
             console.log(kategorier);
-            visKat();
-// klikHverkate();
+            // visKat();
+            klikNext();
         }
 
-        function visKat() {
-            kategorier.forEach(kategori => {
-                document.querySelector(".katbillede").src = kategori.billeder.guid;
-                document.querySelector(".navnKat").textContent = kategori.navn;
-                klikNext();
-            })
-        }
 
-//        function klikHverkate() {
-//
-//        }
+        // function visKat() {
+        // // kategorierID = this.dataset.id;
+        // kategorier.forEach(kategori => {
+        // console.log(kategori.id)
+        // document.querySelector(".katbillede").src = kategori.billeder.guid;
+        // document.querySelector(".navnKat").textContent = kategori.navn;
+        //
+        // document.querySelector(".labelKat").lastElementChild.addEventListener("click", () => {
+        // location.href = "cykler.html?cykelkategorier=" + kategori.id;
+        // });
+        // klikNext();
+        // })
+        // }
 
         function klikNext() {
             console.log(klikNext);
-            galleri_taeller++;
             if (galleri_taeller == kategorier.length) {
                 galleri_taeller = 0;
             }
 
+            galleri_taeller++;
             document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
             document.querySelector(".katbillede").src = kategorier[galleri_taeller].billeder.guid;
+            document.querySelector(".labelKat").addEventListener("click", () => {
+                location.href = "cykler.html?cykelkategorier=" + kategorier[galleri_taeller].id;
+            });
         }
 
         function klikPrev() {
@@ -115,9 +121,11 @@
             if (galleri_taeller < 0) {
                 galleri_taeller = kategorier.length - 1;
             }
-
             document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
             document.querySelector(".katbillede").src = kategorier[galleri_taeller].billeder.guid;
+            document.querySelector(".labelKat").addEventListener("click", () => {
+                location.href = "cykler.html?cykelkategorier=" + kategorier[galleri_taeller].id;
+            });
         }
     </script>
 
