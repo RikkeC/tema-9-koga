@@ -146,6 +146,11 @@ header a:hover {
 
 
 /*---------------FORSIDE--------------*/
+
+#forside_grid {
+    display: none;
+}
+
 .main_image {
     width: 100%;
     height: auto;
@@ -264,10 +269,10 @@ header a:hover {
     background-color: #337CBE;
     opacity: 80%;
     height: 25%;
-    width: 89%;
+    width: 93%;
     position: absolute;
     bottom: 3vw;
-    left: 6vw;
+    left: 3.6vw;
     cursor: pointer;
 }
 
@@ -830,6 +835,65 @@ header_footer.html .footer_image {
 
 /*hvis skærmen er min. 800px og større --- TABLET og andre*/
 @media screen and (min-width: 800px) {
+
+    /*forside-grid*/
+
+    #forside_slides {
+        display: none;
+    }
+
+    #forside_grid {
+        display: block;
+    }
+
+    #forside_grid img {
+        width: 35vw;
+    }
+
+    .kats_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 70vw;
+        margin: 2vw auto;
+        grid-gap: 1vw;
+    }
+
+    .kat_container {
+        position: relative;
+        cursor: pointer;
+
+    }
+
+    .kat_container:hover {
+        transform: scale(1.02);
+        transition: 0.4s ease-in-out;
+    }
+
+    .grid_label {
+        background-color: #337CBE;
+        opacity: 80%;
+        height: 25%;
+        width: 100%;
+        position: absolute;
+        bottom: 0vw;
+        left: 0vw;
+        cursor: pointer;
+    }
+
+    #forside_grid h4 {
+        color: white;
+        text-align: center;
+        padding: 1vw;
+        font-size: 1.5rem;
+    }
+
+    #forside_grid h1 {
+        font-size: 2.5rem;
+        color: #337CBE;
+        text-align: center;
+        margin-top: 2vw;
+    }
+
 
     /*header*/
     header {
