@@ -296,8 +296,7 @@ header a:hover {
     left: 0;
 }
 
-<<<<<<< HEAD
-.loader {
+<<<<<<< HEAD .loader {
     border: 16px solid #f3f3f3;
     /* Light grey */
     border-top: 16px solid #3498db;
@@ -317,8 +316,6 @@ header a:hover {
         transform: rotate(360deg);
     }
 }
-=======
->>>>>>> origin/master
 
 /*---------------CYKLER---------------*/
 /* width */
@@ -351,8 +348,7 @@ header a:hover {
 
 #cykellisten .cykler {
     margin: 4.5vw 1vw 7vw;
-    height: 500px;
-    /* Alans   display: none;*/
+    height: 350px;
 }
 
 #cykellisten {
@@ -810,6 +806,10 @@ header_footer.html .footer_image {
         padding: 0;
     }
 
+    #cykellisten .cykler {
+        height: 350px;
+    }
+
     /*singleView.html*/
     .tilbage {
         font-size: 2vw;
@@ -863,7 +863,12 @@ header_footer.html .footer_image {
 /*hvis skærmen er min. 800px og større --- TABLET og andre*/
 @media screen and (min-width: 800px) {
 
+    /*forside.html*/
     /*forside-grid*/
+    .labelKat {
+        bottom: 3vw;
+        left: 4.5vw;
+    }
 
     #forside_slides {
         display: none;
@@ -949,12 +954,6 @@ header_footer.html .footer_image {
         font-size: 1.5vw;
     }
 
-    /*forside.html*/
-    .labelKat {
-        bottom: 3vw;
-        left: 4.5vw;
-    }
-
     /*om.html*/
     .side p {
         font-size: 1.8vw;
@@ -997,6 +996,10 @@ header_footer.html .footer_image {
 
     .textimg {
         padding: 15vw 3vw;
+    }
+
+    #cykellisten .cykler {
+        height: 560px;
     }
 
     /*singleView.html*/
@@ -1127,6 +1130,10 @@ header_footer.html .footer_image {
     .pris,
     .encykel .navn {
         font-size: 1.2vw;
+    }
+
+    #cykellisten .cykler {
+        height: 700px;
     }
 
     /*singleView.html*/
