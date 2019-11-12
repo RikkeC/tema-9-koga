@@ -118,26 +118,23 @@
             contentType: "json"
         }, {
             theUrl: urlCityCykler,
-            hvilkenSide: "elside",
+            hvilkenSide: "cityside",
             theFunction: visCykler,
             contentType: "json"
         }, {
             theUrl: urlElCykler,
-            hvilkenSide: "cityside",
+            hvilkenSide: "elside",
             theFunction: visCykler,
-
             contentType: "json"
         }, {
             theUrl: urlRacerCykler,
             hvilkenSide: "racerside",
             theFunction: visCykler,
-
             contentType: "json"
         }, {
             theUrl: urlTrekCykler,
             hvilkenSide: "trekside",
             theFunction: visCykler,
-
             contentType: "json"
         }];
 
@@ -183,9 +180,11 @@
             indhold.forEach(cykel => {
                 //console.log(cykel);
                 const klon = skabelon.cloneNode(true).content;
+                //siden skal først loade alle billeder i den valgte sektion fra forsiden (index.html).
                 klon.querySelector(".thumbnail").onload = function() {
-
+                    //tjek om alle billeder er færdige med at loade på cykler.html
                     console.log("jeg er loadet og jeg er ", this);
+                    //Find parent element, der indeholder alle cykelbilleder
                     console.log("jeg er loadet og min mor er ", this.parentElement);
                 }
                 klon.querySelector(".thumbnail").src = cykel.billed_1.guid;

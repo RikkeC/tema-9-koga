@@ -14,7 +14,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #eef0ef;
+    background-color: white;
 }
 
 a {
@@ -663,16 +663,18 @@ article {
     margin: 2.5rem;
 }
 
-#info #section_wrapper {
+#info #section_wrapper1 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 2vw;
+
 }
 
 #info .text_kontakt {
     flex-grow: 1;
     flex-basis: 150px;
-    background-color: white;
+    background-color: #eef0ef;
+    /*    background-color: white;*/
     margin: 5px;
 }
 
@@ -689,12 +691,14 @@ article {
 }
 
 
-
 #info .broedtekst_jonas {
     flex-grow: 1;
     flex-basis: 220px;
 }
 
+#info .billede_jonas {
+    align-items: center;
+}
 
 #info .map {
     flex-grow: 1;
