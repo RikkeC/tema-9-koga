@@ -41,9 +41,9 @@
                 <div class="kat_slide">
                     <div class="enkat_wrapper">
                         <div class="labelKat">
-                            <a href="cykler.html">
-                                <h2 class="navnKat"></h2>
-                            </a>
+                            <!--                            <a href="cykler.html">-->
+                            <h2 class="navnKat"></h2>
+                            <!--                            </a>-->
                         </div>
                         <img class="katbillede" src="" alt="">
                     </div>
@@ -92,7 +92,8 @@
             document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
             document.querySelector(".katbillede").src = kategorier[galleri_taeller].billeder.guid;
             document.querySelector(".labelKat").addEventListener("click", () => {
-                location.href = "cykler.html?cykelkategorier=" + kategorier[galleri_taeller].id;
+                // location.href = "cykler.html?cykelkategorier=" + kategorier[galleri_taeller].id;
+                location.href = "cykler.html#" + kategorier[galleri_taeller].slug;
             });
         }
 
@@ -105,7 +106,7 @@
             document.querySelector(".navnKat").textContent = kategorier[galleri_taeller].name;
             document.querySelector(".katbillede").src = kategorier[galleri_taeller].billeder.guid;
             document.querySelector(".labelKat").addEventListener("click", () => {
-                location.href = "cykler.html?cykelkategorier=" + kategorier[galleri_taeller].id;
+                location.href = "cykler.html#" + kategorier[galleri_taeller].slug;
             });
         }
     </script>

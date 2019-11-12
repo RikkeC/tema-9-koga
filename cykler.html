@@ -24,7 +24,7 @@
     <!--vis alle en LISTE af kategorier  -->
     <main id="cykellisten">
         <h1 class="overskrift"></h1>
-        <section class="citycykler cykler" data-cykelkategorier="3">
+        <section id="by-cykler" class="citycykler cykler" data-cykelkategorier="3">
             <h2>Bycykler</h2>
             <article class="cityside vandret">
             </article>
@@ -33,7 +33,8 @@
                 <div class="pil_hoejre"></div>
             </div>
         </section>
-        <section class="racercykler cykler" data-cykelkategorier="4">
+
+        <section id="racer-cykler" class="racercykler cykler" data-cykelkategorier="4">
             <h2>Racer</h2>
             <article class="racerside vandret">
             </article>
@@ -42,7 +43,8 @@
                 <div class="pil_hoejre"></div>
             </div>
         </section>
-        <section class="trekcykler cykler" data-cykelkategorier="5">
+
+        <section id="trekking-cykler" class="trekcykler cykler" data-cykelkategorier="5">
             <h2>Trekking</h2>
             <article class="trekside vandret">
             </article>
@@ -51,7 +53,8 @@
                 <div class="pil_hoejre"></div>
             </div>
         </section>
-        <section class="elcykler cykler" data-cykelkategorier="2">
+
+        <section id="el-cykler" class="elcykler cykler" data-cykelkategorier="2">
             <h2>El-cykler</h2>
             <article class="elside vandret">
             </article>
@@ -60,7 +63,8 @@
                 <div class="pil_hoejre"></div>
             </div>
         </section>
-        <section class="signcykler cykler" data-cykelkategorier="6">
+
+        <section id="signature-cykler" class="signcykler cykler" data-cykelkategorier="6">
             <h2>Signaturecykler</h2>
             <div class="box">
                 <div class="textimg">
@@ -85,7 +89,7 @@
         </article>
     </template>
 
-    <footer>
+    <footer id="footer">
     </footer>
 
     <script src="script.js"></script>
@@ -108,25 +112,55 @@
         let loadIterator = 0;
         let filtre;
 
+        //        const loadArray = [{
+        // theUrl: urlOverskrift,
+        // theFunction: visOverskrift,
+        // contentType: "json"
+        // }, {
+        // theUrl: urlCityCykler,
+        // theFunction: visCityCykler,
+        // contentType: "json"
+        // }, {
+        // theUrl: urlElCykler,
+        // theFunction: visElCykler,
+        // contentType: "json"
+        // }, {
+        // theUrl: urlRacerCykler,
+        // theFunction: visRacerCykler,
+        // contentType: "json"
+        // }, {
+        // theUrl: urlTrekCykler,
+        // theFunction: visTrekCykler,
+        // contentType: "json"
+        // }];
+        //
         const loadArray = [{
             theUrl: urlOverskrift,
+
             theFunction: visOverskrift,
             contentType: "json"
         }, {
             theUrl: urlCityCykler,
-            theFunction: visCityCykler,
+            hvilkenSide: "elside",
+            theFunction: visCykler,
             contentType: "json"
         }, {
             theUrl: urlElCykler,
-            theFunction: visElCykler,
+            hvilkenSide: "cityside",
+            theFunction: visCykler,
+
             contentType: "json"
         }, {
             theUrl: urlRacerCykler,
-            theFunction: visRacerCykler,
+            hvilkenSide: "racerside",
+            theFunction: visCykler,
+
             contentType: "json"
         }, {
             theUrl: urlTrekCykler,
-            theFunction: visTrekCykler,
+            hvilkenSide: "trekside",
+            theFunction: visCykler,
+
             contentType: "json"
         }];
 
@@ -145,7 +179,15 @@
             } else {
                 indhold = await jsonData.text();
             }
-            contentToLoad.theFunction(indhold);
+            if (contentToLoad.theFunction == visCykler) {
+
+                contentToLoad.theFunction(indhold, contentToLoad.hvilkenSide);
+
+            } else {
+                contentToLoad.theFunction(indhold);
+
+            }
+
             loadIterator++;
             if (loadIterator < loadArray.length) {
                 loadTheContentArray(loadArray[loadIterator]);
@@ -157,68 +199,91 @@
             document.querySelector(".overskrift").textContent = indhold.title.rendered;
         }
 
-        function visCityCykler(indhold) {
+        //        function visCityCykler(indhold) {
+        // const skabelon = document.querySelector("template");
+        // const liste = document.querySelector(".cityside");
+        //
+        // indhold.forEach(cykel => {
+        // // console.log(cykel);
+        // const klon = skabelon.cloneNode(true).content;
+        // klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+        // klon.querySelector(".navn").textContent = cykel.title.rendered;
+        // klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+        //
+        // liste.appendChild(klon);
+        // liste.lastElementChild.addEventListener("click", () => {
+        // location.href = "singleView.html?id=" + cykel.id;
+        // });
+        //
+        // })
+        // }
+        //
+        // function visElCykler(indhold) {
+        // const skabelon = document.querySelector("template");
+        // const liste = document.querySelector(".elside");
+        //
+        // indhold.forEach(cykel => {
+        // //console.log(cykel);
+        // const klon = skabelon.cloneNode(true).content;
+        // klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+        // klon.querySelector(".navn").textContent = cykel.title.rendered;
+        // klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+        //
+        // liste.appendChild(klon);
+        // liste.lastElementChild.addEventListener("click", () => {
+        // location.href = "singleView.html?id=" + cykel.id;
+        // });
+        // })
+        // }
+        //
+        // function visRacerCykler(indhold) {
+        // const skabelon = document.querySelector("template");
+        // const liste = document.querySelector(".racerside");
+        //
+        // indhold.forEach(cykel => {
+        // //console.log(cykel);
+        // const klon = skabelon.cloneNode(true).content;
+        // klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+        // klon.querySelector(".navn").textContent = cykel.title.rendered;
+        // klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+        //
+        // liste.appendChild(klon);
+        // liste.lastElementChild.addEventListener("click", () => {
+        // location.href = "singleView.html?id=" + cykel.id;
+        // });
+        // })
+        // }
+        //
+        // function visTrekCykler(indhold) {
+        // const skabelon = document.querySelector("template");
+        // const liste = document.querySelector(".trekside");
+        //
+        // indhold.forEach(cykel => {
+        // //console.log(cykel);
+        // const klon = skabelon.cloneNode(true).content;
+        // klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
+        // klon.querySelector(".navn").textContent = cykel.title.rendered;
+        // klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+        //
+        // liste.appendChild(klon);
+        // liste.lastElementChild.addEventListener("click", () => {
+        // location.href = "singleView.html?id=" + cykel.id;
+        // });
+        // })
+        // }
+
+        function visCykler(indhold, hvilketElement) {
             const skabelon = document.querySelector("template");
-            const liste = document.querySelector(".cityside");
-
-            indhold.forEach(cykel => {
-                //    console.log(cykel);
-                const klon = skabelon.cloneNode(true).content;
-                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
-                klon.querySelector(".navn").textContent = cykel.title.rendered;
-                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
-
-                liste.appendChild(klon);
-                liste.lastElementChild.addEventListener("click", () => {
-                    location.href = "singleView.html?id=" + cykel.id;
-                });
-
-            })
-        }
-
-        function visElCykler(indhold) {
-            const skabelon = document.querySelector("template");
-            const liste = document.querySelector(".elside");
+            const liste = document.querySelector("." + hvilketElement);
 
             indhold.forEach(cykel => {
                 //console.log(cykel);
                 const klon = skabelon.cloneNode(true).content;
-                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
-                klon.querySelector(".navn").textContent = cykel.title.rendered;
-                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+                klon.querySelector(".thumbnail").onload = function() {
 
-                liste.appendChild(klon);
-                liste.lastElementChild.addEventListener("click", () => {
-                    location.href = "singleView.html?id=" + cykel.id;
-                });
-            })
-        }
-
-        function visRacerCykler(indhold) {
-            const skabelon = document.querySelector("template");
-            const liste = document.querySelector(".racerside");
-
-            indhold.forEach(cykel => {
-                //console.log(cykel);
-                const klon = skabelon.cloneNode(true).content;
-                klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
-                klon.querySelector(".navn").textContent = cykel.title.rendered;
-                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
-
-                liste.appendChild(klon);
-                liste.lastElementChild.addEventListener("click", () => {
-                    location.href = "singleView.html?id=" + cykel.id;
-                });
-            })
-        }
-
-        function visTrekCykler(indhold) {
-            const skabelon = document.querySelector("template");
-            const liste = document.querySelector(".trekside");
-
-            indhold.forEach(cykel => {
-                //console.log(cykel);
-                const klon = skabelon.cloneNode(true).content;
+                    console.log("jeg er loadet og jeg er ", this);
+                    console.log("jeg er loadet og min mor er ", this.parentElement);
+                }
                 klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
                 klon.querySelector(".navn").textContent = cykel.title.rendered;
                 klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";

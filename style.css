@@ -291,6 +291,27 @@ header a:hover {
     left: 0;
 }
 
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /*---------------CYKLER---------------*/
 /* width */
 .cykler ::-webkit-scrollbar {
@@ -322,11 +343,13 @@ header a:hover {
 
 #cykellisten .cykler {
     margin: 4.5vw 1vw 7vw;
+    height: 500px;
     /* Alans   display: none;*/
 }
 
 #cykellisten {
     margin: 3em 0 1em 1em;
+
 }
 
 article {
@@ -382,6 +405,7 @@ article {
     overflow-x: scroll;
     overflow-y: visible;
     padding: 2vw 0 3vw 0;
+
 }
 
 .box {
@@ -771,6 +795,7 @@ header_footer.html .footer_image {
 
     .thumbnail {
         max-width: 200px;
+
     }
 
     .box {
