@@ -675,7 +675,7 @@ article {
     flex-basis: 150px;
     background-color: #eef0ef;
     /*    background-color: white;*/
-    margin: 5px;
+    margin: 0 0 0 3vw;
 }
 
 .text_kontakt img {
@@ -698,6 +698,7 @@ article {
 
 #info .billede_jonas {
     align-items: center;
+    padding: 3vw;
 }
 
 #info .map {
@@ -1194,6 +1195,18 @@ header_footer.html .footer_image {
     .side .historie_img,
     .side .filosofi_img {
         margin: 0 0 0 2vw;
+    }
+
+    /*kontak.html*/
+    #info #section_wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 2vw;
+    }
+
+    #info .map {
+        margin: 0 0 6vw;
     }
 
     /*footer*/
