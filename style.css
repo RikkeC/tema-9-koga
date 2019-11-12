@@ -362,7 +362,6 @@ article {
 
 #cykellisten .overskrift,
 #forside_slides .overskrift,
-#cykellisten h2,
 .kat_container h1 {
     color: #007CC4;
     margin: 3vw;
@@ -372,8 +371,8 @@ article {
 #cykellisten h2 {
     text-align: left;
     color: #007CC4;
-    margin-left: 3vw;
-    margin-top: 5vw;
+    margin: 0 0 0 3vw;
+    text-transform: uppercase;
 }
 
 #encykel,
