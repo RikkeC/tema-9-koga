@@ -52,7 +52,7 @@ header {
 }
 
 .header_stor {
-    height: 15rem;
+    height: 20rem;
 }
 
 .logo {
@@ -934,11 +934,11 @@ header_footer.html .footer_image {
 
     /*header*/
     header {
-        height: 5.3rem;
+        height: 4rem;
     }
 
     .logo {
-        margin: 1.5vw;
+        margin: 1vw;
     }
 
     .dropbtn {
