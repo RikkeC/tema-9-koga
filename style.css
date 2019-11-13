@@ -187,20 +187,115 @@ header a:hover {
     color: #4b8ce5;
 }
 
-#splash_container {
-    flex-wrap: wrap;
-    display: flex;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 90% 0%;
-    background-image: url(header_img/nyt_header.jpg);
-    width: 100%;
+/* Slideshow css starts*/
+
+/* Slideshow container */
+
+.cont-slider {
+    position: relative;
     height: 90vh;
+    max-height: 100vh;
+    width: auto;
+    min-width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
 }
+
+.slide {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: 90% 0;
+    background-size: cover;
+}
+
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+    animation: slidy 18s 0s backwards infinite;
+
+}
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    10% {
+        left: 0%;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    90% {
+        left: -400%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.one {
+    background-image: url(images/header-comfort-AOC.jpg);
+}
+
+.two {
+    background-image: url(images/header-comfort.jpg);
+}
+
+.three {
+    background-image: url(images/header_asphalt.jpg);
+}
+
+.four {
+    background-image: url(images/Edinburgh-Mark_beaumont.jpg);
+}
+
+.five {
+    background-image: url(images/76727065_478354176361035_6009280445403889664_n.jpg);
+}
+
+/* Slideshow css end */
+
+
 
 .splash_text h1 {
     padding: 0 0 20vw 0;
     text-transform: uppercase;
+    font-size: 3vw;
 }
 
 .splash_text {
@@ -210,39 +305,23 @@ header a:hover {
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 5vw;
     width: 80vw;
 }
 
 
 #splash_container a span {
     position: absolute;
-    bottom: 3.8vw;
+    padding: 1.5vw;
+    bottom: 6vw;
     left: 50%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-left: -12px;
-    border-left: 2.5px solid #fff;
-    border-bottom: 2.5px solid #fff;
-    -webkit-transform: rotate(-45deg);
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
     transform: rotate(-45deg);
-    -webkit-animation: pil 2s infinite;
     animation: pil 2s infinite;
     box-sizing: border-box;
-}
-
-@-webkit-keyframes pil {
-    0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-    }
-
-    20% {
-        -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-    }
-
-    40% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-    }
 }
 
 @keyframes pil {
