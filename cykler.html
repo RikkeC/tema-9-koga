@@ -26,7 +26,20 @@
 
     <!--vis alle en LISTE af kategorier  -->
     <main id="cykellisten">
-        <h1 class="overskrift"></h1>
+        <div class="flex-container" style="display: flex;">
+            <div style="min-width: 25%"> <!-- column with menu-->
+                <div class="fix-side-menu s-hide" style="position: fixed;top:5rem;left:0.2rem;">
+                    <ul>
+                        <li><a href="#by-cykler">Bycykler</a></li>
+                        <li><a href="#racer-cykler">Racer</a></li>
+                        <li><a href="#trekking-cykler">Trekking</a></li>
+                        <li><a href="#el-cykler">Elcykler</a></li>
+                        <li><a href="#signature-cykler">Signaturecykler</a></li>
+                    </ul>
+                    </div>
+                </div>
+            <div style="width: 70%"><!-- Column with content-->
+            <h1 class="overskrift"></h1>
         <h4 class="underoverskrift"></h4>
         <section id="by-cykler" class="cykler" data-cykelkategorier="3">
             <h2>Bycykler</h2>
@@ -80,7 +93,12 @@
                 </div>
             </div>
         </section>
-    </main>
+
+            </div>
+            <div style="width: 5%"></div> <!-- right most column for "air" -->
+        </div> <!-- flex container end -->
+
+            </main>
 
     <!--  hvordan en cykel ser ud i listen -->
     <template>
