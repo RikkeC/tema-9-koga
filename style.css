@@ -557,7 +557,7 @@ article {
 }
 
 .navn {
-    padding: 2vw;
+    padding: 2vw 0;
     font-size: 4vw;
 }
 
@@ -1277,6 +1277,9 @@ header_footer.html .footer_image {
     }
 
     /*singleView.html*/
+    .navn {
+        font-size: 3vw;
+    }
 
     .next {
         right: -5vw;
