@@ -398,6 +398,19 @@ header a:hover {
 
 /*---------------CYKLER---------------*/
 /* width */
+
+#cykellisten .overskrift {
+    margin-bottom: 0;
+    margin-left: 3vw;
+    color: #007CC4;
+}
+
+#cykellisten .underoverskrift {
+    margin: 0 3vw;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 .cykler ::-webkit-scrollbar {
     width: 100%;
     cursor: pointer;
@@ -439,7 +452,6 @@ article {
     padding: 2.7vw;
 }
 
-#cykellisten .overskrift,
 #forside_slides .overskrift,
 .kat_container h1 {
     color: #007CC4;
@@ -1043,6 +1055,15 @@ header_footer.html .footer_image {
     }
 
     /*cykler.html*/
+    #cykellisten .underoverskrift {
+        margin-right: 50vw;
+        margin-left: 5vw;
+    }
+
+    #cykellisten .overskrift {
+        margin-left: 5vw;
+    }
+
     .thumbnail {
         width: 500px;
     }

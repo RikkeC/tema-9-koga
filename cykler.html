@@ -27,6 +27,7 @@
     <!--vis alle en LISTE af kategorier  -->
     <main id="cykellisten">
         <h1 class="overskrift"></h1>
+        <h4 class="underoverskrift"></h4>
         <section id="by-cykler" class="cykler" data-cykelkategorier="3">
             <h2>Bycykler</h2>
             <article class="cityside vandret">
@@ -174,6 +175,7 @@
 
         function visOverskrift(indhold) {
             document.querySelector(".overskrift").textContent = indhold.title.rendered;
+            document.querySelector(".underoverskrift").innerHTML = indhold.content.rendered;
         }
 
         function visCykler(indhold, hvilketElement) {
