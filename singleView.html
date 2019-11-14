@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <title></title>
 
+    <style>
+        body {
+            background-color: rgba(128, 128, 128, 0.06);
+        }
 
+    </style>
 </head>
 
 <body>
@@ -38,18 +43,19 @@
                     <a class="next">&#10095;</a>
                 </div>
                 <div class="tekstcontainer">
-                    <div class="prissingle">
-                        <pre class="nummer"></pre>
-                    </div>
                     <div class="tekstvenstre">
-                        <h2 class="beskrivelse">Beskrivelse</h2><br>
-                        <pre class="tekst"></pre>
+                        <pre class="nummer"></pre>
+                        <div class="beskrivbottom">
+                            <h2 class="beskrivelse">Beskrivelse</h2><br>
+                            <pre class="beskriv tekst"></pre>
+                        </div>
                     </div>
                     <div class="teksthoejre">
                         <h2 class="tekniskinfo">Teknisk Information</h2><br>
-                        <pre class="teknisk_tekst"></pre>
+                        <pre class="teknisk tekst"></pre>
                     </div>
                 </div>
+
             </article>
         </section>
     </main>
@@ -76,7 +82,7 @@
         }
 
 
-        //        function visGalleri(n) {
+        //  TESTING      function visGalleri(n) {
         // console.log(visGalleri);
         // let i;
         // let slides = document.querySelector(".slide");
@@ -100,8 +106,8 @@
                 if (cykel.id == id) {
                     document.querySelector(".navn").textContent = cykel.navn;
                     document.querySelector(".nummer").textContent = "Pris: " + cykel.pris + " kr.";
-                    document.querySelector(".tekst").textContent = cykel.beskrivelse;
-                    document.querySelector(".teknisk_tekst").textContent = cykel.teknisk;
+                    document.querySelector(".beskriv").textContent = cykel.beskrivelse;
+                    document.querySelector(".teknisk").textContent = cykel.teknisk;
                     //   console.log("Billed array", cykel.billeder);
                     billedArray = cykel.billeder;
                     klikNext();
