@@ -416,16 +416,15 @@ header a:hover {
 
 /* Track */
 .cykler ::-webkit-scrollbar-track {
-    background-color: #f1fbff;
-
+    background-color: #d6dee2;
     border-radius: 10px;
+    margin: 3vw;
 
 }
 
 /* Handle */
 .cykler ::-webkit-scrollbar-thumb {
     background-color: #007CC4;
-
     border-radius: 10px;
 }
 
@@ -434,22 +433,27 @@ header a:hover {
     background-color: rgba(0, 124, 196, 0.33);
 }
 
+#cykellisten {
+    background-color: rgba(248, 248, 248, 0.63);
+    width: 100%;
+    padding-top: 2vw;
+}
 
 
+#signature-cykler {
+    padding-top: 2vw;
+}
 
 #cykellisten .box {
     margin-top: 2vw;
 }
 
 #cykellisten .cykler {
-    margin: 4.5vw 1vw 7vw;
+    margin: 0 auto;
     height: 350px;
 }
 
-#cykellisten {
-    margin: 3em 0 1em 1em;
 
-}
 
 article {
     padding: 2.7vw;
@@ -486,6 +490,7 @@ article {
     cursor: pointer;
     background-color: #337CBE;
     padding: 0.5em;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.15);
 }
 
 .signlabel {
@@ -527,6 +532,8 @@ article {
     background-color: rgb(62, 103, 141);
 }
 
+/*
+
 .stryge_container {
     display: flex;
     flex-flow: row wrap;
@@ -554,6 +561,7 @@ article {
     width: 3.5vw;
 
 }
+*/
 
 /*---------------SINGLE VIEW---------------*/
 
@@ -572,6 +580,7 @@ article {
     left: 0;
     z-index: 5;
     font-size: 2vw;
+    cursor: pointer;
 }
 
 .galleri_container {
@@ -836,7 +845,6 @@ pre {
     height: 260px;
     width: 400px;
     margin: 15px;
-    box-shadow: 0.5vw 0.5vw 0.5vw grey;
 }
 
 #info .text_kontakt h2,
@@ -947,6 +955,12 @@ header_footer.html .footer_image {
 
 @media only screen and (max-width: 820px) {
 
+    /*index.html*/
+    .splash_text h1 {
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
     /*cykler.html*/
     h1 {
         font-size: 6.5vw;
@@ -958,7 +972,7 @@ header_footer.html .footer_image {
 
     .thumbnail {
         max-width: 200px;
-
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
     }
 
     .box {
@@ -1101,17 +1115,17 @@ header_footer.html .footer_image {
     }
 
     #cykellisten .overskrift {
-        margin-left: 5vw;
+        margin: 3vw;
+        color: #808080;
+        text-align: center;
     }
 
     .thumbnail {
-        width: 500px;
+        width: 450px;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
     }
 
-    #cykellisten .cykler,
-    .signcykler {
-        margin: 2vw;
-    }
+
 
     .stryge_container p {
         font-size: 1rem;
@@ -1270,7 +1284,9 @@ header_footer.html .footer_image {
     .thumbnail {
         max-width: 1000px;
         cursor: pointer;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
     }
+
 
     .pris,
     .encykel .navn {
