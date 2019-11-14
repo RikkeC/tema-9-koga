@@ -551,13 +551,14 @@ article {
 }
 
 /*---------------SINGLE VIEW---------------*/
+
 #encykel {
     padding: 2vw;
 }
 
-#singleview {
-    margin: 0;
-    background-color: rgba(128, 128, 128, 0.06);
+.navn {
+    padding: 2vw;
+    font-size: 4vw;
 }
 
 .tilbage {
@@ -571,7 +572,7 @@ article {
 .galleri_container {
     max-width: 1000px;
     position: relative;
-    margin-bottom: 3.5vw;
+    margin-bottom: 3vw;
 }
 
 .encykelslide img,
@@ -634,8 +635,10 @@ article {
 
 .tekstvenstre,
 .teksthoejre {
+    flex-basis: 1;
+    flex-grow: 200px;
     margin: 3vw;
-    padding: 3.5vw 1.5vw 0 1.5vw;
+    padding: 4vw 1.5vw;
     background-color: white;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.04);
 }
@@ -652,9 +655,8 @@ article {
 }
 
 pre {
-    line-height: 4.2vw;
+    line-height: 5vw;
 }
-
 
 
 /*-------------------OM---------------------*/
@@ -1157,26 +1159,27 @@ header_footer.html .footer_image {
     .tekstcontainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 5vw;
         grid-gap: 2vw;
     }
 
-    .prissingle {
-        grid-column: 2;
-        margin: 0 auto;
+    .nummer {
+        margin: 0 0 0 25vw;
     }
 
-    .prissingle pre {
-        font-size: 2vw;
-        text-align: right;
+    .teksthoejre {
+        grid-column: 2;
+        padding: 4.3vw 1.8vw;
+        margin: 0;
     }
 
     .tekstvenstre {
         grid-column: 1;
+        margin: 0;
+        padding: 0.8vw;
     }
 
     pre {
-        font-size: 1.8vw;
+        font-size: 1.7vw;
         line-height: 3vw;
     }
 
@@ -1285,13 +1288,21 @@ header_footer.html .footer_image {
         padding: 2vw;
     }
 
-    pre,
+    pre {
+        font-size: 1.3vw;
+        line-height: 2.3vw;
+    }
+
     .tilbage {
         font-size: 1.2vw;
     }
 
     .textimg {
         padding: 12vw 3vw;
+    }
+
+    .nummer {
+        margin: 0 0 0 27vw;
     }
 
     /*om.html*/

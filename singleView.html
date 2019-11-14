@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <title></title>
 
+    <style>
+        body {
+            background-color: rgba(128, 128, 128, 0.06);
+        }
 
+    </style>
 </head>
 
 <body>
@@ -42,12 +47,12 @@
                         <pre class="nummer"></pre>
                         <div class="beskrivbottom">
                             <h2 class="beskrivelse">Beskrivelse</h2><br>
-                            <pre class="tekst"></pre>
+                            <pre class="beskriv tekst"></pre>
                         </div>
                     </div>
                     <div class="teksthoejre">
                         <h2 class="tekniskinfo">Teknisk Information</h2><br>
-                        <pre class="tekst"></pre>
+                        <pre class="teknisk tekst"></pre>
                     </div>
                 </div>
 
@@ -101,8 +106,8 @@
                 if (cykel.id == id) {
                     document.querySelector(".navn").textContent = cykel.navn;
                     document.querySelector(".nummer").textContent = "Pris: " + cykel.pris + " kr.";
-                    document.querySelector(".tekst").textContent = cykel.beskrivelse;
-                    document.querySelector(".teknisk_tekst").textContent = cykel.teknisk;
+                    document.querySelector(".beskriv").textContent = cykel.beskrivelse;
+                    document.querySelector(".teknisk").textContent = cykel.teknisk;
                     //   console.log("Billed array", cykel.billeder);
                     billedArray = cykel.billeder;
                     klikNext();
