@@ -673,22 +673,12 @@ pre {
 }
 
 .side {
-    margin: 0 5vw;
-    padding: 5rem 0;
+    padding: 0;
     display: grid;
-    grid-gap: 0.5rem;
     grid-template-areas:
-        "kogacenter_overskrift"
-        "kogacenter_img"
-        "kogacenter_txt"
-        "historie_overskrift"
-        "historie_img"
-        "historie_txt"
-        "historie_txt_2"
-        "filosofi_overskrift"
-        "filosofi_txt"
-        "filosofi_img"
-        "filosofi_txt_2";
+        "om_section1"
+        "om_section2"
+        "om_section3";
 }
 
 #omside .overskrift {
@@ -703,6 +693,46 @@ pre {
 .side img {
     max-width: 80vw;
     margin: 0;
+}
+
+#om_section1,
+#om_section2,
+#om_section3 {
+    padding: 3vw;
+}
+
+#om_section1 {
+    background-color: whitesmoke;
+    grid-area: om_section1;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "kogacenter_overskrift"
+        "kogacenter_img"
+        "kogacenter_txt";
+}
+
+#om_section2 {
+    grid-area: om_section2;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "historie_overskrift"
+        "historie_img"
+        "historie_txt"
+        "historie_txt_2";
+}
+
+#om_section3 {
+    background-color: whitesmoke;
+    grid-area: om_section3;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "filosofi_overskrift"
+        "filosofi_txt"
+        "filosofi_img"
+        "filosofi_txt_2";
 }
 
 .side .historie_overskrift {
@@ -1274,16 +1304,36 @@ header_footer.html .footer_image {
         max-width: 35vw;
     }
 
-    .side {
-        width: 75vw;
+    #om_section1,
+    #om_section2,
+    #om_section3 {
+        padding: 3vw 13vw;
+    }
+
+    #om_section1 {
+        width: 100vw;
         margin: 0 auto;
         grid-gap: 1rem;
         grid-template-areas:
             ". kogacenter_overskrift"
-            "kogacenter_img kogacenter_txt"
+            "kogacenter_img kogacenter_txt";
+    }
+
+    #om_section2 {
+        width: 100vw;
+        margin: 0 auto;
+        grid-gap: 1rem;
+        grid-template-areas:
             "historie_overskrift historie_overskrift"
             "historie_txt historie_img"
-            "historie_txt_2 historie_txt_2"
+            "historie_txt_2 historie_txt_2";
+    }
+
+    #om_section3 {
+        width: 100vw;
+        margin: 0 auto;
+        grid-gap: 1rem;
+        grid-template-areas:
             "filosofi_overskrift filosofi_overskrift"
             "filosofi_txt filosofi_img"
             "filosofi_txt_2 filosofi_txt_2";
@@ -1297,6 +1347,10 @@ header_footer.html .footer_image {
     .side .historie_img,
     .side .filosofi_img {
         margin: 0 0 0 2vw;
+    }
+
+    .filosofi_img img {
+        width: 100%;
     }
 
     /*kontak.html*/
