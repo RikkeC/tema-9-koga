@@ -194,7 +194,7 @@
                 }
                 klon.querySelector(".thumbnail").src = cykel.billed_1.guid;
                 klon.querySelector(".navn").textContent = cykel.title.rendered;
-                klon.querySelector(".pris").textContent = cykel.pris + ",- kr.";
+                klon.querySelector(".pris").textContent = cykel.pris + " kr.";
 
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
@@ -202,5 +202,8 @@
                 });
             })
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
