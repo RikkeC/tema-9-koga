@@ -884,9 +884,10 @@ pre {
 
 /*-----------------FOOTER--------------------*/
 
-footer {
+.footer {
     width: 100%;
-    background-image: url("images/asfalt.jpg");
+    /*  background-image: url("images/asfalt.jpg"); */
+    background-image: linear-gradient(#aaa, #333);
     background-size: 100%;
     color: white;
     padding: 2.5vw;
