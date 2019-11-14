@@ -315,8 +315,8 @@ header a:hover {
     width: 30px;
     height: 30px;
     margin-left: -12px;
-    border-left: 3px solid #fff;
-    border-bottom: 3px solid #fff;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
     transform: rotate(-45deg);
     animation: pil 2s infinite;
     box-sizing: border-box;
