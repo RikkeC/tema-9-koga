@@ -552,22 +552,12 @@ article {
 
 /*---------------SINGLE VIEW---------------*/
 #encykel {
-    padding: 2.5vw;
+    padding: 2vw;
 }
 
-.enCykelview .navn {
-    text-align: center;
-}
-
-.tekstcontainer {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.prissingle pre {
-    color: #337CBE;
-    font-weight: 600;
-    text-align: right;
+#singleview {
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.06);
 }
 
 .tilbage {
@@ -575,6 +565,7 @@ article {
     top: 4.5vh;
     left: 0;
     z-index: 5;
+    font-size: 2vw;
 }
 
 .galleri_container {
@@ -626,6 +617,44 @@ article {
 .kathoejre:hover {
     background-color: rgba(136, 136, 136, 0.8);
 }
+
+.prev,
+.next {
+    font-size: 4vw;
+}
+
+.enCykelview .navn {
+    text-align: center;
+}
+
+.tekstcontainer {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.tekstvenstre,
+.teksthoejre {
+    margin: 3vw;
+    padding: 3.5vw 1.5vw 0 1.5vw;
+    background-color: white;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.04);
+}
+
+.nummer {
+    color: #337CBE;
+    margin: 0 0 0 55vw;
+    font-weight: 600;
+    text-align: right;
+}
+
+.tekstcontainer .tekst {
+    padding: 1.6vw;
+}
+
+pre {
+    line-height: 4.2vw;
+}
+
 
 
 /*-------------------OM---------------------*/
@@ -901,37 +930,6 @@ header_footer.html .footer_image {
 
     #cykellisten .cykler {
         height: 350px;
-    }
-
-    /*singleView.html*/
-    .tilbage {
-        font-size: 2vw;
-    }
-
-    .prev,
-    .next {
-        font-size: 4vw;
-    }
-
-    pre {
-        line-height: 4.2vw;
-    }
-
-    #singleview {
-        margin: 0;
-        background-color: rgba(128, 128, 128, 0.06);
-    }
-
-    .tekstvenstre,
-    .teksthoejre {
-        margin: 3.5vw 1vw;
-        padding: 1.5vw;
-        background-color: white;
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.04)
-    }
-
-    .prissingle {
-        margin: 0 0 0 60vw;
     }
 
     /*kontakt.html*/
