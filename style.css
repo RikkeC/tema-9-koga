@@ -191,7 +191,7 @@ header a:hover {
 
 /* Slideshow container */
 
-#cont-slider {
+.cont-slider {
     position: relative;
     height: 90vh;
     max-height: 100vh;
@@ -201,7 +201,7 @@ header a:hover {
     overflow: hidden;
 }
 
-#cont-slider .slide {
+.slide {
     display: inline-block;
     position: relative;
     float: left;
@@ -212,7 +212,7 @@ header a:hover {
     background-size: cover;
 }
 
-#cont-slider .slider {
+.slider {
     position: absolute;
     left: 0;
     top: 0;
@@ -268,29 +268,27 @@ header a:hover {
     }
 }
 
-#cont-slider .one {
+.one {
     background-image: url(images/header-comfort-AOC.jpg);
 }
 
-#cont-slider .two {
+.two {
     background-image: url(images/header-comfort.jpg);
 }
 
-#cont-slider .three {
+.three {
     background-image: url(images/header_asphalt.jpg);
 }
 
-#cont-slider .four {
+.four {
     background-image: url(images/Edinburgh-Mark_beaumont.jpg);
 }
 
-#cont-slider .five {
+.five {
     background-image: url(images/76727065_478354176361035_6009280445403889664_n.jpg);
 }
 
 /* Slideshow css end */
-
-
 
 .splash_text h1 {
     padding: 0 0 20vw 0;
