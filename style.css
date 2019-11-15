@@ -8,6 +8,7 @@
 :root {
     --koga-blue: #0e7dc7;
     --baggrund-grey: #f8f8f8;
+    --navi-knapper: #4ea4d6;
     --header-skrift: 'Open Sans', sans-serif;
     --broedteskt-skrift: 'Roboto', sans-serif;
 }
@@ -559,7 +560,7 @@ article {
 }
 
 .tilbage {
-    background-color: var(--koga-blue);
+    background-color: var(--navi-knapper);
     border: none;
     color: white;
     font-size: 4vw;
@@ -568,7 +569,7 @@ article {
     position: fixed;
     top: 10vh;
     left: 0;
-    z-index: 4;
+    z-index: -1;
     cursor: pointer;
 }
 
@@ -1156,6 +1157,7 @@ header_footer.html .footer_image {
     }
 
     .tilbage {
+        z-index: 2;
         font-size: 2.5vw;
         top: 8vw;
         height: 7vh;
