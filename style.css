@@ -269,15 +269,15 @@ header a:hover {
 }
 
 #slider .one {
-    background-image: url(header_img/splash%2011.png);
+    background-image: url(header_img/splash_11.jpg);
 }
 
 #slider .two {
-    background-image: url(header_img/splash%209.png);
+    background-image: url(header_img/splash_9.jpg);
 }
 
 #slider .three {
-    background-image: url(header_img/splash%2010.png);
+    background-image: url(header_img/splash_10.jpg);
 }
 
 #slider .four {
@@ -285,7 +285,7 @@ header a:hover {
 }
 
 #slider .five {
-    background-image: url(header_img/splash%206.png);
+    background-image: url(header_img/splash_6.jpg);
 }
 
 /* Slideshow css end */
@@ -454,10 +454,8 @@ header a:hover {
     height: 350px;
 }
 
-
-
 article {
-    padding: 2.7vw;
+    padding: 0 2.7vw;
 }
 
 #forside_slides .overskrift,
@@ -572,7 +570,7 @@ article {
 
 .navn {
     padding: 2vw 0;
-    font-size: 4vw;
+    font-size: 4.8vw;
 }
 
 .tilbage {
@@ -585,7 +583,7 @@ article {
 }
 
 .galleri_container {
-    max-width: 1000px;
+    max-width: 900px;
     position: relative;
     margin-bottom: 3vw;
 }
@@ -660,7 +658,7 @@ article {
 
 .nummer {
     color: #337CBE;
-    margin: 0 0 0 55vw;
+    margin: 0 0 0 53vw;
     font-weight: 600;
     text-align: right;
 }
@@ -1040,8 +1038,13 @@ header_footer.html .footer_image {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 70vw;
+<<<<<<< HEAD
         margin: 0 auto;
         grid-gap: 1vw;
+=======
+        margin: 2vw auto;
+        grid-gap: 4vw;
+>>>>>>> origin/master
     }
 
     .kat_container {
@@ -1165,7 +1168,7 @@ header_footer.html .footer_image {
 
     /*singleView.html*/
     #encykel {
-        margin: 3vw;
+        margin: 0.8vw 3vw;
     }
 
     .tilbage {
@@ -1419,10 +1422,9 @@ header_footer.html .footer_image {
     footer p {
         font-size: 1.2vw;
     }
-
-
 }
 
+/* Fixed menu on the left for dekstop*/
 .fix-side-menu {
 
     position: fixed;
@@ -1432,10 +1434,7 @@ header_footer.html .footer_image {
 
 .fix-menu-list {
     list-style: none;
-
 }
-
-
 
 .list_item {
     background-color: rgba(51, 124, 190, 0.80);
@@ -1451,9 +1450,16 @@ header_footer.html .footer_image {
 .fixed_menu_link {
     color: whitesmoke;
     padding: 10px;
-
 }
 
 .fixed_menu_link:hover {
     color: white;
+}
+
+/*Splash for kontakt.html */
+#splash_kontakt {
+    height: 300px;
+    width: 100%;
+    background-size: 100%;
+    background-image: url(images/splash_transparent_bg.png)
 }
