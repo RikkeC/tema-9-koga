@@ -1416,10 +1416,9 @@ header_footer.html .footer_image {
     footer p {
         font-size: 1.2vw;
     }
-
-
 }
 
+/* Fixed menu on the left for dekstop*/
 .fix-side-menu {
 
     position: fixed;
@@ -1429,10 +1428,7 @@ header_footer.html .footer_image {
 
 .fix-menu-list {
     list-style: none;
-
 }
-
-
 
 .list_item {
     background-color: rgba(51, 124, 190, 0.80);
@@ -1448,9 +1444,16 @@ header_footer.html .footer_image {
 .fixed_menu_link {
     color: whitesmoke;
     padding: 10px;
-
 }
 
 .fixed_menu_link:hover {
     color: white;
+}
+
+/*Splash for kontakt.html */
+#splash_kontakt {
+    height: 300px;
+    width: 100%;
+    background-size: 100%;
+    background-image: url(images/splash_transparent_bg.png)
 }
