@@ -1026,7 +1026,7 @@ header_footer.html .footer_image {
 
     #forside_grid {
         display: block;
-        background-color: whitesmoke;
+        background-color: rgba(128, 128, 128, 0.06);
         margin: 0;
     }
 
@@ -1038,13 +1038,9 @@ header_footer.html .footer_image {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 70vw;
-<<<<<<< HEAD
         margin: 0 auto;
-        grid-gap: 1vw;
-=======
-        margin: 2vw auto;
         grid-gap: 4vw;
->>>>>>> origin/master
+
     }
 
     .kat_container {
