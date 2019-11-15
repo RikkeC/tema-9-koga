@@ -27,78 +27,80 @@
     <!--vis alle en LISTE af kategorier  -->
     <main id="cykellisten">
         <div class="flex-container" style="display: flex;">
-            <div style="min-width: 25%"> <!-- column with menu-->
-                <div class="fix-side-menu s-hide" style="position: fixed;top:5rem;left:0.2rem;">
-                    <ul>
-                        <li><a href="#by-cykler">Bycykler</a></li>
-                        <li><a href="#racer-cykler">Racer</a></li>
-                        <li><a href="#trekking-cykler">Trekking</a></li>
-                        <li><a href="#el-cykler">Elcykler</a></li>
-                        <li><a href="#signature-cykler">Signaturecykler</a></li>
+            <div style="min-width: 25%">
+                <!-- column with menu-->
+                <div class="fix-side-menu s-hide">
+                    <ul class="fix-menu-list">
+                        <li class="list_item"><a class="fixed_menu_link" href="#by-cykler">Bycykler</a></li>
+                        <li class="list_item"><a class="fixed_menu_link" href="#racer-cykler">Racer</a></li>
+                        <li class="list_item"><a class="fixed_menu_link" href="#trekking-cykler">Trekking</a></li>
+                        <li class="list_item"><a class="fixed_menu_link" href="#el-cykler">Elcykler</a></li>
+                        <li class="list_item"><a class="fixed_menu_link" href="#signature-cykler">Signaturecykler</a></li>
                     </ul>
-                    </div>
-                </div>
-            <div style="width: 70%"><!-- Column with content-->
-            <h1 class="overskrift"></h1>
-        <h4 class="underoverskrift"></h4>
-        <section id="by-cykler" class="cykler" data-cykelkategorier="3">
-            <h2>Bycykler</h2>
-            <article class="cityside vandret">
-            </article>
-            <!-- <div class="stryge_container">
-                <div class="pil_venstre"></div>
-                <div class="pil_hoejre"></div>
-            </div>-->
-        </section>
-
-        <section id="racer-cykler" class="cykler" data-cykelkategorier="4">
-            <h2>Racer</h2>
-            <article class="racerside vandret">
-            </article>
-            <!--<div class="stryge_container">
-                <div class="pil_venstre"></div>
-                <div class="pil_hoejre"></div>
-            </div>-->
-        </section>
-
-        <section id="trekking-cykler" class="trekcykler cykler" data-cykelkategorier="5">
-            <h2>Trekking</h2>
-            <article class="trekside vandret">
-            </article>
-            <!--<div class="stryge_container">
-                <div class="pil_venstre"></div>
-                <div class="pil_hoejre"></div>
-            </div>-->
-        </section>
-
-        <section id="el-cykler" class="elcykler cykler" data-cykelkategorier="2">
-            <h2>Elcykler</h2>
-            <article class="elside vandret">
-            </article>
-            <!-- <div class="stryge_container">
-                <div class="pil_venstre"></div>
-                <div class="pil_hoejre"></div>
-            </div>-->
-        </section>
-
-        <section id="signature-cykler" class="signcykler cykler" data-cykelkategorier="6">
-            <h2>Signaturecykler</h2>
-            <div class="box">
-                <div class="textimg">
-                    <div class="signlabel">
-                        <a href="https://www.koga.com/en/koga-signature">
-                            <h3>Byg din egen cykel</h3>
-                        </a>
-                    </div>
                 </div>
             </div>
-        </section>
+            <div style="width: 70%">
+                <!-- Column with content-->
+                <h1 class="overskrift"></h1>
+                <h4 class="underoverskrift"></h4>
+                <section id="by-cykler" class="cykler" data-cykelkategorier="3">
+                    <h2>Bycykler</h2>
+                    <article class="cityside vandret">
+                    </article>
+                    <!-- <div class="stryge_container">
+                <div class="pil_venstre"></div>
+                <div class="pil_hoejre"></div>
+            </div>-->
+                </section>
+
+                <section id="racer-cykler" class="cykler" data-cykelkategorier="4">
+                    <h2>Racer</h2>
+                    <article class="racerside vandret">
+                    </article>
+                    <!--<div class="stryge_container">
+                <div class="pil_venstre"></div>
+                <div class="pil_hoejre"></div>
+            </div>-->
+                </section>
+
+                <section id="trekking-cykler" class="trekcykler cykler" data-cykelkategorier="5">
+                    <h2>Trekking</h2>
+                    <article class="trekside vandret">
+                    </article>
+                    <!--<div class="stryge_container">
+                <div class="pil_venstre"></div>
+                <div class="pil_hoejre"></div>
+            </div>-->
+                </section>
+
+                <section id="el-cykler" class="elcykler cykler" data-cykelkategorier="2">
+                    <h2>Elcykler</h2>
+                    <article class="elside vandret">
+                    </article>
+                    <!-- <div class="stryge_container">
+                <div class="pil_venstre"></div>
+                <div class="pil_hoejre"></div>
+            </div>-->
+                </section>
+
+                <section id="signature-cykler" class="signcykler cykler" data-cykelkategorier="6">
+                    <h2>Signaturecykler</h2>
+                    <div class="box">
+                        <div class="textimg">
+                            <div class="signlabel">
+                                <a href="https://www.koga.com/en/koga-signature">
+                                    <h3>Byg din egen cykel</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <div style="width: 5%"></div> <!-- right most column for "air" -->
         </div> <!-- flex container end -->
 
-            </main>
+    </main>
 
     <!--  hvordan en cykel ser ud i listen -->
     <template>
@@ -220,6 +222,7 @@
                 });
             })
         }
+
     </script>
 </body>
 
