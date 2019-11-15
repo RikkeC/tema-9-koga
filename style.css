@@ -269,23 +269,23 @@ header a:hover {
 }
 
 #slider .one {
-    background-image: url(images/header-comfort-AOC.jpg);
+    background-image: url(header_img/splash%2011.png);
 }
 
 #slider .two {
-    background-image: url(images/header-comfort.jpg);
+    background-image: url(header_img/splash%209.png);
 }
 
 #slider .three {
-    background-image: url(images/header_asphalt.jpg);
+    background-image: url(header_img/splash%2010.png);
 }
 
 #slider .four {
-    background-image: url(images/Edinburgh-Mark_beaumont.jpg);
+    background-image: url(header_img/header-comfort-AOC-blue.jpg);
 }
 
 #slider .five {
-    background-image: url(images/76727065_478354176361035_6009280445403889664_n.jpg);
+    background-image: url(header_img/splash%206.png);
 }
 
 /* Slideshow css end */
@@ -888,7 +888,8 @@ pre {
 .footer {
     width: 100%;
     /*  background-image: url("images/asfalt.jpg"); */
-    background-image: linear-gradient(#aaa, #333);
+    /*    background-image: linear-gradient(#aaa, #333);*/
+    background-color: #333333;
     background-size: 100%;
     color: white;
     padding: 2.5vw;
