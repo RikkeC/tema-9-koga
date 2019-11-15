@@ -1026,6 +1026,8 @@ header_footer.html .footer_image {
 
     #forside_grid {
         display: block;
+        background-color: rgba(128, 128, 128, 0.06);
+        margin: 0;
     }
 
     #forside_grid img {
@@ -1036,14 +1038,15 @@ header_footer.html .footer_image {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 70vw;
-        margin: 2vw auto;
+        margin: 0 auto;
         grid-gap: 4vw;
+
     }
 
     .kat_container {
         position: relative;
         cursor: pointer;
-
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
     }
 
     .kat_container:hover {
@@ -1073,9 +1076,8 @@ header_footer.html .footer_image {
         font-size: 2.5rem;
         color: #337CBE;
         text-align: center;
-        margin-top: 2vw;
+        padding: 2vw;
     }
-
 
     /*header*/
     header {
