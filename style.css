@@ -1411,10 +1411,10 @@ footer img {
     color: white;
 }
 
-/*Splash for kontakt.html */
-#splash_kontakt {
+/*
+Splash for kontakt.html #splash_kontakt {
     height: 300px;
     width: 100%;
     background-size: 100%;
     background-image: url(images/splash_transparent_bg.png)
-}
+}*/
