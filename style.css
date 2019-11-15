@@ -578,7 +578,7 @@ article {
     top: 4.5vh;
     left: 0;
     z-index: 5;
-    font-size: 2vw;
+    font-size: 2.5vw;
     cursor: pointer;
 }
 
@@ -658,7 +658,7 @@ article {
 
 .nummer {
     color: #337CBE;
-/*    margin: 0 0 0 53vw;*/
+    margin: 0 0 0 52vw;
     font-weight: 600;
     text-align: right;
 }
@@ -1183,7 +1183,7 @@ header_footer.html .footer_image {
         grid-gap: 2vw;
     }
 
-/*
+    /*
     .nummer {
         margin: 0 0 0 25vw;
     }*/
