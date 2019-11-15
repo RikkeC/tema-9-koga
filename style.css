@@ -50,7 +50,7 @@ pre {
 
 header {
     display: flex;
-    background-image: url("images/asfalt.jpg");
+    background-image: url("images/header_3_asfalt.jpg");
     margin: 0 auto;
     height: 4rem;
     width: 100%;
@@ -63,7 +63,7 @@ header {
 }
 
 .logo {
-    background-image: url(header_img/logo_white_new_small.svg);
+    background-image: url(assets/logo_white_new.svg);
     height: 40px;
     width: 150px;
     position: relative;
@@ -103,7 +103,7 @@ nav {
 }
 
 header a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--header-skrift);
     color: white;
     font-size: 1rem;
     font-weight: bolder;
@@ -206,6 +206,16 @@ header a:hover {
     overflow: hidden;
 }
 
+#slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+    animation: slidy 18s 0s backwards infinite;
+
+}
+
 #slider .slide {
     display: inline-block;
     position: relative;
@@ -217,14 +227,24 @@ header a:hover {
     background-size: cover;
 }
 
-#slider {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 500%;
-    height: 100%;
-    animation: slidy 18s 0s backwards infinite;
+#slider .one {
+    background-image: url(images/splash_11.jpg);
+}
 
+#slider .two {
+    background-image: url(images/splash_9.jpg);
+}
+
+#slider .three {
+    background-image: url(images/splash_10.jpg);
+}
+
+#slider .four {
+    background-image: url(images/splah_comfort-AOC-blue.jpg);
+}
+
+#slider .five {
+    background-image: url(images/splash_6.jpg);
 }
 
 @keyframes slidy {
@@ -271,26 +291,6 @@ header a:hover {
     100% {
         left: 0;
     }
-}
-
-#slider .one {
-    background-image: url(header_img/splash_11.jpg);
-}
-
-#slider .two {
-    background-image: url(header_img/splash_9.jpg);
-}
-
-#slider .three {
-    background-image: url(header_img/splash_10.jpg);
-}
-
-#slider .four {
-    background-image: url(header_img/header-comfort-AOC-blue.jpg);
-}
-
-#slider .five {
-    background-image: url(header_img/splash_6.jpg);
 }
 
 /* Slideshow css end */
@@ -341,6 +341,7 @@ header a:hover {
     }
 }
 
+/*Slideshowet til kategorier*/
 .kat_container {
     max-width: 700px;
     position: relative;
@@ -379,51 +380,12 @@ header a:hover {
 }
 
 /*---------------CYKLER---------------*/
-/* width */
-
-#cykellisten .overskrift {
-    margin-bottom: 0;
-    margin-left: 3vw;
-    color: #007CC4;
-}
-
-#cykellisten .underoverskrift {
-
-    /* doesnt apply*/
-    margin: 0 0 0 3vw;
-    font-weight: 200;
-    font-size: 1rem;
-}
-
-.cykler ::-webkit-scrollbar {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Track */
-.cykler ::-webkit-scrollbar-track {
-    background-color: #d6dee2;
-    border-radius: 10px;
-    margin: 3vw;
-}
-
-/* Handle */
-.cykler ::-webkit-scrollbar-thumb {
-    background-color: #4ea4d6;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-.cykler ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 124, 196, 0.33);
-}
 
 #cykellisten {
-    background-color: rgba(248, 248, 248, 0.63);
+    background-color: var(--baggrund-grey);
     width: 100%;
     padding-top: 2vw;
 }
-
 
 #signature-cykler {
     padding-top: 2vw;
@@ -447,6 +409,12 @@ article {
     color: #007CC4;
     margin: 3vw;
     text-align: center;
+}
+
+.underoverskrift {
+    margin: 0 0 0 3vw;
+    font-weight: 200;
+    font-size: 1rem;
 }
 
 #cykellisten h2 {
@@ -516,36 +484,37 @@ article {
     background-color: rgb(62, 103, 141);
 }
 
-/*
+/*Scrollbar i hver sektion*/
+/* width */
 
-.stryge_container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    opacity: 70%;
-    padding: 0 3vw 0;
+#cykellisten .overskrift {
+    margin-bottom: 0;
+    margin-left: 3vw;
+    color: #007CC4;
 }
 
-.stryge_container p {
-    font-size: 0.8rem;
-    font-style: italic;
+.cykler ::-webkit-scrollbar {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.pil_venstre {
-    background-image: url(images/right-arrow_3.svg);
-    background-size: 100%;
-    height: 3.5vw;
-    width: 3.5vw;
+/* Track */
+.cykler ::-webkit-scrollbar-track {
+    background-color: #d6dee2;
+    border-radius: 10px;
+    margin: 3vw;
 }
 
-.pil_hoejre {
-    background-image: url(images/right-arrow_2.svg);
-    background-size: 100%;
-    height: 3.5vw;
-    width: 3.5vw;
-
+/* Handle */
+.cykler ::-webkit-scrollbar-thumb {
+    background-color: #4ea4d6;
+    border-radius: 10px;
 }
-*/
+
+/* Handle on hover */
+.cykler ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 124, 196, 0.33);
+}
 
 /*---------------SINGLE VIEW---------------*/
 
@@ -896,7 +865,7 @@ footer img {
 
 .facebook {
     cursor: pointer;
-    background-image: url(images/facebook-circular-logo-white.svg);
+    background-image: url(assets/ikoner/facebook-circular-logo-white.svg);
     background-size: 100%;
     height: 5vw;
     width: 5vw;
@@ -904,7 +873,7 @@ footer img {
 
 .twitter {
     cursor: pointer;
-    background-image: url(images/twitter-white-shape.svg);
+    background-image: url(assets/ikoner/twitter-white-shape.svg);
     background-size: 100%;
     height: 5vw;
     width: 5vw;
@@ -935,11 +904,6 @@ footer img {
     grid-column: 3;
 }
 
-/*
-header_footer.html .footer_image {
-    width: 40px;
-}
-*/
 
 /*--------------MEDIA QUERIES------------*/
 
