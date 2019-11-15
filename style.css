@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    line-height: inherit;
 }
 
 :root {
@@ -43,6 +44,7 @@ a {
 pre {
     display: flex;
     white-space: pre-wrap;
+    line-height: 3vh;
 }
 
 
@@ -627,23 +629,20 @@ article {
     padding: 1.6vw;
 }
 
-pre {
-    line-height: 5vw;
+/*-------------------OM---------------------*/
+.indhold {
+    margin: 2vw 1vw;
 }
 
-
-/*-------------------OM---------------------*/
-
 .side h3 {
-    font-family: 'Montserrat', sans-serif;
     color: var(--koga-blue);
-    font-weight: bold;
-    margin: 0;
-    font-size: 2rem;
+    font-weight: 700;
+    margin: 2vw 0 1vw 0;
+    font-size: 5vw;
 }
 
 .side p {
-    font-size: 0.9rem;
+    font-size: 3.2vw;
     margin: 0;
 }
 
@@ -666,7 +665,7 @@ pre {
 }
 
 .side img {
-    max-width: 80vw;
+    max-width: 100%;
     margin: 0;
 }
 
@@ -734,10 +733,12 @@ pre {
 
 .side .filosofi_txt {
     grid-area: filosofi_txt;
+    margin: 0 0 5vw 0;
 }
 
 .side .filosofi_txt_2 {
     grid-area: filosofi_txt_2;
+    margin: 0 0 5vw 0;
 }
 
 .side .filosofi_img {
@@ -746,7 +747,7 @@ pre {
 
 .side .kogacenter_overskrift {
     grid-area: kogacenter_overskrift;
-    margin: 0 0 1vw 0;
+    margin: 2vw 0 1vw 0;
 }
 
 .side .kogacenter_txt {
@@ -771,14 +772,14 @@ pre {
 
 
 #info h2 {
-    font-size: 20px;
+    font-size: 3vw;
     margin: 5px;
     color: #007CC4;
 }
 
 #info p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 3vw;
+    line-height: 3vh;
 }
 
 #info {
@@ -794,10 +795,11 @@ pre {
 
 #info .text_kontakt {
     flex-grow: 1;
-    flex-basis: 150px;
-    background-color: #eef0ef;
-    /*    background-color: white;*/
-    margin: 0 0 0 3vw;
+    flex-basis: 250px;
+    background-color: #f8f8f8;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+    padding: 2vw;
+    margin: 3vw 0 1vw 0;
 }
 
 .text_kontakt img {
@@ -843,7 +845,7 @@ pre {
 
 /*-----------------FOOTER--------------------*/
 
-.footer {
+footer {
     width: 100%;
     /*  background-image: url("images/asfalt.jpg"); */
     /*    background-image: linear-gradient(#aaa, #333);*/
@@ -945,7 +947,7 @@ footer img {
         padding: 0;
     }
 
-    #info #section_wrapper {
+    #info #section_wrapper1 {
         margin-top: 2vw;
         display: grid;
         flex-wrap: wrap-reverse;
@@ -1063,7 +1065,11 @@ footer img {
 
     /*om.html*/
     .side p {
-        font-size: 1.8vw;
+        font-size: 2vw;
+    }
+
+    .side h3 {
+        font-size: 3vw;
     }
 
     /*cykler.html*/
@@ -1080,10 +1086,6 @@ footer img {
     .thumbnail {
         width: 450px;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
-    }
-
-    .stryge_container p {
-        font-size: 1rem;
     }
 
     .pil_venstre,
@@ -1157,7 +1159,6 @@ footer img {
 
     pre {
         font-size: 1.7vw;
-        line-height: 3vw;
     }
 
     /*footer*/
@@ -1233,64 +1234,11 @@ footer img {
         right: -5vw;
     }
 
-    /*om.html*/
+
+    /* om.html*/
     .side p {
-        font-size: 1.3vw;
+        font-size: 1.5vw;
     }
-
-    /*cykler.html*/
-    .thumbnail {
-        max-width: 1000px;
-        cursor: pointer;
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
-    }
-
-
-    .pris,
-    .encykel .navn {
-        font-size: 1.2vw;
-    }
-
-    #cykellisten .cykler {
-        height: 700px;
-    }
-
-    /*singleView.html*/
-    .navn {
-        font-size: 3vw;
-    }
-
-    .next {
-        right: -5vw;
-    }
-
-    .teksthoejre,
-    .tekstvenstre {
-        margin: 0;
-        padding: 2vw;
-    }
-
-    pre {
-        font-size: 1.3vw;
-        line-height: 2.3vw;
-    }
-
-    .tilbage {
-        font-size: 2.5vw;
-        top: 8vw;
-        height: 6.3vh;
-        width: 6.3vw;
-    }
-
-    .textimg {
-        padding: 12vw 3vw;
-    }
-
-    .nummer {
-        margin: 0 0 0 27vw;
-    }
-
-    /*om.html*/
 
     #omside .overskrift {
         margin: 2vw 15vw;
@@ -1303,7 +1251,7 @@ footer img {
     #om_section1,
     #om_section2,
     #om_section3 {
-        padding: 3vw 13vw;
+        padding: 2vw 5vw;
     }
 
     #om_section1 {
@@ -1347,6 +1295,58 @@ footer img {
 
     .filosofi_img img {
         width: 100%;
+    }
+
+    /*cykler.html*/
+    .thumbnail {
+        max-width: 1000px;
+        cursor: pointer;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+    }
+
+
+    .pris,
+    .encykel .navn {
+        font-size: 1.2vw;
+    }
+
+    #cykellisten .cykler {
+        height: 700px;
+    }
+
+    /*singleView.html*/
+    .navn {
+        font-size: 3vw;
+    }
+
+    .next {
+        right: -5vw;
+    }
+
+    .teksthoejre,
+    .tekstvenstre {
+        margin: 0;
+        padding: 2vw;
+    }
+
+    pre {
+        font-size: 1.5vw;
+        line-height: 3.5vh;
+    }
+
+    .tilbage {
+        font-size: 2.5vw;
+        top: 8vw;
+        height: 6.3vh;
+        width: 6.3vw;
+    }
+
+    .textimg {
+        padding: 12vw 3vw;
+    }
+
+    .nummer {
+        margin: 0 0 0 27vw;
     }
 
     /*kontak.html*/
