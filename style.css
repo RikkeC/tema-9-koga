@@ -408,7 +408,7 @@ header a:hover {
 
 /* Handle */
 .cykler ::-webkit-scrollbar-thumb {
-    background-color: #007CC4;
+    background-color: #4ea4d6;
     border-radius: 10px;
 }
 
@@ -510,7 +510,8 @@ article {
     transform: scale(1.05);
 }
 
-.label:hover {
+.label:hover,
+.tilbage:hover {
     background-color: rgb(62, 103, 141);
 }
 
@@ -882,7 +883,8 @@ pre {
     padding: 2.5vw;
 }
 
-#footerinfo {display: grid;
+#footerinfo {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4vw;
 }
