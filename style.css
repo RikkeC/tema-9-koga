@@ -658,7 +658,7 @@ article {
 
 .nummer {
     color: #337CBE;
-    margin: 0 0 0 53vw;
+/*    margin: 0 0 0 53vw;*/
     font-weight: 600;
     text-align: right;
 }
@@ -1181,9 +1181,10 @@ header_footer.html .footer_image {
         grid-gap: 2vw;
     }
 
+/*
     .nummer {
         margin: 0 0 0 25vw;
-    }
+    }*/
 
     .teksthoejre {
         grid-column: 2;
