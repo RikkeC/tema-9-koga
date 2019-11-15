@@ -404,8 +404,10 @@ header a:hover {
 }
 
 #cykellisten .underoverskrift {
-    margin: 0 3vw;
-    font-weight: 600;
+
+    /* doesnt apply*/
+    margin: 0 0 0 3vw;
+    font-weight: 200;
     font-size: 1rem;
 }
 
@@ -419,7 +421,6 @@ header a:hover {
     background-color: #d6dee2;
     border-radius: 10px;
     margin: 3vw;
-
 }
 
 /* Handle */
@@ -513,7 +514,7 @@ article {
 .box {
     background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
-    box-shadow: 0.8vw 1vw 2vw grey;
+    /*   box-shadow: 0.8vw 1vw 2vw grey;*/
 }
 
 .textimg {
@@ -1111,8 +1112,7 @@ header_footer.html .footer_image {
 
     /*cykler.html*/
     #cykellisten .underoverskrift {
-        margin-right: 50vw;
-        margin-left: 5vw;
+        margin: 0 5vw 5vw 3vw;
     }
 
     #cykellisten .overskrift {
@@ -1419,4 +1419,39 @@ header_footer.html .footer_image {
     }
 
 
+}
+
+.fix-side-menu {
+
+    position: fixed;
+    top: 12rem;
+    left: 3rem;
+}
+
+.fix-menu-list {
+    list-style: none;
+
+}
+
+
+
+.list_item {
+    background-color: rgba(51, 124, 190, 0.80);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.list_item:hover {
+    background-color: rgba(51, 124, 190);
+    color: white;
+}
+
+.fixed_menu_link {
+    color: whitesmoke;
+    padding: 10px;
+
+}
+
+.fixed_menu_link:hover {
+    color: white;
 }
