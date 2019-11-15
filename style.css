@@ -1161,6 +1161,11 @@ footer img {
         font-size: 1.7vw;
     }
 
+    /*kontakt.html*/
+    #info p {
+        font-size: 2vw;
+    }
+
     /*footer*/
 
     #footerinfo {
@@ -1304,7 +1309,6 @@ footer img {
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
     }
 
-
     .pris,
     .encykel .navn {
         font-size: 1.2vw;
@@ -1355,6 +1359,19 @@ footer img {
         flex-flow: row wrap;
         justify-content: space-around;
         padding: 2vw;
+    }
+
+    #info p {
+        font-size: 1.3vw;
+    }
+
+    #info h2 {
+        font-size: 2vw;
+    }
+
+    #info .text_kontakt {
+        margin: 0 0 0 2.5vw;
+        padding: 0;
     }
 
     #info .map {
