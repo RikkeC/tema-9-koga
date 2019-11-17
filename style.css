@@ -307,7 +307,7 @@ header a:hover {
     position: absolute;
     /*    text-align: center;*/
     color: white;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
@@ -409,7 +409,7 @@ article {
 #forside_slides .overskrift,
 .kat_container h1 {
     color: #007CC4;
-    margin: 3vw;
+    margin: 7vw 0 2vw 0;
     text-align: center;
 }
 
@@ -1077,8 +1077,6 @@ footer img {
 
     #cykellisten .overskrift {
         margin: 3vw;
-        color: #808080;
-        text-align: center;
     }
 
     .thumbnail {
