@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koga center</title>
+    <title>Koga Center Copenhagen</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="myIcons/apple-touch-icon.png">
@@ -38,73 +38,74 @@
                 <div class="splash_text">
                     <h1>Velkommen til <br>Koga Center Copenhagen</h1>
                 </div>
-
-                <a href="#forside_slides"><a href="#forside_grid"><span></span></a></a>
+                <a href="#ostepops"><span></span></a>
             </div>
         </div>
 
         <!--slideshow til kategories-->
-        <section id="forside_slides">
-            <h1 class="overskrift">Kogas cykeltyper</h1>
-            <div class="kat_container">
-                <div class="kat_slide">
-                    <div class="enkat_wrapper">
-                        <div class="labelKat">
-                            <!--                            <a href="cykler.html">-->
-                            <h2 class="navnKat"></h2>
-                            <!--                            </a>-->
+        <div id="ostepops">
+            <section id="forside_slides">
+                <h1 class="overskrift">Kogas cykeltyper</h1>
+                <div class="kat_container">
+                    <div class="kat_slide">
+                        <div class="enkat_wrapper">
+                            <div class="labelKat">
+                                <!--                            <a href="cykler.html">-->
+                                <h2 class="navnKat"></h2>
+                                <!--                            </a>-->
+                            </div>
+                            <img class="katbillede" src="" alt="">
                         </div>
-                        <img class="katbillede" src="" alt="">
+
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="katvenstre">&#10094;</a>
+                    <a class="kathoejre">&#10095;</a>
+                </div>
+            </section>
+
+            <section id="forside_grid">
+                <h1 class="overskrift">Kogas cykeltyper</h1>
+                <div class="kats_container">
+
+                    <div class="kat_container">
+                        <a href="cykler.html#by-cykler">
+                            <img class="kat1_img" src="images/bycykel-1.jpg" alt="citycykler">
+                            <div class="grid_label">
+                                <h4>Bycykler</h4>
+                            </div>
+                        </a>
                     </div>
 
-                </div>
-                <!-- Next and previous buttons -->
-                <a class="katvenstre">&#10094;</a>
-                <a class="kathoejre">&#10095;</a>
-            </div>
-        </section>
+                    <div class="kat_container">
+                        <a href="cykler.html#el-cykler">
+                            <img class="kat2_img" src="images/elcykel-1.jpg" alt="elcykler">
+                            <div class="grid_label">
+                                <h4>Elcykler</h4>
+                            </div>
+                        </a>
+                    </div>
 
-        <section id="forside_grid">
-            <h1 class="overskrift">Kogas cykeltyper</h1>
-            <div class="kats_container">
+                    <div class="kat_container">
+                        <a href="cykler.html#racer-cykler">
+                            <img class="kat3_img" src="images/racer-1.jpg" alt="racercykler">
+                            <div class="grid_label">
+                                <h4>Racer cykler</h4>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="kat_container">
-                    <a href="cykler.html#by-cykler">
-                        <img class="kat1_img" src="images/bycykel-1.jpg" alt="citycykler">
-                        <div class="grid_label">
-                            <h4>Bycykler</h4>
-                        </div>
-                    </a>
+                    <div class="kat_container">
+                        <a href="cykler.html#trekking-cykler">
+                            <img class="kat4_img" src="images/trekking-1.jpg" alt="trekkingcykler">
+                            <div class="grid_label">
+                                <h4>Trekking</h4>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="kat_container">
-                    <a href="cykler.html#el-cykler">
-                        <img class="kat2_img" src="images/elcykel-1.jpg" alt="elcykler">
-                        <div class="grid_label">
-                            <h4>Elcykler</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="kat_container">
-                    <a href="cykler.html#racer-cykler">
-                        <img class="kat3_img" src="images/racer-1.jpg" alt="racercykler">
-                        <div class="grid_label">
-                            <h4>Racer cykler</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="kat_container">
-                    <a href="cykler.html#trekking-cykler">
-                        <img class="kat4_img" src="images/trekking-1.jpg" alt="trekkingcykler">
-                        <div class="grid_label">
-                            <h4>Trekking</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer></footer>
@@ -160,7 +161,6 @@
                 location.href = "cykler.html#" + kategorier[galleri_taeller].slug;
             });
         }
-
     </script>
 
 </body>
