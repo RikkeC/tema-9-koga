@@ -676,7 +676,7 @@ article {
 }
 
 #om_section1 {
-    background-color: whitesmoke;
+    background-color: white;
     grid-area: om_section1;
     display: grid;
     grid-gap: 0.5rem;
@@ -698,7 +698,7 @@ article {
 }
 
 #om_section3 {
-    background-color: whitesmoke;
+    background-color: white;
     grid-area: om_section3;
     display: grid;
     grid-gap: 0.5rem;
@@ -733,7 +733,6 @@ article {
 
 .side .filosofi_txt {
     grid-area: filosofi_txt;
-    margin: 0 0 5vw 0;
 }
 
 .side .filosofi_txt_2 {
@@ -995,7 +994,6 @@ footer img {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 70vw;
-        margin: 0 auto;
         grid-gap: 4vw;
 
     }
@@ -1261,8 +1259,7 @@ footer img {
 
     #om_section1 {
         width: 100vw;
-        margin: 0 auto;
-        grid-gap: 1rem;
+        grid-gap: 2.3vw;
         grid-template-areas:
             ". kogacenter_overskrift"
             "kogacenter_img kogacenter_txt";
@@ -1270,7 +1267,6 @@ footer img {
 
     #om_section2 {
         width: 100vw;
-        margin: 0 auto;
         grid-gap: 1rem;
         grid-template-areas:
             "historie_overskrift historie_overskrift"
@@ -1280,17 +1276,11 @@ footer img {
 
     #om_section3 {
         width: 100vw;
-        margin: 0 auto;
         grid-gap: 1rem;
         grid-template-areas:
             "filosofi_overskrift filosofi_overskrift"
             "filosofi_txt filosofi_img"
             "filosofi_txt_2 filosofi_txt_2";
-    }
-
-    .side .kogacenter_overskrift {
-
-        margin: 0;
     }
 
     .side .historie_img,
