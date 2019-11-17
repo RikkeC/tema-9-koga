@@ -630,15 +630,16 @@ article {
 }
 
 /*-------------------OM---------------------*/
+
 .indhold {
-    margin: 2vw 1vw;
+    margin: 3vw 1.5vw 4vw;
 }
 
-.side h3 {
+.side h2 {
     color: var(--koga-blue);
     font-weight: 700;
     margin: 2vw 0 1vw 0;
-    font-size: 5vw;
+    font-size: 3.5vw;
 }
 
 .side p {
@@ -646,119 +647,56 @@ article {
     margin: 0;
 }
 
-.side {
-    padding: 0;
-    display: grid;
-    grid-template-areas:
-        "om_section1"
-        "om_section2"
-        "om_section3";
-}
-
-#omside .overskrift {
-    margin: 2vw 5vw;
-}
-
-.side figure {
-    margin: 0;
-    padding: 0;
-}
-
 .side img {
-    max-width: 100%;
-    margin: 0;
+    width: 100%;
+    margin: 3.4vw 0;
 }
 
-#om_section1,
-#om_section2,
-#om_section3 {
+.omtekst {
+    background-color: white;
     padding: 3vw;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
 }
 
-#om_section1 {
-    background-color: white;
-    grid-area: om_section1;
-    display: grid;
-    grid-gap: 0.5rem;
-    grid-template-areas:
-        "kogacenter_overskrift"
-        "kogacenter_img"
-        "kogacenter_txt";
+.kcc_tekst {
+    grid-area: kcc_tekst;
 }
 
-#om_section2 {
-    grid-area: om_section2;
-    display: grid;
-    grid-gap: 0.5rem;
-    grid-template-areas:
-        "historie_overskrift"
-        "historie_img"
-        "historie_txt"
-        "historie_txt_2";
+.his1_tekst {
+    grid-area: his1_tekst;
 }
 
-#om_section3 {
-    background-color: white;
-    grid-area: om_section3;
-    display: grid;
-    grid-gap: 0.5rem;
-    grid-template-areas:
-        "filosofi_overskrift"
-        "filosofi_txt"
-        "filosofi_img"
-        "filosofi_txt_2";
+.his2_tekst {
+    grid-area: his2_tekst;
 }
 
-.side .historie_overskrift {
-    grid-area: historie_overskrift;
+.filo1_tekst {
+    grid-area: filo1_tekst;
 }
 
-.side .historie_img {
-    grid-area: historie_img;
-    margin: 0 0 0 2vw;
+.filo2_tekst {
+    grid-area: filo2_tekst;
 }
 
-.side .historie_txt {
-    grid-area: historie_txt;
+.kcc_billede {
+    grid-area: kcc_billede;
 }
 
-.side .historie_txt_2 {
-    grid-area: historie_txt_2;
-    margin: 0 0 5vw 0;
+.his1_billede {
+    grid-area: his1_billede;
 }
 
-.side .filosofi_overskrift {
-    grid-area: filosofi_overskrift;
+.his2_billede {
+    grid-area: his2_billede;
 }
 
-.side .filosofi_txt {
-    grid-area: filosofi_txt;
+.filo1_billede {
+    grid-area: filo1_billede;
 }
 
-.side .filosofi_txt_2 {
-    grid-area: filosofi_txt_2;
-    margin: 0 0 5vw 0;
+.filo2_billede {
+    grid-area: filo2_billede;
 }
-
-.side .filosofi_img {
-    grid-area: filosofi_img;
-}
-
-.side .kogacenter_overskrift {
-    grid-area: kogacenter_overskrift;
-    margin: 2vw 0 1vw 0;
-}
-
-.side .kogacenter_txt {
-    grid-area: kogacenter_txt;
-    margin: 0 0 5vw 0;
-}
-
-.side .kogacenter_img {
-    grid-area: kogacenter_img;
-}
-
-
 
 /*---------------KONTAKT--------------*/
 
@@ -994,7 +932,6 @@ footer img {
         grid-template-columns: repeat(2, 1fr);
         width: 70vw;
         grid-gap: 4vw;
-
     }
 
     .kat_container {
@@ -1067,6 +1004,11 @@ footer img {
 
     .side h3 {
         font-size: 3vw;
+    }
+
+    .omtekst {
+        margin-top: 2.8vw;
+        padding: 3vw;
     }
 
     /*cykler.html*/
@@ -1239,59 +1181,36 @@ footer img {
         right: -5vw;
     }
 
-
     /* om.html*/
+    .side {
+        display: grid;
+        grid-gap: 1.6vw;
+        grid-row-gap: 2vw;
+        grid-template-areas:
+            "kcc_billede kcc_tekst"
+            "his1_tekst his1_billede"
+            "his2_billede his2_tekst"
+            "filo1_tekst filo1_billede"
+            "filo2_billede filo2_tekst";
+
+    }
+
     .side p {
         font-size: 1.5vw;
     }
 
-    #omside .overskrift {
-        margin: 2vw 15vw;
-    }
-
     .side img {
-        max-width: 35vw;
-    }
-
-    #om_section1,
-    #om_section2,
-    #om_section3 {
-        padding: 2vw 5vw;
-    }
-
-    #om_section1 {
-        width: 100vw;
-        grid-gap: 2.3vw;
-        grid-template-areas:
-            ". kogacenter_overskrift"
-            "kogacenter_img kogacenter_txt";
-    }
-
-    #om_section2 {
-        width: 100vw;
-        grid-gap: 1rem;
-        grid-template-areas:
-            "historie_overskrift historie_overskrift"
-            "historie_txt historie_img"
-            "historie_txt_2 historie_txt_2";
-    }
-
-    #om_section3 {
-        width: 100vw;
-        grid-gap: 1rem;
-        grid-template-areas:
-            "filosofi_overskrift filosofi_overskrift"
-            "filosofi_txt filosofi_img"
-            "filosofi_txt_2 filosofi_txt_2";
-    }
-
-    .side .historie_img,
-    .side .filosofi_img {
-        margin: 0 0 0 2vw;
-    }
-
-    .filosofi_img img {
         width: 100%;
+        margin-top: 5vw;
+    }
+
+    .his2_tekst {
+        padding-top: 3vw;
+    }
+
+    .omtekst {
+        margin-top: 2.8vw;
+        padding: 3vw;
     }
 
     /*cykler.html*/
