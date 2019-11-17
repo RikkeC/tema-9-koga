@@ -31,6 +31,12 @@ h4 {
     font-family: var(--header-skrift);
 }
 
+h1 {
+    color: #007CC4;
+    margin: 7vw 0 2vw 0;
+    text-align: center;
+}
+
 a,
 p,
 pre {
@@ -301,6 +307,7 @@ header a:hover {
     padding: 0 0 20vw 0;
     text-transform: uppercase;
     font-size: 3vw;
+    color: white;
 }
 
 .splash_text {
@@ -406,13 +413,6 @@ article {
     padding: 0 2.7vw;
 }
 
-#forside_slides .overskrift,
-.kat_container h1 {
-    color: #007CC4;
-    margin: 7vw 0 2vw 0;
-    text-align: center;
-}
-
 .underoverskrift {
     margin: 0 0 0 3vw;
     font-weight: 200;
@@ -422,7 +422,7 @@ article {
 #cykellisten h2 {
     text-align: left;
     color: #007CC4;
-    margin: 0 0 0 3vw;
+    margin: 2vw 0 0 3vw;
     text-transform: uppercase;
 }
 
@@ -490,9 +490,8 @@ article {
 /* width */
 
 #cykellisten .overskrift {
-    margin-bottom: 0;
     margin-left: 3vw;
-    color: #007CC4;
+    text-align: left;
 }
 
 .cykler ::-webkit-scrollbar {
@@ -762,12 +761,14 @@ article {
 
 /*---------------KONTAKT--------------*/
 
+/*
 #info h1 {
     margin: 5vw;
     text-align: center;
     font-size: 30px;
     color: #007CC4;
 }
+*/
 
 
 #info h2 {
@@ -1031,7 +1032,7 @@ footer img {
         font-size: 2.5rem;
         color: var(--koga-blue);
         text-align: center;
-        padding: 2vw;
+        padding: 3vw 0 2vw 0;
     }
 
     /*header*/
