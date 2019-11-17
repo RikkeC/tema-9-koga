@@ -33,8 +33,9 @@ h4 {
 
 h1 {
     color: #007CC4;
-    margin: 7vw 0 2vw 0;
     text-align: center;
+    margin: 5vw 0 0 0;
+
 }
 
 a,
@@ -312,7 +313,7 @@ header a:hover {
 
 .splash_text {
     position: absolute;
-    /*    text-align: center;*/
+    text-align: center;
     color: white;
     top: 85%;
     left: 50%;
@@ -761,14 +762,11 @@ article {
 
 /*---------------KONTAKT--------------*/
 
-/*
 #info h1 {
     margin: 5vw;
     text-align: center;
-    font-size: 30px;
-    color: #007CC4;
+
 }
-*/
 
 
 #info h2 {
@@ -916,7 +914,7 @@ footer img {
     /*index.html*/
     .splash_text h1 {
         font-size: 4.5vw;
-        text-align: center;
+        text-align: left;
     }
 
     /*cykler.html*/
@@ -1212,6 +1210,11 @@ footer img {
     }
 
     /*forside.html*/
+    .splash_text {
+        text-align: left;
+
+    }
+
     .labelKat {
         width: 100%;
         bottom: 1vw;
