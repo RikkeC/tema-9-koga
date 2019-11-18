@@ -34,8 +34,20 @@ h4 {
 
 h1 {
     color: #007CC4;
-    margin: 7vw 0 2vw 0;
     text-align: center;
+    margin: 5vw 0 0 0;
+
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--koga-blue);
+    margin: 2vw 0 1vw 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
 }
 
 a,
@@ -315,13 +327,13 @@ header a:hover {
 .splash_text h1 {
     padding: 0 0 20vw 0;
     text-transform: uppercase;
-    font-size: 3vw;
+    font-size: 4vw;
     color: white;
 }
 
 .splash_text {
     position: absolute;
-    /*    text-align: center;*/
+    text-align: center;
     color: white;
     top: 85%;
     left: 50%;
@@ -399,24 +411,43 @@ header a:hover {
 
 /*---------------CYKLER---------------*/
 
+h1 {
+    font-size: 6.5vw;
+}
+
+h2 {
+    font-size: 3.5vw;
+}
+
+.thumbnail {
+    max-width: 200px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+}
+
+.flex-container {
+    display: flex;
+}
+
 #cykellisten {
     background-color: var(--baggrund-grey);
-    width: 100%;
     padding-top: 2vw;
 }
 
 #signature-cykler {
-    padding-top: 2vw;
+    padding-top: 0;
 }
 
 #cykellisten .box {
-    margin-top: 2vw;
+
+    margin: 3vw;
+    padding: 1rem;
 }
 
 #cykellisten .cykler {
-    margin: 0 auto;
     height: 350px;
+    max-width: 95vw;
 }
+
 
 article {
     padding: 0 2.7vw;
@@ -431,13 +462,11 @@ article {
 #cykellisten h2 {
     text-align: left;
     color: #007CC4;
-    margin: 2vw 0 0 3vw;
+    margin: 0 0 0 3vw;
     text-transform: uppercase;
 }
 
-#encykel,
-.box {
-    padding: 1em;
+#encykel {
     margin: 0.8em 1em;
 }
 
@@ -475,12 +504,12 @@ article {
 .box {
     background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
+    height: 250px;
     /*   box-shadow: 0.8vw 1vw 2vw grey;*/
 }
 
 .textimg {
-    padding: 30vw 0 10vw 0;
-    margin-bottom: 5vw;
+    padding: 160px 0 20px 0;
     text-align: center;
 }
 
@@ -495,13 +524,18 @@ article {
     background-color: rgb(62, 103, 141);
 }
 
-/*Scrollbar i hver sektion*/
-/* width */
-
 #cykellisten .overskrift {
     margin-left: 3vw;
     text-align: left;
 }
+
+#cykellisten .underoverskrift {
+    margin: 1vw 2vw 3vw 3vw;
+
+}
+
+/*Scrollbar i hver sektion*/
+/* width */
 
 .cykler ::-webkit-scrollbar {
     width: 100%;
@@ -643,17 +677,6 @@ article {
     margin: 3vw 1.5vw 4vw;
 }
 
-.side h2 {
-    color: var(--koga-blue);
-    font-weight: 700;
-    margin: 2vw 0 1vw 0;
-    font-size: 3.5vw;
-}
-
-.side p {
-    font-size: 3.2vw;
-    margin: 0;
-}
 
 .side img {
     width: 100%;
@@ -709,14 +732,11 @@ article {
 
 /*---------------KONTAKT--------------*/
 
-/*
 #info h1 {
     margin: 5vw;
     text-align: center;
-    font-size: 30px;
-    color: #007CC4;
+
 }
-*/
 
 
 #info h2 {
@@ -859,35 +879,13 @@ footer img {
 
 /*hvis skærmen er max. 820px og mindre -- MOBILE */
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 799px) {
 
     /*index.html*/
-    .splash_text h1 {
-        font-size: 4.5vw;
-        text-align: center;
-    }
+
 
     /*cykler.html*/
-    h1 {
-        font-size: 6.5vw;
-    }
 
-    h2 {
-        font-size: 3.5vw;
-    }
-
-    .thumbnail {
-        max-width: 200px;
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
-    }
-
-    .box {
-        padding: 0;
-    }
-
-    #cykellisten .cykler {
-        height: 350px;
-    }
 
     /*kontakt.html*/
     #info {
@@ -922,6 +920,11 @@ footer img {
     }
 
     /*forside.html*/
+    .splash_text h1 {
+        font-size: 4.5vw;
+        text-align: left;
+    }
+
     /*forside-grid*/
     .labelKat {
         bottom: 3vw;
@@ -1013,13 +1016,6 @@ footer img {
     }
 
     /*om.html*/
-    .side p {
-        font-size: 2vw;
-    }
-
-    .side h3 {
-        font-size: 3vw;
-    }
 
     .omtekst {
         margin-top: 2.8vw;
@@ -1029,6 +1025,7 @@ footer img {
     /*cykler.html*/
     #cykellisten .underoverskrift {
         margin: 0 5vw 5vw 3vw;
+        max-width: 68vw;
     }
 
     #cykellisten .overskrift {
@@ -1056,18 +1053,65 @@ footer img {
     }
 
     .box {
-        margin: 0 0 4vw 2.8vw;
+        /* margin: 0 0 4vw 2.8vw;
         height: 400px;
-        width: 700px;
+        width: 700px;*/
+        height: 300px;
+        width: 68vw;
     }
 
     .textimg {
-        padding: 15vw 3vw;
+        /* padding: 15vw 3vw; */
+        padding: 150px 30px 0 30px;
     }
 
     #cykellisten .cykler {
-        height: 560px;
+        /* height: 560px;*/
+        margin: 0 10px 0 0;
+        width: 70vw;
+        height: 400px;
     }
+
+
+
+    /* Fixed menu on the left for dekstop*/
+    .right_side_air,
+    .side_menu_wrapper {
+        display: block;
+        min-width: 20%;
+    }
+
+    .fix-side-menu {
+        position: fixed;
+        top: 9rem;
+        left: 0;
+    }
+
+    .fix-menu-list {
+        list-style: none;
+    }
+
+    .list_item {
+        background-color: rgba(51, 124, 190, 0.80);
+        padding: 7px;
+        margin: 20px 0 10px 20px;
+    }
+
+    .list_item:hover {
+        background-color: rgba(51, 124, 190);
+        color: white;
+    }
+
+    .fixed_menu_link {
+        color: whitesmoke;
+        /*padding: 20px; */
+    }
+
+    .fixed_menu_link:hover {
+        color: white;
+    }
+
+
 
     /*singleView.html*/
     #encykel {
@@ -1166,7 +1210,13 @@ footer img {
         font-size: 1.2vw;
     }
 
+
     /*forside.html*/
+    .splash_text h1 {
+        font-size: 3vw;
+        text-align: left;
+    }
+
     .labelKat {
         width: 100%;
         bottom: 1vw;
@@ -1205,8 +1255,12 @@ footer img {
 
     }
 
-    .side p {
-        font-size: 1.5vw;
+    p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1, 5rem;
     }
 
     .side img {
@@ -1224,10 +1278,25 @@ footer img {
     }
 
     /*cykler.html*/
+    #cykellisten .underoverskrift {
+        margin: 0 7vw 1vw 3vw;
+    }
+
     .thumbnail {
-        max-width: 1000px;
+        max-width: 800px;
         cursor: pointer;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+
+    }
+
+    .box {
+        height: 350px;
+        width: auto;
+        margin-left: 3vw;
+    }
+
+    .textimg {
+        padding: 200px 30px 0 30px;
     }
 
     .pris,
@@ -1236,7 +1305,13 @@ footer img {
     }
 
     #cykellisten .cykler {
-        height: 700px;
+        margin: 0 10px 0 0;
+        width: 70vw;
+        height: 600px;
+    }
+
+    #cykellisten .signcykler {
+        height: 450px;
     }
 
     /*singleView.html*/
@@ -1315,39 +1390,41 @@ footer img {
     footer p {
         font-size: 1.2vw;
     }
+
+    /* Fixed menu on the left for dekstop*/
+    .right_side_air,
+    .side_menu_wrapper {
+        display: block;
+        min-width: 25%;
+    }
+
+    .fix-side-menu {
+        position: fixed;
+        top: 9rem;
+        left: 7vw;
+    }
+
+    .fix-menu-list {
+        list-style: none;
+    }
+
+    .list_item {
+        background-color: rgba(51, 124, 190, 0.80);
+        padding: 10px;
+        margin-bottom: 20px 0 10px 20px;
+    }
+
+    .list_item:hover {
+        background-color: rgba(51, 124, 190);
+    }
+
+    .fixed_menu_link {
+        color: whitesmoke;
+        padding: 10px;
+    }
+
 }
 
-/* Fixed menu on the left for dekstop*/
-.fix-side-menu {
-
-    position: fixed;
-    top: 12rem;
-    left: 3rem;
-}
-
-.fix-menu-list {
-    list-style: none;
-}
-
-.list_item {
-    background-color: rgba(51, 124, 190, 0.80);
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-.list_item:hover {
-    background-color: rgba(51, 124, 190);
-    color: white;
-}
-
-.fixed_menu_link {
-    color: whitesmoke;
-    padding: 10px;
-}
-
-.fixed_menu_link:hover {
-    color: white;
-}
 
 /*
 Splash for kontakt.html #splash_kontakt {
