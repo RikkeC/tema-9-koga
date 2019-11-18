@@ -504,7 +504,9 @@ article {
 .box {
     background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
-    height: 250px;
+    /* height: 250px; */
+    height: 300px;
+
     /*   box-shadow: 0.8vw 1vw 2vw grey;*/
 }
 
@@ -531,7 +533,10 @@ article {
 
 #cykellisten .underoverskrift {
     margin: 1vw 2vw 3vw 3vw;
+}
 
+.signcykler {
+    height: 470px;
 }
 
 /*Scrollbar i hver sektion*/
@@ -1072,6 +1077,10 @@ footer img {
         height: 400px;
     }
 
+    .signcykler {
+        height: 500px;
+    }
+
 
 
     /* Fixed menu on the left for dekstop*/
@@ -1316,8 +1325,8 @@ footer img {
         height: 600px;
     }
 
-    #cykellisten .signcykler {
-        height: 450px;
+    .signcykler {
+        height: 550px;
     }
 
     /*singleView.html*/
