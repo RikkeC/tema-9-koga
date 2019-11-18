@@ -1306,6 +1306,8 @@ footer img {
     .pris,
     .encykel .navn {
         font-size: 1.2vw;
+        margin: 1vw;
+        padding: 0;
     }
 
     #cykellisten .cykler {
