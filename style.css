@@ -9,9 +9,10 @@
 :root {
     --koga-blue: #0e7dc7;
     --baggrund-grey: #f8f8f8;
+    --darker-grey: #666666;
     --navi-knapper: #4ea4d6;
     --header-skrift: 'Open Sans', sans-serif;
-    --broedteskt-skrift: 'Roboto', sans-serif;
+    --broedtekst-skrift: 'Roboto', sans-serif;
 }
 
 html {
@@ -40,7 +41,7 @@ h1 {
 a,
 p,
 pre {
-    font-family: var(--broedteskt-skrift);
+    font-family: var(--broedtekst-skrift);
 }
 
 a {
@@ -53,6 +54,14 @@ pre {
     line-height: 3vh;
 }
 
+figcaption {
+    margin: 0 0 2vw 0;
+    padding: 0 0 5vw 0;
+    text-align: center;
+    font-family: var(--broedtekst-skrift);
+    font-style: italic;
+    color: var(--darker-grey);
+}
 
 /*-------------HEADER------------*/
 
@@ -675,6 +684,7 @@ article {
 
 .filo2_tekst {
     grid-area: filo2_tekst;
+    margin-bottom: 2vw;
 }
 
 .kcc_billede {
@@ -907,6 +917,9 @@ footer img {
 
 /*hvis skærmen er min. 800px og større --- TABLET og andre*/
 @media screen and (min-width: 800px) {
+    figcaption {
+        margin: 0;
+    }
 
     /*forside.html*/
     /*forside-grid*/
