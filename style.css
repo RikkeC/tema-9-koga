@@ -237,14 +237,12 @@ header a:hover {
     background-image: url("images/splash_9.jpg");
     background-position: 75% 90%;
     position: absolute;
-<<<<<<< HEAD
-    left: 0;
+    <<<<<<< HEAD left: 0;
     top: 0;
     width: 500%;
     height: 100%;
     animation: slidy 18s 0s backwards infinite;
-=======
-    height: 90vh;
+    =======height: 90vh;
     width: 100%;
     background-size: cover;
 }
@@ -256,7 +254,7 @@ header a:hover {
     height: 90vh;
     width: 100%;
     background-size: cover;
->>>>>>> origin/master
+    > > > > > > > origin/master
 }
 
 .img4 {
@@ -1167,8 +1165,6 @@ footer img {
         height: 500px;
     }
 
-
-
     /* Fixed menu on the left for dekstop*/
     .right_side_air,
     .side_menu_wrapper {
@@ -1288,9 +1284,7 @@ footer img {
     }
 }
 
-
-
-/*desktop skærme*/
+/*-------Desktop skærme-----*/
 
 @media screen and (min-width: 1000px) {
     h1 {
