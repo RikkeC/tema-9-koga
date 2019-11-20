@@ -552,7 +552,8 @@ h2 {
     padding: 1rem;
 }
 
-#cykellisten .cykler {
+#cykellisten .cykler,
+.signcykler {
     height: 350px;
     max-width: 95vw;
 }
