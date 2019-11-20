@@ -224,101 +224,214 @@ header a:hover {
 
 /* Slideshow container */
 
-#cont-slider {
-    position: relative;
+.img1 {
+    background-image: url("images/splash_11.jpg");
+    background-position: 25% 0;
+    position: absolute;
     height: 90vh;
-    max-height: 100vh;
-    width: auto;
-    min-width: 100vw;
-    margin: 0 auto;
-    overflow: hidden;
+    width: 100%;
+    background-size: cover;
 }
 
-#slider {
+.img2 {
+    background-image: url("images/splash_9.jpg");
+    background-position: 75% 90%;
     position: absolute;
+<<<<<<< HEAD
     left: 0;
     top: 0;
     width: 500%;
     height: 100%;
     animation: slidy 18s 0s backwards infinite;
-}
-
-#slider .slide {
-    display: inline-block;
-    position: relative;
-    float: left;
-    width: 20%;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: 90% 0;
+=======
+    height: 90vh;
+    width: 100%;
     background-size: cover;
 }
 
-#slider .one {
-    background-image: url(images/splash_11.jpg);
+.img3 {
+    background-image: url("images/splash_10.jpg");
+    background-position: 75% 0;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+>>>>>>> origin/master
 }
 
-#slider .two {
-    background-image: url(images/splash_9.jpg);
+.img4 {
+    background-image: url("images/splah_comfort-AOC-blue.jpg");
+    background-position: 90% 0;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
 }
 
-#slider .three {
-    background-image: url(images/splash_10.jpg);
+.img5 {
+    background-image: url("images/splash_6.jpg");
+    background-position: 90% 0;
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
 }
 
-#slider .four {
-    background-image: url(images/splah_comfort-AOC-blue.jpg);
+
+.galleryContainer {
+    width: 100%;
+    height: 90vh;
+    user-select: none;
+    box-sizing: border-box;
 }
 
-#slider .five {
-    background-image: url(images/splash_6.jpg);
+.galleryContainer .slideShowContainer {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
 }
 
-@keyframes slidy {
-    0% {
-        left: 0%;
+
+
+.galleryContainer .slideShowContainer .imageHolder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.galleryContainer .slideShowContainer .imageHolder .captionText {
+    display: none;
+}
+
+
+
+.galleryContainer .slideShowContainer > .captionTextHolder {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.galleryContainer .moveLeftCurrentSlide {
+    animation-name: moveLeftCurrent;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+
+.galleryContainer .moveLeftNextSlide {
+    animation-name: moveLeftNext;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveLeftCurrent {
+    from {
+        margin-left: 0;
+        opacity: 1;
     }
 
-    10% {
-        left: 0%;
-    }
-
-    20% {
-        left: -100%;
-    }
-
-    30% {
-        left: -100%;
-    }
-
-    40% {
-        left: -200%;
-    }
-
-    50% {
-        left: -200%;
-    }
-
-    60% {
-        left: -300%;
-    }
-
-    70% {
-        left: -300%;
-    }
-
-    80% {
-        left: -400%;
-    }
-
-    90% {
-        left: -400%;
-    }
-
-    100% {
-        left: 0;
+    to {
+        margin-left: -100%;
+        opacity: 1;
     }
 }
+
+@keyframes moveLeftNext {
+    from {
+        margin-left: 100%;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+
+.galleryContainer .moveRightCurrentSlide {
+    animation-name: moveRightCurrent;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.galleryContainer .moveRightPrevSlide {
+    animation-name: moveRightPrev;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveRightCurrent {
+    from {
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveRightPrev {
+    from {
+        margin-left: -100%;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+.slideTextFromBottom {
+    animation-name: slideTextFromBottom;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slideTextFromBottom {
+    from {
+        opacity: 0;
+        margin-top: 100px
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.slideTextFromTop {
+    animation-name: slideTextFromTop;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slideTextFromTop {
+    from {
+        opacity: 0;
+        margin-top: -100px
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+
 
 /* Slideshow css end */
 
@@ -764,7 +877,7 @@ article {
 #info .text_kontakt {
     flex-grow: 1;
     flex-basis: 250px;
-    background-color: #f8f8f8;
+    background-color: white;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
     padding: 2vw;
     margin: 3vw 0 1vw 0;
@@ -916,7 +1029,6 @@ footer img {
 
     #forside_grid {
         display: block;
-        background-color: rgba(128, 128, 128, 0.06);
         margin: 0;
     }
 
