@@ -100,10 +100,6 @@ function moveSlide(n) {
         next.classList.add(moveSlideAnimClass.forNext);
         dots[n].classList.add("active");
         slideIndex = n;
-        captionText.style.display = "none";
-        captionText.className = "captionText " + slideTextAnimClass;
-        captionText.innerText = slides[n].querylector(".captionText").innerText;
-        captionText.style.display = "block";
     }
 
 }
