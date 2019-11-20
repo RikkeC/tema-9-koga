@@ -792,6 +792,7 @@ article {
 
 
 .side img {
+    height: 100%;
     width: 100%;
     margin: 3.4vw 0;
 }
