@@ -545,6 +545,7 @@ h2 {
 #signature-cykler {
     padding-top: 0;
     margin-bottom: 4vw;
+    height: 470px;
 }
 
 #cykellisten .cykler,
@@ -635,10 +636,6 @@ article {
 
 #cykellisten .underoverskrift {
     margin: 1vw 2vw 3vw 3vw;
-}
-
-.signcykler {
-    height: 470px;
 }
 
 /*Scrollbar i hver sektion*/
@@ -1369,11 +1366,9 @@ footer img {
         max-width: 800px;
         cursor: pointer;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
-
     }
 
     .box {
-        height: 350px;
         width: auto;
         margin-left: 3vw;
     }
