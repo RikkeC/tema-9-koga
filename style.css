@@ -544,11 +544,7 @@ h2 {
 
 #signature-cykler {
     padding-top: 0;
-}
-
-#cykellisten .box {
-    margin: 3vw;
-    padding: 1rem;
+    margin-bottom: 4vw;
 }
 
 #cykellisten .cykler,
@@ -556,7 +552,6 @@ h2 {
     height: 350px;
     max-width: 95vw;
 }
-
 
 article {
     padding: 0 2.7vw;
@@ -613,9 +608,8 @@ article {
 .box {
     background-image: url(images/Mark-Beaumont-Bike-Koga-80-Days-06-1000x624.jpg);
     background-size: 100%;
-    /* height: 250px; */
-    height: 300px;
-    /*   box-shadow: 0.8vw 1vw 2vw grey;*/
+    margin: 2vw;
+    padding: 2vw;
 }
 
 .textimg {
