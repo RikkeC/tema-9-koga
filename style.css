@@ -1165,8 +1165,6 @@ footer img {
         height: 500px;
     }
 
-
-
     /* Fixed menu on the left for dekstop*/
     .right_side_air,
     .side_menu_wrapper {
@@ -1289,9 +1287,7 @@ footer img {
     }
 }
 
-
-
-/*desktop skærme*/
+/*-------Desktop skærme-----*/
 
 @media screen and (min-width: 1000px) {
     h1 {
