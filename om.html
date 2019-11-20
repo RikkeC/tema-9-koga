@@ -25,6 +25,7 @@
 
     <main id="omside">
         <section class="indhold">
+            <h1 class="om_overskrift"></h1>
             <article class="side"></article>
         </section>
 
@@ -73,6 +74,7 @@
 
         function visData() {
             document.querySelector(".side").innerHTML = side.content.rendered;
+            document.querySelector(".om_overskrift").textContent = side.title.rendered;
         }
 
         //        function animationBurger() {
@@ -84,8 +86,5 @@
         // document.querySelector(".menu").classList.toggle("hidden");
         // document.querySelector("header").classList.toggle("header_stor");
         // }
-
     </script>
-</body>
-
-</html>
+</body></html>
