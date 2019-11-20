@@ -1171,12 +1171,14 @@ footer img {
     .side_menu_wrapper {
         display: block;
         min-width: 20%;
+        color: white;
     }
 
     .fix-side-menu {
         position: fixed;
         top: 9rem;
         left: 0;
+        color: white;
     }
 
     .fix-menu-list {
@@ -1187,6 +1189,7 @@ footer img {
         background-color: rgba(51, 124, 190, 0.80);
         padding: 7px;
         margin: 20px 0 10px 20px;
+        color: white;
     }
 
     .list_item:hover {
