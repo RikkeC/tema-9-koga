@@ -237,12 +237,12 @@ header a:hover {
     background-image: url("images/splash_9.jpg");
     background-position: 75% 90%;
     position: absolute;
-    <<<<<<< HEAD left: 0;
+    left: 0;
     top: 0;
     width: 500%;
     height: 100%;
     animation: slidy 18s 0s backwards infinite;
-    =======height: 90vh;
+    height: 90vh;
     width: 100%;
     background-size: cover;
 }
@@ -254,7 +254,6 @@ header a:hover {
     height: 90vh;
     width: 100%;
     background-size: cover;
-    > > > > > > > origin/master
 }
 
 .img4 {
